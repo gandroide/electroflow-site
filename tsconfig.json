@@ -16,7 +16,8 @@
     "jsxFactory": "react.createElement",
     "jsxFragmentFactory": "react.Fragment",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
