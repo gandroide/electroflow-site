@@ -2,6 +2,7 @@ import react, { FC, useState } from "react"
 import Button from "@mui/material/Button"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
+import { useTranslation } from "react-i18next"
 
 interface Lng {
   id: number
@@ -22,19 +23,28 @@ const languages = [
   },
 ]
 
-const ChangeLanguage: FC = () => {
+const ChangeLanguageComponent: FC = () => {
+  const { i18n } = useTranslation()
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [currentLanguage, setCurrentLanguage] = useState<Lng>(languages[0])
   const open = Boolean(anchorEl)
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
   }
+  console.log(currentLanguage)
+
+  const changeLanguage = (code: string) => {
+    console.log(code)
+    i18n.changeLanguage(code)
+  }
+
   const handleClose = () => {
     setAnchorEl(null)
   }
 
   const handleChange = (lang: Lng) => {
     setCurrentLanguage(lang)
+    changeLanguage(lang.code)
     handleClose()
   }
 
@@ -69,4 +79,4 @@ const ChangeLanguage: FC = () => {
   )
 }
 
-export default ChangeLanguage
+export default ChangeLanguageComponent

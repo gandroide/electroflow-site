@@ -17,6 +17,7 @@ import {
 import BasicMenu from "../changeLanguage/ChangeMaterialLanguage"
 import { useTranslation } from "react-i18next"
 import pt from "../../locales/pt/translation.json"
+import { Link, Outlet } from "react-router-dom"
 
 const products = [
   {
@@ -62,14 +63,11 @@ function classNames(...classes: string[]) {
 const Header: FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { t } = useTranslation()
-  const [currentLocale, setCurrentLocale] = useState("pt")
 
   useEffect(() => {
     return localStorage.setItem("currentLocale", "pt")
   }, [])
 
-  useEffect(() => {}, [])
-  console.log(t)
   return (
     <>
       <header className="bg-slate-100">
@@ -166,8 +164,8 @@ const Header: FC = () => {
             </Popover>
 
             <div className="text-sm font-semibold leading-6 text-gray-900">
-              <a href="/services">Features</a>
-              {/* <Link to={"/services"}>Features</Link> */}
+              {/* <a href="/services">Features</a> */}
+              <Link to={"/services"}>Features</Link>
             </div>
             <a
               href="#"
@@ -179,7 +177,7 @@ const Header: FC = () => {
               href="/company"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              {pt.translations.header.services.title}
+              {t("translations.header.services.title")}
             </a>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -280,7 +278,9 @@ const Header: FC = () => {
           </Dialog.Panel>
         </Dialog>
       </header>
-      <div className="bg-slate-50 min-h-screen"></div>
+      <div className="bg-slate-50 min-h-screen">
+        <Outlet />
+      </div>
     </>
   )
 }
