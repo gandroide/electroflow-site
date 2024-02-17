@@ -4,6 +4,9 @@
       "services": {
         "title": "Serviços"
       }
+    },
+    "cards": {
+      "title": ""
     }
   }
 }
