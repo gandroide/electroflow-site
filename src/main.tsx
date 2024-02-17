@@ -10,8 +10,10 @@ import Footer from "./components/Footer"
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <react.StrictMode>
     <I18nextProvider i18n={i18n}>
-      <RouterProvider router={router} />
-      <Footer />
+      <main>
+        <RouterProvider router={router} />
+        <Footer />
+      </main>
     </I18nextProvider>
   </react.StrictMode>,
 )
