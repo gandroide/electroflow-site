@@ -1,4 +1,4 @@
-import { ChangeEvent, HTMLInputTypeAttribute } from "react";
+import { ChangeEvent, HTMLInputTypeAttribute, ReactNode } from "react";
 
 // Types
 export type SharedInputProperties = {
@@ -18,6 +18,7 @@ export type TextareaInput = SharedInputProperties & {
     type: 'textarea';
 }
 
+// Component Props
 export type InputProps = BasicInput | TextareaInput;
 
 export type FormProps = {
@@ -30,6 +31,22 @@ export type BasicInputProps = BasicInput & {
 
 export type TextareaInputProps = Omit<TextareaInput, 'type'> & {
     changeHandler: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
+export type GridProps = {
+    children: ReactNode;
+};
+
+export type GridItemProps = {
+    children: GridProps['children'];
+    columns: {
+        default: number;
+        xs?: number;
+        sm?: number;
+        md?: number;
+        lg?: number;
+        xl?: number;
+    }
 }
 
 // Type Guards

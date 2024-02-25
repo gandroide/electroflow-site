@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Form from './components/Form';
 import GlobalStyle from './styles';
 import { FormProps } from './interfaces';
+import { Grid, GridItem } from './components/Grid';
 
 const inputs: FormProps['inputs'] = [
   {
@@ -39,7 +40,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Footer />
       </main>
     </I18nextProvider> */}
-    <Form inputs={inputs} />
+    {/* <Form inputs={inputs} /> */}
+    <Grid>
+      <GridItem columns={{ default: 12, sm: 6 }}>Teste1</GridItem>
+      <GridItem columns={{ default: 12, sm: 4 }}>Teste2</GridItem>
+    </Grid>
     <GlobalStyle />
   </react.StrictMode>,
 );
