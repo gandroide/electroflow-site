@@ -22,6 +22,7 @@ export const StyledInputContainer = styled.div<StyledInputErrorProps>`
 export const StyledInputLabel = styled.label``;
 
 export const StyledInputContent = styled.div`
+    display: flex;
     border: 1px solid #cbcbcb;
 `;
 
@@ -32,6 +33,8 @@ export const StyledInputText = styled.input`
 
 export const StyledTextareaInput = styled.textarea`
     resize: none;
+    width: 100%;
+    padding: 3px 10px;
 `;
 
 export const StyledRequiredInputContainer = styled.span`

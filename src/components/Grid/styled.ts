@@ -11,30 +11,29 @@ export const StyledGrid = styled.div`
 `;
 
 export const StyledGridItem = styled.div<StyledGridItemProps>`
-    grid-column: ${({$columns}) => `span ${$columns?.xs ?? $columns.default}`};
-    border: 1px solid red;
+    grid-column: ${({$columns}) => `span ${$columns?.xs ?? 12}`};
 
     @media screen and (min-width: 576px) {
         grid-column: ${({$columns}) => `span ${
-            $columns?.sm ?? $columns?.xs ?? $columns.default
+            $columns?.sm ?? $columns?.xs ?? 12
         }`};
     }
 
     @media screen and (min-width: 768px) {
         grid-column: ${({$columns}) => `span ${
-            $columns?.md ?? $columns?.sm ?? $columns.xs ?? $columns.default
+            $columns?.md ?? $columns?.sm ?? $columns?.xs ?? 12
         }`};
     }
 
     @media screen and (min-width: 992px) {
         grid-column: ${({$columns}) => `span ${
-            $columns?.lg ?? $columns?.md ?? $columns?.sm ?? $columns?.xs ?? $columns.default
+            $columns?.lg ?? $columns?.md ?? $columns?.sm ?? $columns?.xs ?? 12
         }`};
     }
 
     @media screen and (min-width: 1200px) {
         grid-column: ${({$columns}) => `span ${
-            $columns?.xl ?? $columns?.lg ?? $columns?.md ?? $columns?.sm ?? $columns?.xs ?? $columns.default
+            $columns?.xl ?? $columns?.lg ?? $columns?.md ?? $columns?.sm ?? $columns?.xs ?? 12
         }`};
     }
 `;

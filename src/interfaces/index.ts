@@ -8,6 +8,7 @@ export type SharedInputProperties = {
     hasError: boolean;
     errorMsg: string;
     isRequired: boolean;
+    columns?: GridItemProps['columns'];
 }
 
 export type BasicInput = SharedInputProperties & {
@@ -39,8 +40,7 @@ export type GridProps = {
 
 export type GridItemProps = {
     children: GridProps['children'];
-    columns: {
-        default: number;
+    columns?: {
         xs?: number;
         sm?: number;
         md?: number;

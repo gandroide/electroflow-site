@@ -20,6 +20,9 @@ const inputs: FormProps['inputs'] = [
     hasError: true,
     errorMsg: '',
     isRequired: true,
+    columns: {
+      sm: 6,
+    },
   },
   {
     id: '2',
@@ -29,6 +32,9 @@ const inputs: FormProps['inputs'] = [
     hasError: true,
     errorMsg: '',
     isRequired: true,
+    columns: {
+      sm: 6,
+    },
   },
 ];
 
@@ -40,11 +46,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Footer />
       </main>
     </I18nextProvider> */}
-    {/* <Form inputs={inputs} /> */}
-    <Grid>
+    <Form inputs={inputs} />
+    {/* <Grid>
       <GridItem columns={{ default: 12, sm: 6 }}>Teste1</GridItem>
       <GridItem columns={{ default: 12, sm: 4 }}>Teste2</GridItem>
-    </Grid>
+    </Grid> */}
     <GlobalStyle />
   </react.StrictMode>,
 );
