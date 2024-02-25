@@ -1,20 +1,5 @@
-import react, { useReducer, HTMLInputTypeAttribute, FormEvent, ChangeEvent, Dispatch } from 'react';
-
-type SharedInputProps = {
-    id: string;
-    label: string;
-    value: string;
-}
-
-type BasicInputProps = SharedInputProps & {
-    type: HTMLInputTypeAttribute;
-}
-
-type TextareaInputProps = SharedInputProps & {
-    type: 'textarea';
-}
-
-type InputProps = BasicInputProps | TextareaInputProps;
+import react, { useReducer, ChangeEvent, Dispatch } from 'react';
+import { InputProps } from '../interfaces';
 
 type UseFormInputs = (inputs: InputProps[]) => { formInputs: UseFormInputsState, formActions: Dispatch<UseFormInputsActions> };
 

@@ -1,67 +1,59 @@
-import react, { FC, HTMLInputTypeAttribute } from 'react';
+import react, { FC } from 'react';
 import useFormInputs, { ActionTypes } from '../../hooks/useFormInputs';
-
-type SharedInputProps = {
-    id: string;
-    label: string;
-    value: string;
-}
-
-type BasicInputProps = SharedInputProps & {
-    type: HTMLInputTypeAttribute;
-}
-
-type TextareaInputProps = SharedInputProps & {
-    type: 'textarea';
-}
-
-type InputProps = BasicInputProps | TextareaInputProps;
-
-type FormProps = {
-    inputs: InputProps[];
-}
+import { TextInput, TextareaInput } from '../Inputs';
+import { FormProps, isTextInput, isTextareaInput } from '../../interfaces';
 
 const Form: FC<FormProps> = ({ inputs }) => {
-    const { formInputs, formActions } = useFormInputs(inputs);
+  const { formInputs, formActions } = useFormInputs(inputs);
 
-    const generatedInputs = () => {
-        return formInputs.map(({ id, label, type, value }, index) => {
-            if (type === 'text') {
-                return (
-                    <div key={id}>
-                        <label htmlFor={id}>{label}</label>
-                        <div>
-                            <input
-                                value={value}
-                                type={type}
-                                onChange={(e) => formActions({ type: ActionTypes.CHANGE, payload: { event: e, index } })} 
-                            />
-                        </div>
-                    </div>
-                )
+  const generatedInputs = () => {
+    return formInputs.map((input, index) => {
+      const { id, label, type, value, hasError, errorMsg, isRequired } = input;
+
+      if (isTextInput(input)) {
+        return (
+          <TextInput
+            key={id}
+            id={id}
+            label={label}
+            type={type}
+            value={value}
+            hasError={hasError}
+            errorMsg={errorMsg}
+            isRequired={isRequired}
+            changeHandler={(e) =>
+              formActions({
+                type: ActionTypes.CHANGE,
+                payload: { event: e, index },
+              })
             }
+          />
+        );
+      }
 
-            if (type === 'textarea') {
-                return (
-                    <div key={id}>
-                        <label htmlFor={id}>{label}</label>
-                        <div>
-                            <textarea
-                                onChange={(e) => formActions({ type: ActionTypes.CHANGE, payload: { event: e, index } })}
-                                value={value}
-                            ></textarea>
-                        </div>
-                    </div>
-                )
+      if (isTextareaInput(input)) {
+        return (
+          <TextareaInput
+            key={id}
+            id={id}
+            label={label}
+            value={value}
+            hasError={hasError}
+            errorMsg={errorMsg}
+            isRequired={isRequired}
+            changeHandler={(e) =>
+              formActions({
+                type: ActionTypes.CHANGE,
+                payload: { event: e, index },
+              })
             }
-        });
-    }
+          />
+        );
+      }
+    });
+  };
 
-    return (
-        <form>
-            {generatedInputs()}
-        </form>
-    )
-}
+  return <form>{generatedInputs()}</form>;
+};
 
 export default Form;
