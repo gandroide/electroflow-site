@@ -68,6 +68,25 @@ const Form: FC<FormProps> = ({ inputs }) => {
   return (
     <form>
       <Grid>{generatedInputs()}</Grid>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          marginTop: '48px',
+        }}
+      >
+        <button
+          style={{
+            border: '1px solid blue',
+            padding: '8px 48px',
+            borderRadius: '4px',
+            background: 'blue',
+            color: '#fff',
+          }}
+        >
+          Send
+        </button>
+      </div>
     </form>
   );
 };

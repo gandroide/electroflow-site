@@ -2,8 +2,6 @@ import react, { FC } from 'react';
 import SwiperComponent from '../components/swiper/Swiper';
 import Card from '../components/card/Card';
 
-import { FaLocationDot } from 'react-icons/fa6';
-
 import {
   TfiEmail,
   TfiLocationPin,
@@ -11,7 +9,45 @@ import {
   TfiFacebook,
   TfiLinkedin,
 } from 'react-icons/tfi';
-import { Grid, GridItem } from '../components/Grid';
+
+import Form from '../components/Form';
+import { InputProps } from '../interfaces';
+
+const formInputs: InputProps[] = [
+  {
+    id: 'name',
+    label: 'Nome',
+    value: '',
+    hasError: false,
+    errorMsg: '',
+    isRequired: true,
+    type: 'text',
+    columns: {
+      sm: 6,
+    },
+  },
+  {
+    id: 'email',
+    label: 'Email',
+    value: '',
+    hasError: false,
+    errorMsg: '',
+    isRequired: true,
+    type: 'text',
+    columns: {
+      sm: 6,
+    },
+  },
+  {
+    id: 'message',
+    label: 'Mensagem',
+    value: '',
+    hasError: false,
+    errorMsg: '',
+    isRequired: true,
+    type: 'textarea',
+  },
+];
 
 const Home: FC = () => {
   return (
@@ -56,7 +92,7 @@ const Home: FC = () => {
           style={{
             display: 'flex',
             width: '60%',
-            height: '450px',
+            // height: '450px',
             position: 'absolute',
             bottom: '0',
             transform: 'translateY(-30%)',
@@ -81,95 +117,14 @@ const Home: FC = () => {
             >
               Send us a message
             </h3>
-            <form>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(12, 1fr)',
-                  gap: '16px',
-                }}
-              >
-                <div style={{ gridColumn: '1 / span 6' }}>
-                  <label htmlFor="name">Name</label>
-                  <div
-                    style={{ border: '1px solid #cbcbcb', borderRadius: '4px' }}
-                  >
-                    <input
-                      type="text"
-                      id="name"
-                      style={{
-                        border: 'none',
-                        background: 'none',
-                        outline: 'none',
-                        width: '100%',
-                        padding: '5px 10px',
-                      }}
-                    />
-                  </div>
-                </div>
-                <div style={{ gridColumn: '7 / span 6' }}>
-                  <label htmlFor="email">Email</label>
-                  <div
-                    style={{ border: '1px solid #cbcbcb', borderRadius: '4px' }}
-                  >
-                    <input
-                      type="text"
-                      id="email"
-                      style={{
-                        border: 'none',
-                        background: 'none',
-                        outline: 'none',
-                        width: '100%',
-                        padding: '5px 10px',
-                      }}
-                    />
-                  </div>
-                </div>
-                <div style={{ gridColumn: '1 / span 12' }}>
-                  <label htmlFor="message">Message</label>
-                  <div
-                    style={{ border: '1px solid #cbcbcb', borderRadius: '4px' }}
-                  >
-                    <textarea
-                      id="message"
-                      style={{
-                        border: 'none',
-                        background: 'none',
-                        outline: 'none',
-                        width: '100%',
-                        padding: '5px 10px',
-                        resize: 'none',
-                      }}
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                  marginTop: '48px',
-                }}
-              >
-                <button
-                  style={{
-                    border: '1px solid blue',
-                    padding: '8px 48px',
-                    borderRadius: '4px',
-                    background: 'blue',
-                    color: '#fff',
-                  }}
-                >
-                  Send
-                </button>
-              </div>
-            </form>
+            <div style={{ height: '100%', marginTop: 40 }}>
+              <Form inputs={formInputs} />
+            </div>
           </div>
           <div
             style={{
               background: 'blue',
               width: '35%',
-              height: '100%',
               padding: '48px',
               display: 'flex',
               flexDirection: 'column',

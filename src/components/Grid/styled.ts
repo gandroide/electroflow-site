@@ -8,6 +8,7 @@ type StyledGridItemProps = {
 export const StyledGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 30px 20px;
 `;
 
 export const StyledGridItem = styled.div<StyledGridItemProps>`

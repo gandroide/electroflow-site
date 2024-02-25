@@ -40,17 +40,12 @@ const inputs: FormProps['inputs'] = [
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <react.StrictMode>
-    {/* <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18n}>
       <main>
         <RouterProvider router={router} />
         <Footer />
       </main>
-    </I18nextProvider> */}
-    <Form inputs={inputs} />
-    {/* <Grid>
-      <GridItem columns={{ default: 12, sm: 6 }}>Teste1</GridItem>
-      <GridItem columns={{ default: 12, sm: 4 }}>Teste2</GridItem>
-    </Grid> */}
+    </I18nextProvider>
     <GlobalStyle />
   </react.StrictMode>,
 );
