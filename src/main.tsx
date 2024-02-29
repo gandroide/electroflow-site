@@ -9,7 +9,8 @@ import Footer from './components/Footer';
 import Form from './components/Form';
 import GlobalStyle from './styles';
 import { FormProps } from './interfaces';
-import { Grid, GridItem } from './components/Grid';
+import Modal from './components/Modal';
+import PrivacyPolicy from './layouts/PrivacyPolicy';
 
 const inputs: FormProps['inputs'] = [
   {
@@ -40,12 +41,15 @@ const inputs: FormProps['inputs'] = [
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <react.StrictMode>
-    <I18nextProvider i18n={i18n}>
+    {/* <I18nextProvider i18n={i18n}>
       <main>
         <RouterProvider router={router} />
         <Footer />
       </main>
-    </I18nextProvider>
+    </I18nextProvider> */}
+    <Modal title="Política de privacidade da Electroflow">
+      <PrivacyPolicy />
+    </Modal>
     <GlobalStyle />
   </react.StrictMode>,
 );

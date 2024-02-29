@@ -49,6 +49,11 @@ export type GridItemProps = {
     }
 }
 
+export type ModalProps = {
+    title: string;
+    children: ReactNode;
+}
+
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
     return input.type === 'text';
