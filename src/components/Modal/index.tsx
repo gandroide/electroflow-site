@@ -9,14 +9,17 @@ import {
 } from './styled';
 import { ModalProps } from '../../interfaces';
 
-const Modal: FC<ModalProps> = ({ title, children }) => {
+const Modal: FC<ModalProps> = ({ title, children, isOpen, closeCallback }) => {
+  if (!isOpen) {
+    return null;
+  }
   return (
     <StyledModal>
-      <StyledModalBackdrop />
+      <StyledModalBackdrop onClick={closeCallback} />
       <StyledModalContainer>
         <StyledModalHeader>
           <StyledModalTitle>{title}</StyledModalTitle>
-          <button>Fechar</button>
+          <button onClick={() => closeCallback()}>Fechar</button>
         </StyledModalHeader>
         <StyledModalContent>{children}</StyledModalContent>
       </StyledModalContainer>

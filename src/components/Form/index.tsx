@@ -1,8 +1,14 @@
 import react, { FC } from 'react';
 import useFormInputs, { ActionTypes } from '../../hooks/useFormInputs';
 import { TextInput, TextareaInput } from '../Inputs';
-import { FormProps, isTextInput, isTextareaInput } from '../../interfaces';
+import {
+  FormProps,
+  isTextInput,
+  isTextareaInput,
+  isRadioInput,
+} from '../../interfaces';
 import { Grid, GridItem } from '../Grid';
+import RadioInput from '../Inputs/RadioInput';
 
 const Form: FC<FormProps> = ({ inputs }) => {
   const { formInputs, formActions } = useFormInputs(inputs);
@@ -62,11 +68,19 @@ const Form: FC<FormProps> = ({ inputs }) => {
           </GridItem>
         );
       }
+
+      if (isRadioInput(input)) {
+        return (
+          <GridItem columns={columns} key={id}>
+            {/* <RadioInput /> */}d
+          </GridItem>
+        );
+      }
     });
   };
 
   return (
-    <form>
+    <form style={{ width: '100%' }}>
       <Grid>{generatedInputs()}</Grid>
       <div
         style={{

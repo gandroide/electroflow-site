@@ -1,27 +1,32 @@
-import react from "react"
-import { createBrowserRouter } from "react-router-dom"
-import Services from "./pages/Services"
-import Company from "./pages/Company"
-import Header from "./components/header/Header"
-import Home from "./pages/Home"
+import react from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import Services from './pages/Services';
+import Company from './pages/Company';
+import Header from './components/header/Header';
+import Home from './pages/Home';
+import { BudgetForm } from './pages/budget/BudgetForm';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Header />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/services",
+        path: '/services',
         element: <Services />,
       },
       {
-        path: "/company",
+        path: '/company',
         element: <Company />,
+      },
+      {
+        path: '/budget',
+        element: <BudgetForm />,
       },
     ],
   },
-])
+]);
