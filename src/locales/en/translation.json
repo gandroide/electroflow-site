@@ -4,6 +4,12 @@
       "services": {
         "title": "Services"
       }
+    },
+    "cards": {
+      "title": ""
+    },
+    "footer": {
+      "privacyPolicyTitle": "Privacy Policy"
     }
   }
 }

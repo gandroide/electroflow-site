@@ -1,64 +1,78 @@
-import { ChangeEvent, HTMLInputTypeAttribute, ReactNode } from "react";
+import { ChangeEvent, HTMLInputTypeAttribute, ReactNode } from 'react';
 
 // Types
 export type SharedInputProperties = {
-    id: string;
-    label: string;
-    value: string;
-    hasError: boolean;
-    errorMsg: string;
-    isRequired: boolean;
-    columns?: GridItemProps['columns'];
-}
+  id: string;
+  label: string;
+  value: string;
+  hasError: boolean;
+  errorMsg: string;
+  isRequired: boolean;
+  columns?: GridItemProps['columns'];
+};
 
 export type BasicInput = SharedInputProperties & {
-    type: HTMLInputTypeAttribute;
-}
+  type: HTMLInputTypeAttribute;
+};
 
 export type TextareaInput = SharedInputProperties & {
-    type: 'textarea';
-}
+  type: 'textarea';
+};
+
+export type RadioInput = SharedInputProperties & {
+  type: 'radio';
+};
 
 // Component Props
-export type InputProps = BasicInput | TextareaInput;
+export type InputProps = BasicInput | TextareaInput | RadioInput;
 
 export type FormProps = {
-    inputs: InputProps[];
-}
+  inputs: InputProps[];
+};
 
 export type BasicInputProps = BasicInput & {
-    changeHandler: (e: ChangeEvent<HTMLInputElement>) => void;
-}
+  changeHandler: (e: ChangeEvent<HTMLInputElement>) => void;
+};
 
 export type TextareaInputProps = Omit<TextareaInput, 'type'> & {
-    changeHandler: (e: ChangeEvent<HTMLTextAreaElement>) => void;
-}
+  changeHandler: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+};
+
+export type RadioInputProps = Omit<RadioInput, 'type'> & {
+  changeHandler: (e: ChangeEvent<HTMLInputElement>) => void;
+};
 
 export type GridProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 export type GridItemProps = {
-    children: GridProps['children'];
-    columns?: {
-        xs?: number;
-        sm?: number;
-        md?: number;
-        lg?: number;
-        xl?: number;
-    }
-}
+  children: GridProps['children'];
+  columns?: {
+    xs?: number;
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+  };
+};
 
 export type ModalProps = {
-    title: string;
-    children: ReactNode;
-}
+  title: string;
+  children: ReactNode;
+  closeCallback: () => void;
+  isOpen: boolean;
+};
 
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
-    return input.type === 'text';
-}
+  return input.type === 'text';
+};
 
 export const isTextareaInput = (input: InputProps): input is TextareaInput => {
-    return input.type === 'textarea';
-}
+  return input.type === 'textarea';
+};
+
+export const isRadioInput = (input: InputProps): input is RadioInput => {
+  return input.type === 'radio';
+};

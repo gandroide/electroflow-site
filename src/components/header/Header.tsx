@@ -1,5 +1,5 @@
-import react, { FC, Fragment, useEffect, useState } from "react"
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react"
+import react, { FC, Fragment, useEffect, useState } from 'react';
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -8,65 +8,65 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-} from "@heroicons/react/24/outline"
+} from '@heroicons/react/24/outline';
 import {
   ChevronDownIcon,
   PhoneIcon,
   PlayCircleIcon,
-} from "@heroicons/react/20/solid"
-import BasicMenu from "../changeLanguage/ChangeMaterialLanguage"
-import { useTranslation } from "react-i18next"
-import pt from "../../locales/pt/translation.json"
-import { Link, Outlet } from "react-router-dom"
+} from '@heroicons/react/20/solid';
+import BasicMenu from '../changeLanguage/ChangeMaterialLanguage';
+import { useTranslation } from 'react-i18next';
+import pt from '../../locales/pt/translation.json';
+import { Link, Outlet } from 'react-router-dom';
 
 const products = [
   {
-    name: "Manutenção industrial",
-    description: "Get a better understanding of your traffic",
-    href: "/",
+    name: 'Manutenção industrial',
+    description: 'Get a better understanding of your traffic',
+    href: '/',
     icon: ChartPieIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "/services",
+    name: 'Engagement',
+    description: 'Speak directly to your customers',
+    href: '/services',
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "/company",
+    name: 'Security',
+    description: 'Your customers’ data will be safe and secure',
+    href: '/company',
     icon: FingerPrintIcon,
   },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
+    name: 'Integrations',
+    description: 'Connect with third-party tools',
+    href: '#',
     icon: SquaresPlusIcon,
   },
   {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
+    name: 'Automations',
+    description: 'Build strategic funnels that will convert',
+    href: '#',
     icon: ArrowPathIcon,
   },
-]
+];
 const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-]
+  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(' ');
 }
 
 const Header: FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { t } = useTranslation()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    return localStorage.setItem("currentLocale", "pt")
-  }, [])
+    return localStorage.setItem('currentLocale', 'pt');
+  }, []);
 
   return (
     <>
@@ -78,7 +78,7 @@ const Header: FC = () => {
           <div className="flex lg:flex-1">
             <div className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <a href={"/"}>
+              <a href={'/'}>
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -165,7 +165,7 @@ const Header: FC = () => {
 
             <div className="text-sm font-semibold leading-6 text-gray-900">
               {/* <a href="/services">Features</a> */}
-              <Link to={"/services"}>Features</Link>
+              <Link to={'/services'}>Features</Link>
             </div>
             <a
               href="#"
@@ -177,7 +177,7 @@ const Header: FC = () => {
               href="/company"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              {t("translations.header.services.title")}
+              {t('translations.header.services.title')}
             </a>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -224,8 +224,8 @@ const Header: FC = () => {
                           Product
                           <ChevronDownIcon
                             className={classNames(
-                              open ? "rotate-180" : "",
-                              "h-5 w-5 flex-none",
+                              open ? 'rotate-180' : '',
+                              'h-5 w-5 flex-none',
                             )}
                             aria-hidden="true"
                           />
@@ -278,11 +278,11 @@ const Header: FC = () => {
           </Dialog.Panel>
         </Dialog>
       </header>
-      <div className="bg-slate-50 min-h-screen">
+      <div>
         <Outlet />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

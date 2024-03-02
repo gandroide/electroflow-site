@@ -5,12 +5,12 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './Utils';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './locales/translations';
-import Footer from './components/Footer';
 import Form from './components/Form';
 import GlobalStyle from './styles';
 import { FormProps } from './interfaces';
 import Modal from './components/Modal';
 import PrivacyPolicy from './layouts/PrivacyPolicy';
+import Footer from './components/Footer';
 
 const inputs: FormProps['inputs'] = [
   {
