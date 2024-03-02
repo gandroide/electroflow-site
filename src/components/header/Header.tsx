@@ -278,7 +278,13 @@ const Header: FC = () => {
           </Dialog.Panel>
         </Dialog>
       </header>
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Outlet />
       </div>
     </>
