@@ -39,4 +39,45 @@ export const StyledTextareaInput = styled.textarea`
 
 export const StyledRequiredInputContainer = styled.span`
     color: red;
-`
+`;
+
+export const StyledRadioInputDescription = styled.p``;
+
+export const StyledRadioInputContent = styled.div``;
+
+export const StyledRadioInputLabel = styled.label`
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+        margin-right: 40px;
+    }
+`;
+
+export const StyledRadioInput = styled.input`
+    appearance: none;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #cbcbcb;
+        border-radius: 50%;
+    }
+
+    &:checked::after {
+        border: 1px solid red;
+    }
+`;
+
+

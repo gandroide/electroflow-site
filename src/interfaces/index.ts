@@ -11,20 +11,47 @@ export type SharedInputProperties = {
   columns?: GridItemProps['columns'];
 };
 
-export type BasicInput = SharedInputProperties & {
-  type: HTMLInputTypeAttribute;
+export type BasicInput = {
+  type: 'text';
+  id: string;
+  label: string;
+  value: string;
+  hasError: boolean;
+  errorMsg: string;
+  isRequired: boolean;
+  columns?: GridItemProps['columns'];
 };
 
-export type TextareaInput = SharedInputProperties & {
+export type TextareaInput = {
   type: 'textarea';
+  id: string;
+  label: string;
+  value: string;
+  hasError: boolean;
+  errorMsg: string;
+  isRequired: boolean;
+  columns?: GridItemProps['columns'];
 };
 
-export type RadioInput = SharedInputProperties & {
+export type RadioInputOptions = {
+  label: string;
+  value: string;
+  isChecked: boolean;
+}
+
+export type RadioInput = {
   type: 'radio';
+  id: string;
+  label: string;
+  hasError: boolean;
+  errorMsg: string;
+  isRequired: boolean;
+  columns?: GridItemProps['columns'];
+  options: RadioInputOptions[];
 };
 
 // Component Props
-export type InputProps = BasicInput | TextareaInput | RadioInput;
+export type InputProps = TextareaInput | BasicInput | RadioInput;
 
 export type FormProps = {
   inputs: InputProps[];

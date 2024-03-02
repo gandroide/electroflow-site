@@ -15,16 +15,7 @@ const Form: FC<FormProps> = ({ inputs }) => {
 
   const generatedInputs = () => {
     return formInputs.map((input, index) => {
-      const {
-        id,
-        label,
-        type,
-        value,
-        hasError,
-        errorMsg,
-        isRequired,
-        columns,
-      } = input;
+      const { id, label, hasError, errorMsg, isRequired, columns } = input;
 
       if (isTextInput(input)) {
         return (
@@ -32,8 +23,8 @@ const Form: FC<FormProps> = ({ inputs }) => {
             <TextInput
               id={id}
               label={label}
-              type={type}
-              value={value}
+              type={input.type}
+              value={input.value}
               hasError={hasError}
               errorMsg={errorMsg}
               isRequired={isRequired}
@@ -54,7 +45,7 @@ const Form: FC<FormProps> = ({ inputs }) => {
             <TextareaInput
               id={id}
               label={label}
-              value={value}
+              value={input.value}
               hasError={hasError}
               errorMsg={errorMsg}
               isRequired={isRequired}
@@ -72,7 +63,20 @@ const Form: FC<FormProps> = ({ inputs }) => {
       if (isRadioInput(input)) {
         return (
           <GridItem columns={columns} key={id}>
-            {/* <RadioInput /> */}d
+            <RadioInput
+              id={id}
+              label={label}
+              hasError={hasError}
+              errorMsg={errorMsg}
+              isRequired={isRequired}
+              changeHandler={(e) =>
+                formActions({
+                  type: ActionTypes.CHANGE,
+                  payload: { event: e, index },
+                })
+              }
+              options={input.options}
+            />
           </GridItem>
         );
       }

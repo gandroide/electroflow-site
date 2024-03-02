@@ -50,6 +50,26 @@ export const BudgetForm = () => {
       hasError: false,
       errorMsg: '',
     },
+    {
+      id: 'instalation',
+      type: 'radio',
+      options: [
+        {
+          isChecked: false,
+          label: 'Residencial',
+          value: 'residencial',
+        },
+        {
+          isChecked: false,
+          label: 'Comercial',
+          value: 'comercial',
+        },
+      ],
+      isRequired: true,
+      label: 'Tipo de instalação',
+      hasError: false,
+      errorMsg: '',
+    },
     // {
     //   id: 'budgetType',
     //   type: 'radio',
