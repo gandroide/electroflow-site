@@ -41,15 +41,15 @@ const inputs: FormProps['inputs'] = [
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <react.StrictMode>
-    {/* <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18n}>
       <main>
         <RouterProvider router={router} />
         <Footer />
       </main>
-    </I18nextProvider> */}
-    <Modal title="Política de privacidade da Electroflow">
+    </I18nextProvider>
+    {/* <Modal title="Política de privacidade da Electroflow">
       <PrivacyPolicy />
-    </Modal>
+    </Modal> */}
     <GlobalStyle />
   </react.StrictMode>,
 );

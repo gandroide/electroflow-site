@@ -12,6 +12,9 @@ import {
 
 import Form from '../components/Form';
 import { InputProps } from '../interfaces';
+import { StyledSecondaryTitle, StyledSection } from '../styles';
+import { Grid, GridItem } from '../components/Grid';
+import Contacts from '../layouts/Contacts';
 
 const formInputs: InputProps[] = [
   {
@@ -63,6 +66,11 @@ const Home: FC = () => {
         <Card title="Áreas de intervenção" />
       </div>
       <div className="h-screen">cosas de la empresa! fotos y logros!</div>
+
+      <StyledSection>
+        <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>
+        <Contacts />
+      </StyledSection>
 
       <section
         style={{
