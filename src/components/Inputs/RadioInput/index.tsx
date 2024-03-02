@@ -26,7 +26,13 @@ const RadioInput: FC<RadioInputProps> = ({
       <StyledRadioInputContent>
         {options.map(({ isChecked, label, value }) => (
           <StyledRadioInputLabel key={value}>
-            <StyledRadioInput type="radio" name={id} checked={isChecked} />
+            <StyledRadioInput
+              type="radio"
+              name={id}
+              checked={isChecked}
+              onChange={changeHandler}
+              value={value}
+            />
             {label}
           </StyledRadioInputLabel>
         ))}
