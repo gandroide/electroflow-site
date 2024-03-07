@@ -1,9 +1,11 @@
-import react from 'react';
+import react, { useRef } from 'react';
 import Form from '../../components/Form';
 import { InputProps } from '../../interfaces';
 import { Container } from './styled';
+import emailjs from '@emailjs/browser';
 
 export const BudgetForm = () => {
+  const form = useRef();
   const formInputs: InputProps[] = [
     {
       id: 'name',
@@ -213,6 +215,18 @@ export const BudgetForm = () => {
       errorMsg: '',
     },
   ];
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    // falta acrescentar as envs e criar o serviço no site de emailjs
+    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+  };
+
   return (
     <Container>
       <Form inputs={formInputs} />
