@@ -50,6 +50,12 @@ export type RadioInput = {
   options: RadioInputOptions[];
 };
 
+export type Language = {
+  id: number;
+  code: string;
+  name: string;
+}
+
 // Component Props
 export type InputProps = TextareaInput | BasicInput | RadioInput;
 

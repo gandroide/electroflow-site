@@ -11,6 +11,7 @@ import { FormProps } from './interfaces';
 import Modal from './components/Modal';
 import PrivacyPolicy from './layouts/PrivacyPolicy';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 const inputs: FormProps['inputs'] = [
   {
@@ -42,10 +43,7 @@ const inputs: FormProps['inputs'] = [
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <react.StrictMode>
     <I18nextProvider i18n={i18n}>
-      <main>
-        <RouterProvider router={router} />
-        <Footer />
-      </main>
+      <RouterProvider router={router} />
     </I18nextProvider>
     {/* <Modal title="Política de privacidade da Electroflow">
       <PrivacyPolicy />

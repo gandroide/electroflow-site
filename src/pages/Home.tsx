@@ -57,20 +57,20 @@ const Home: FC = () => {
     <>
       <SwiperComponent />
       <div className="flex h-screen">
-        <Card
+        {/* <Card
           title="Quem somos"
           subtitle="Destacamo-nos como uma equipa jovem e dinâmica com amplos conhecimentos da indústria em questão, na generalidade com mais de 15 anos de experiência do ramo, e sensíveis às necessidades dos nossos Clientes."
           buttonText="Saiba mais"
         />
         <Card title="Oferta integrada " />
-        <Card title="Áreas de intervenção" />
+        <Card title="Áreas de intervenção" /> */}
       </div>
       <div className="h-screen">cosas de la empresa! fotos y logros!</div>
 
-      <StyledSection>
+      {/* <StyledSection>
         <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>
         <Contacts />
-      </StyledSection>
+      </StyledSection> */}
 
       <section
         style={{
@@ -81,7 +81,7 @@ const Home: FC = () => {
           position: 'relative',
         }}
       >
-        <div
+        {/* <div
           style={{
             background: '#e2e2e2',
             height: '60vh',
@@ -238,7 +238,7 @@ const Home: FC = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );
