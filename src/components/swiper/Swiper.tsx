@@ -1,32 +1,42 @@
-import react from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
+import react from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
-import "swiper/css"
+import 'swiper/css';
 
-const SwiperComponent = () => {
+const SwiperComponent = ({
+  onSliderChange,
+}: {
+  onSliderChange: (activeSliderIndex: number) => void;
+}) => {
   return (
     <Swiper
-      spaceBetween={50}
+      modules={[Autoplay]}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
+      onSlideChange={(swiper) => {
+        console.log(swiper);
+        onSliderChange(swiper.realIndex);
+      }}
       onSwiper={(swiper) => console.log(swiper)}
+      loop
+      autoplay={{ delay: 5000 }}
     >
       <SwiperSlide>
         <img src="../../public/ManutencaoReparacao.jpg" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="../../plublic/AcDescMecatronica.png" />
+        <img src="../../public/AcDescMecatronica.png" />
       </SwiperSlide>
       <SwiperSlide>
         <img src="../../public/Gearmotors.jpg" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="../../public/Conversores.jpg" />
+        <img src="../../public/Conversores.png" />
       </SwiperSlide>
       ...
     </Swiper>
-  )
-}
+  );
+};
 
-export default SwiperComponent
+export default SwiperComponent;

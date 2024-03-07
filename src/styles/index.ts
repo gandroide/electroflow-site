@@ -16,6 +16,25 @@ export const StyledSection = styled.section`
     padding: 50px 100px;
 `;
 
+export const StyledHomeSection = styled.section`
+    position: relative;
+    height: calc(100vh - 65px);
+
+    & .swiper {
+        height: 100%;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        height: calc(100vh - 80px);
+    }
+`;
+
 export const StyledSecondaryTitle = styled.h2`
     font-size: 40px;
     font-weight: bold;
@@ -63,4 +82,31 @@ export const StyledContactCardRightTrapezoidBig = styled.div`
     right: 0;
     position: absolute;
     z-index: 0;
-`
+`;
+
+export const StyledHomeContainer = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+    pointer-events: none;
+`;
+
+export const StyledPrimaryTitle = styled.h1`
+    font-size: 124px;
+    margin: 112px 0;
+`;
+
+export const StyledText = styled.p`
+    font-size: 24px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+`;
