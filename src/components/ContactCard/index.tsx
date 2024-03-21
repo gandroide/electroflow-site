@@ -1,9 +1,14 @@
 import react from 'react';
+import { TfiUser } from 'react-icons/tfi';
+
 import {
   StyledContactCardContainer,
   StyledContactCardContent,
   StyledContactCardHeader,
+  StyledContactCardHeaderContainer,
   StyledContactCardHeaderSeparator,
+  StyledContactCardImg,
+  StyledContactCardImgContainer,
   StyledContactCardInfoContainer,
   StyledContactCardInfoContent,
   StyledContactCardInfoLabel,
@@ -11,19 +16,23 @@ import {
   StyledContactCardLeftBorder,
   StyledContactCardName,
   StyledContactCardPosition,
-  StyledContactCardTopTrapezoid,
-} from './styled';
-import {
-  StyledContactCardImg,
-  StyledContactCardImgContainer,
   StyledContactCardRightTrapezoidBig,
   StyledContactCardRightTrapezoidSmall,
-} from '../../styles';
+  StyledContactCardTopTrapezoid,
+} from './styled';
+
+import Mariana from '../../assets/imgs/mariana.jpg';
 
 const ContactCard = () => {
   return (
     <StyledContactCardContainer>
-      <StyledContactCardContent>
+      <StyledContactCardHeaderContainer>
+        <StyledContactCardImgContainer>
+          <StyledContactCardImg>
+            {/* <TfiUser size={80} /> */}
+            <img src={Mariana} />
+          </StyledContactCardImg>
+        </StyledContactCardImgContainer>
         <StyledContactCardHeader>
           <StyledContactCardTopTrapezoid />
           <StyledContactCardName>Gervásio Fernandes</StyledContactCardName>
@@ -32,6 +41,8 @@ const ContactCard = () => {
             Automação e Manutenção Industrial
           </StyledContactCardPosition>
         </StyledContactCardHeader>
+      </StyledContactCardHeaderContainer>
+      <StyledContactCardContent>
         <StyledContactCardInfoContainer>
           <StyledContactCardInfoContent>
             <StyledContactCardInfoLabel>Telefone</StyledContactCardInfoLabel>
@@ -46,9 +57,9 @@ const ContactCard = () => {
         </StyledContactCardInfoContainer>
       </StyledContactCardContent>
       <StyledContactCardLeftBorder />
-      <StyledContactCardImgContainer>
+      {/* <StyledContactCardImgContainer>
         <StyledContactCardImg />
-      </StyledContactCardImgContainer>
+      </StyledContactCardImgContainer> */}
       <StyledContactCardRightTrapezoidSmall />
       <StyledContactCardRightTrapezoidBig />
     </StyledContactCardContainer>

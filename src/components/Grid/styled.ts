@@ -1,14 +1,18 @@
 import styled from "styled-components";
-import { GridItemProps } from "../../interfaces";
+import { GridItemProps, GridProps } from "../../interfaces";
 
 type StyledGridItemProps = {
     $columns: GridItemProps['columns'];
 }
 
-export const StyledGrid = styled.div`
+type StyledGridProps = {
+    $gap?: GridProps['gap'];
+}
+
+export const StyledGrid = styled.div<StyledGridProps>`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 50px;
+    gap: ${({$gap}) => `${$gap}px` ?? '50px'};
 `;
 
 export const StyledGridItem = styled.div<StyledGridItemProps>`
@@ -35,6 +39,12 @@ export const StyledGridItem = styled.div<StyledGridItemProps>`
     @media screen and (min-width: 1200px) {
         grid-column: ${({$columns}) => `span ${
             $columns?.xl ?? $columns?.lg ?? $columns?.md ?? $columns?.sm ?? $columns?.xs ?? 12
+        }`};
+    }
+
+    @media screen and (min-width: 1400px) {
+        grid-column: ${({$columns}) => `span ${
+            $columns?.xxl ?? $columns?.xl ?? $columns?.lg ?? $columns?.md ?? $columns?.sm ?? $columns?.xs ?? 12
         }`};
     }
 `;

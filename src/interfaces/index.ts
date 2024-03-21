@@ -1,4 +1,4 @@
-import { ChangeEvent, HTMLInputTypeAttribute, ReactNode } from 'react';
+import { ChangeEvent, ReactNode } from 'react';
 
 // Types
 export type SharedInputProperties = {
@@ -77,6 +77,7 @@ export type RadioInputProps = Omit<RadioInput, 'type'> & {
 
 export type GridProps = {
   children: ReactNode;
+  gap?: number;
 };
 
 export type GridItemProps = {
@@ -87,6 +88,7 @@ export type GridItemProps = {
     md?: number;
     lg?: number;
     xl?: number;
+    xxl?: number;
   };
 };
 

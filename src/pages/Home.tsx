@@ -86,9 +86,9 @@ const Home: FC = () => {
     <>
       <StyledHomeSection>
         <SwiperComponent onSliderChange={changeTextHandler} />
-        <HomePage currentText={currentText} />
+        {/* <HomePage currentText={currentText} /> */}
       </StyledHomeSection>
-      <div className="flex h-screen">
+      {/* <div className="flex h-screen">
         <Card
           title="Quem somos"
           subtitle="Destacamo-nos como uma equipa jovem e dinâmica com amplos conhecimentos da indústria em questão, na generalidade com mais de 15 anos de experiência do ramo, e sensíveis às necessidades dos nossos Clientes."
@@ -97,14 +97,14 @@ const Home: FC = () => {
         <Card title="Oferta integrada " />
         <Card title="Áreas de intervenção" />
       </div>
-      <div className="h-screen">cosas de la empresa! fotos y logros!</div>
+      <div className="h-screen">cosas de la empresa! fotos y logros!</div> */}
 
       <StyledSection>
         <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>
         <Contacts />
       </StyledSection>
 
-      <section
+      {/* <section
         style={{
           minHeight: '100vh',
           display: 'flex',
@@ -271,7 +271,7 @@ const Home: FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
