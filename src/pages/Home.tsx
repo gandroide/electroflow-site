@@ -22,6 +22,7 @@ import {
 } from '../styles';
 import { Grid, GridItem } from '../components/Grid';
 import Contacts from '../layouts/Contacts';
+import ContactUs from '../layouts/ContactUs';
 
 const formInputs: InputProps[] = [
   {
@@ -103,6 +104,8 @@ const Home: FC = () => {
         <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>
         <Contacts />
       </StyledSection>
+
+      <ContactUs />
 
       {/* <section
         style={{

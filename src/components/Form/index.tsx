@@ -85,7 +85,7 @@ const Form: FC<FormProps> = ({ inputs }) => {
 
   return (
     <form style={{ width: '100%' }}>
-      <Grid>{generatedInputs()}</Grid>
+      <Grid gap={20}>{generatedInputs()}</Grid>
       <div
         style={{
           display: 'flex',

@@ -14,6 +14,7 @@ export const StyledSection = styled.section`
     align-items: center;
     border-top: 1px solid red;
     padding: 50px 20px;
+    position: relative;
 
     @media screen and (min-width: 992px) {
         padding: 50px 40px;
@@ -52,10 +53,18 @@ export const StyledSecondaryTitle = styled.h2`
     font-weight: bold;
     margin-bottom: 50px;
     line-height: 42px;
+    text-align: center;
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 75px;
     }
+`;
+
+export const StyledTertiaryTtile = styled.h3`
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
 `;
 
 export const StyledHomeContainer = styled.div`

@@ -24,6 +24,8 @@ export const StyledInputLabel = styled.label``;
 export const StyledInputContent = styled.div`
     display: flex;
     border: 1px solid #cbcbcb;
+    border-radius: 4px;
+    overflow: hidden;
 `;
 
 export const StyledInputText = styled.input`
