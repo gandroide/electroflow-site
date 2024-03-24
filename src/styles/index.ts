@@ -87,6 +87,11 @@ export const StyledPrimaryTitle = styled.h1`
     margin: 112px 0;
 `;
 
+export const StyledQuaternaryTitle = styled.h4`
+    font-size: 16px;
+    font-weight: bold;
+`;
+
 export const StyledText = styled.p`
     font-size: 24px;
     width: 100%;

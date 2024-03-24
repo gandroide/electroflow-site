@@ -2,7 +2,7 @@ import react, { useCallback, useState } from 'react';
 import Modal from '../Modal';
 import PrivacyPolicy from '../../layouts/PrivacyPolicy';
 import { useTranslation } from 'react-i18next';
-import { ElectroFooter, PrivacyButton, PrivacyPolicyContainer } from './styled';
+import { StyledFooter, StyledLinkButton, StyledFooterContent } from './styled';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -17,17 +17,16 @@ const Footer = () => {
   }, []);
 
   return (
-    <ElectroFooter>
-      <PrivacyPolicyContainer>
-        <p>
+    <StyledFooter>
+      <StyledFooterContent>
+        <span>
           Electroflow &#169; {new Date().getFullYear()} - Todos os direitos
-          reservados
-        </p>
-
-        <PrivacyButton title="Privacy Policy" onClick={handleOpen}>
+          reservados |{' '}
+        </span>
+        <StyledLinkButton title="Privacy Policy" onClick={handleOpen}>
           {t('translations.footer.privacyPolicyTitle')}
-        </PrivacyButton>
-      </PrivacyPolicyContainer>
+        </StyledLinkButton>
+      </StyledFooterContent>
       <Modal
         closeCallback={handleCloseCallback}
         isOpen={open}
@@ -35,7 +34,7 @@ const Footer = () => {
       >
         <PrivacyPolicy />
       </Modal>
-    </ElectroFooter>
+    </StyledFooter>
   );
 };
 

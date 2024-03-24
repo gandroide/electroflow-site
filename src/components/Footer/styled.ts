@@ -1,16 +1,14 @@
 import styled from '@emotion/styled';
 
-export const PrivacyPolicyContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const StyledFooterContent = styled.p`
+  text-align: center;
 `;
 
-export const PrivacyButton = styled.button`
-  margin-left: 5px;
+export const StyledLinkButton = styled.button`
   cursor: pointer;
+  text-decoration: underline;
 `;
 
-export const ElectroFooter = styled.footer`
+export const StyledFooter = styled.footer`
   padding: 15px;
 `;

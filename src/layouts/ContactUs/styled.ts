@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { StyledQuaternaryTitle, StyledSection } from "../../styles";
+
+export const StyledContactUsSection = styled(StyledSection)`
+    min-height: unset;
+`; 
 
 export const StyledContactUsOverlay = styled.div<{$background: string}>`
     background: ${({$background}) => `url(${$background}) no-repeat`};
@@ -31,11 +36,109 @@ export const StyledContactUsContainer = styled.div`
     flex-direction: column;
 `;
 
+export const StyledContactUsContent = styled.div`
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    max-width: 1100px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: unset;
+    }
+`;
+
 export const StyledFormContainer = styled.div`
     background-color: #fff;
     width: 100%;
     padding: 20px;
-    margin-top: 50px;
     box-shadow: 0 0 10px #cbcbcb;
-    border-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+    & ${StyledQuaternaryTitle} {
+        margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 4px;
+        width: 65%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 40px;
+    }
 `;
+
+export const StyledTertiaryTitleContainer = styled.div`
+    width: 100%;
+    max-width: 500px;
+`;
+
+export const StyledContactUsInformationContainer = styled.div`
+    background-color: orange;
+    width: 100%;
+    padding: 20px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 4px;
+        width: 35%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 40px;
+    }
+`;
+
+export const StyledContactUsInformationContent = styled.div`
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+        margin-top: 24px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+`;
+
+export const StyledContactUsInformationIcon = styled.span`
+    display: flex;
+    margin-right: 8px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 8px;
+        margin-right: 0;
+
+        & svg {
+            width: 28px;
+            width: 28px;
+        }
+    }
+`;
+
+export const StyledContactUsInformationValue = styled.p`
+    font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+`

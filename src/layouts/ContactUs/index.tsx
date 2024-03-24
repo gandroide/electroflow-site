@@ -1,18 +1,27 @@
 import react from 'react';
 import {
+  StyledQuaternaryTitle,
   StyledSecondaryTitle,
   StyledSection,
   StyledTertiaryTtile,
 } from '../../styles';
 import {
   StyledContactUsContainer,
+  StyledContactUsContent,
+  StyledContactUsInformationContainer,
+  StyledContactUsInformationContent,
+  StyledContactUsInformationIcon,
+  StyledContactUsInformationValue,
   StyledContactUsOverlay,
+  StyledContactUsSection,
   StyledFormContainer,
+  StyledTertiaryTitleContainer,
 } from './styled';
 
 import Map from '../../assets/imgs/map.png';
 import Form from '../../components/Form';
 import { InputProps } from '../../interfaces';
+import { TfiEmail, TfiLocationPin, TfiMobile } from 'react-icons/tfi';
 
 const formInputs: InputProps[] = [
   {
@@ -25,6 +34,8 @@ const formInputs: InputProps[] = [
     type: 'text',
     columns: {
       sm: 6,
+      md: 12,
+      lg: 6,
     },
   },
   {
@@ -37,6 +48,8 @@ const formInputs: InputProps[] = [
     type: 'text',
     columns: {
       sm: 6,
+      md: 12,
+      lg: 6,
     },
   },
   {
@@ -52,19 +65,51 @@ const formInputs: InputProps[] = [
 
 const ContactUs = () => {
   return (
-    <StyledSection>
+    <StyledContactUsSection>
       <StyledContactUsOverlay $background={Map} />
       <StyledContactUsContainer>
         <StyledSecondaryTitle>Contacte-nos</StyledSecondaryTitle>
-        <StyledTertiaryTtile>
-          Para mais informações sobre os nossos serviços, não hesite em
-          contacte-nos preenchendo o formulário abaixo
-        </StyledTertiaryTtile>
+        <StyledTertiaryTitleContainer>
+          <StyledTertiaryTtile>
+            Para mais informações sobre os nossos serviços, não hesite em
+            contactar-nos preenchendo o formulário abaixo
+          </StyledTertiaryTtile>
+        </StyledTertiaryTitleContainer>
+      </StyledContactUsContainer>
+      <StyledContactUsContent>
         <StyledFormContainer>
+          <StyledQuaternaryTitle>Envie-nos uma mensagem</StyledQuaternaryTitle>
           <Form inputs={formInputs} />
         </StyledFormContainer>
-      </StyledContactUsContainer>
-    </StyledSection>
+        <StyledContactUsInformationContainer>
+          <StyledQuaternaryTitle>Informação do contacto</StyledQuaternaryTitle>
+          <StyledContactUsInformationContent>
+            <StyledContactUsInformationIcon>
+              <TfiLocationPin size={20} />
+            </StyledContactUsInformationIcon>
+            <StyledContactUsInformationValue>
+              Caminho do Pilar 19, 9000-653 Funchal
+            </StyledContactUsInformationValue>
+          </StyledContactUsInformationContent>
+          <StyledContactUsInformationContent>
+            <StyledContactUsInformationIcon>
+              <TfiMobile size={20} />
+            </StyledContactUsInformationIcon>
+            <StyledContactUsInformationValue>
+              (+351) 963 048 614
+            </StyledContactUsInformationValue>
+          </StyledContactUsInformationContent>
+          <StyledContactUsInformationContent>
+            <StyledContactUsInformationIcon>
+              <TfiEmail size={20} />
+            </StyledContactUsInformationIcon>
+            <StyledContactUsInformationValue>
+              eletroflow@eletroflow.pt
+            </StyledContactUsInformationValue>
+          </StyledContactUsInformationContent>
+        </StyledContactUsInformationContainer>
+      </StyledContactUsContent>
+    </StyledContactUsSection>
   );
 };
 
