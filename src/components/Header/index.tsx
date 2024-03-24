@@ -20,7 +20,9 @@ import {
   StyledLanguageDropdownValue,
   StyledLanguageDropdownArrow,
 } from './styled';
+
 import { Language } from '../../interfaces';
+import Logo from '../../assets/imgs/logo.png';
 
 const languages: Language[] = [
   {
@@ -99,7 +101,9 @@ const Header = () => {
 
   return (
     <StyledHeaderContainer>
-      <StyledHeaderLogoContainer>Logo</StyledHeaderLogoContainer>
+      <StyledHeaderLogoContainer>
+        <img src={Logo} />
+      </StyledHeaderLogoContainer>
       <StyledHeaderContent>
         <LanguageDropdown />
         <StyledHeaderNavigationButton onClick={toggleOpenHandler}>

@@ -2,7 +2,12 @@ import react, { useCallback, useState } from 'react';
 import Modal from '../Modal';
 import PrivacyPolicy from '../../layouts/PrivacyPolicy';
 import { useTranslation } from 'react-i18next';
-import { StyledFooter, StyledLinkButton, StyledFooterContent } from './styled';
+import {
+  StyledFooter,
+  StyledLinkButton,
+  StyledFooterContent,
+  StyledFooterRights,
+} from './styled';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -19,10 +24,10 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledFooterContent>
-        <span>
+        <StyledFooterRights>
           Electroflow &#169; {new Date().getFullYear()} - Todos os direitos
           reservados |{' '}
-        </span>
+        </StyledFooterRights>
         <StyledLinkButton title="Privacy Policy" onClick={handleOpen}>
           {t('translations.footer.privacyPolicyTitle')}
         </StyledLinkButton>

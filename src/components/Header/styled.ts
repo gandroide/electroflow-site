@@ -7,11 +7,11 @@ type StyledHeaderNavigationProps = {
 
 export const StyledHeaderContainer = styled.header`
     height: 65px;
-    background: orange;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    background-color: #f5f5f5;
     padding: 0 20px;
+    border-bottom: 2px solid ${({theme}) => theme.palette.thunder};
 
     @media screen and (min-width: 768px) {
         height: 80px;
@@ -19,7 +19,9 @@ export const StyledHeaderContainer = styled.header`
     }
 `;
 
-export const StyledHeaderLogoContainer = styled.span``;
+export const StyledHeaderLogoContainer = styled.span`
+    width: 200px;
+`;
 
 export const StyledHeaderLogo = styled.img``;
 

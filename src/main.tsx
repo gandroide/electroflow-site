@@ -10,8 +10,9 @@ import GlobalStyle from './styles';
 import { FormProps } from './interfaces';
 import Modal from './components/Modal';
 import PrivacyPolicy from './layouts/PrivacyPolicy';
-import Footer from './components/Footer';
 import Header from './components/Header';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
 
 const inputs: FormProps['inputs'] = [
   {
@@ -42,12 +43,11 @@ const inputs: FormProps['inputs'] = [
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <react.StrictMode>
-    <I18nextProvider i18n={i18n}>
-      <RouterProvider router={router} />
-    </I18nextProvider>
-    {/* <Modal title="Política de privacidade da Electroflow">
-      <PrivacyPolicy />
-    </Modal> */}
-    <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <I18nextProvider i18n={i18n}>
+        <RouterProvider router={router} />
+      </I18nextProvider>
+      <GlobalStyle />
+    </ThemeProvider>
   </react.StrictMode>,
 );
