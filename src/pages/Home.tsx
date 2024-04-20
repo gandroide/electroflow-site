@@ -1,16 +1,6 @@
 import react, { FC, useEffect, useState } from 'react';
 import SwiperComponent from '../components/swiper/Swiper';
-import Card from '../components/card/Card';
 
-import {
-  TfiEmail,
-  TfiLocationPin,
-  TfiMobile,
-  TfiFacebook,
-  TfiLinkedin,
-} from 'react-icons/tfi';
-
-import Form from '../components/Form';
 import { InputProps } from '../interfaces';
 import {
   StyledHomeContainer,
@@ -20,7 +10,8 @@ import {
   StyledSection,
   StyledText,
 } from '../styles';
-import { Grid, GridItem } from '../components/Grid';
+
+import Misson from '../layouts/Misson';
 import Contacts from '../layouts/Contacts';
 import ContactUs from '../layouts/ContactUs';
 
@@ -99,6 +90,8 @@ const Home: FC = () => {
         <Card title="Áreas de intervenção" />
       </div>
       <div className="h-screen">cosas de la empresa! fotos y logros!</div> */}
+
+      <Misson />
 
       <StyledSection>
         <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>

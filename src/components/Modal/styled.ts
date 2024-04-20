@@ -6,6 +6,29 @@ export const StyledModal = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 10;
+
+    /* Scroll bar stylings */
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #ccc; 
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
 `;
 
 export const StyledModalBackdrop = styled.div`

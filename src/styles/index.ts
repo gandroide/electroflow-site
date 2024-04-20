@@ -60,6 +60,21 @@ export const StyledSecondaryTitle = styled.h2`
     }
 `;
 
+export const StyledSecondaryTitleEmphasis = styled.span`
+    text-transform: uppercase;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: 3px;
+        background-color: red;
+    }
+`
+
 export const StyledTertiaryTtile = styled.h3`
     font-size: 18px;
     font-weight: bold;
