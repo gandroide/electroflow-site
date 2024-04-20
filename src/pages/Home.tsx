@@ -7,11 +7,13 @@ import {
   StyledHomeSection,
   StyledPrimaryTitle,
   StyledSecondaryTitle,
+  StyledSecondaryTitleEmphasis,
   StyledSection,
   StyledText,
 } from '../styles';
 
 import Misson from '../layouts/Misson';
+import Gallery from '../layouts/Gallery';
 import Contacts from '../layouts/Contacts';
 import ContactUs from '../layouts/ContactUs';
 
@@ -92,6 +94,14 @@ const Home: FC = () => {
       <div className="h-screen">cosas de la empresa! fotos y logros!</div> */}
 
       <Misson />
+
+      <StyledSection>
+        <StyledSecondaryTitle>
+          O nosso{' '}
+          <StyledSecondaryTitleEmphasis>portfólio</StyledSecondaryTitleEmphasis>
+        </StyledSecondaryTitle>
+        <Gallery />
+      </StyledSection>
 
       <StyledSection>
         <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>
