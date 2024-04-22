@@ -16,6 +16,7 @@ import Misson from '../layouts/Misson';
 import Gallery from '../layouts/Gallery';
 import Contacts from '../layouts/Contacts';
 import ContactUs from '../layouts/ContactUs';
+import Products from '../layouts/Products';
 
 const formInputs: InputProps[] = [
   {
@@ -101,6 +102,14 @@ const Home: FC = () => {
           <StyledSecondaryTitleEmphasis>portfólio</StyledSecondaryTitleEmphasis>
         </StyledSecondaryTitle>
         <Gallery />
+      </StyledSection>
+
+      <StyledSection>
+        <StyledSecondaryTitle>
+          Os nossos{' '}
+          <StyledSecondaryTitleEmphasis>produtos</StyledSecondaryTitleEmphasis>
+        </StyledSecondaryTitle>
+        <Products />
       </StyledSection>
 
       <StyledSection>

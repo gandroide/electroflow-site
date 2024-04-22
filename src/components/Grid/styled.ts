@@ -13,6 +13,7 @@ export const StyledGrid = styled.div<StyledGridProps>`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: ${({$gap}) => `${$gap}px` ?? '50px'};
+    width: 100%;
 `;
 
 export const StyledGridItem = styled.div<StyledGridItemProps>`
