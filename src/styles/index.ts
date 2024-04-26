@@ -5,6 +5,22 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     outline: none;
+
+    & .animated-enter {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    & .animated-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 750ms, opacity 750ms;
+    }
+
+    & .animated-enter-done {
+        transform: translateY(0);
+        opacity: 1;
+    }
 `;
 
 export const StyledSection = styled.section`

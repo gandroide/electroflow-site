@@ -1,5 +1,5 @@
 import react, { useEffect, useRef, useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 import {
   StyledHomeContent,
@@ -11,6 +11,7 @@ import {
 } from './styled';
 import SwiperComponent from '../../components/swiper/Swiper';
 import { StyledPrimaryTitle } from '../../styles';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const animatedTextValues = [
   'Automação e Manutenção Industrial',
@@ -35,7 +36,6 @@ const AnimatedText = () => {
 
   return (
     <StyledAnimatedTextContainer>
-      {/* <TransitionGroup className="teste"> */}
       {animatedTextValues.map((text, index) => (
         <CSSTransition
           key={text}
@@ -50,33 +50,41 @@ const AnimatedText = () => {
           </StyledHomeContentAnimated>
         </CSSTransition>
       ))}
-      {/* </TransitionGroup> */}
     </StyledAnimatedTextContainer>
   );
 };
 
 const Home = () => {
+  const homeRef = useRef<HTMLDivElement>(null);
+  const isHomeVisible = useIntersectionObserver({ ref: homeRef });
+
   return (
     <StyledHomeSection>
-      <StyledHomeContent>
-        <StyledPrimaryTitle>ELECTROFLOW</StyledPrimaryTitle>
-        <StyledHomeContentText>
-          Exerce a atividade desde 2014, e contamos com uma equipa jovem e
-          dinâmica com amplos conhecimentos da indústria, em diversas áreas de
-          engenharia, em sintonia com as necessidades dos nossos clientes na
-          RAM.
-        </StyledHomeContentText>
-        <StyledHomeContentText>
-          Intervimos ao nível do projeto, montagem/execução e assistência
-          técnica nas seguintes áreas de negócio:
-          <AnimatedText />
-        </StyledHomeContentText>
-        <StyledHomeContentText>
-          Nas áreas acima mencionadas comercializamos produtos de Marcas de
-          referência, tanto para o setor industrial como comercial, com várias
-          parcerias forjadas com grupos empresariais reconhecidos globalmente.
-        </StyledHomeContentText>
-      </StyledHomeContent>
+      <CSSTransition
+        in={isHomeVisible}
+        timeout={500}
+        classNames="animated-home"
+      >
+        <StyledHomeContent ref={homeRef}>
+          <StyledPrimaryTitle>ELECTROFLOW</StyledPrimaryTitle>
+          <StyledHomeContentText>
+            Exerce a atividade desde 2014, e contamos com uma equipa jovem e
+            dinâmica com amplos conhecimentos da indústria, em diversas áreas de
+            engenharia, em sintonia com as necessidades dos nossos clientes na
+            RAM.
+          </StyledHomeContentText>
+          <StyledHomeContentText>
+            Intervimos ao nível do projeto, montagem/execução e assistência
+            técnica nas seguintes áreas de negócio:
+            <AnimatedText />
+          </StyledHomeContentText>
+          <StyledHomeContentText>
+            Nas áreas acima mencionadas comercializamos produtos de Marcas de
+            referência, tanto para o setor industrial como comercial, com várias
+            parcerias forjadas com grupos empresariais reconhecidos globalmente.
+          </StyledHomeContentText>
+        </StyledHomeContent>
+      </CSSTransition>
       <StyledHomeSlider>
         <SwiperComponent />
       </StyledHomeSlider>

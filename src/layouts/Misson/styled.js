@@ -5,6 +5,8 @@ export const StyledMissonContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(100px);
 `;
 
 export const StyledMissonSection = styled(StyledSection)`
