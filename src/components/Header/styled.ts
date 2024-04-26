@@ -11,7 +11,6 @@ export const StyledHeaderContainer = styled.header`
     align-items: center;
     background-color: #f5f5f5;
     padding: 0 20px;
-    border-bottom: 2px solid ${({theme}) => theme.palette.thunder};
 
     @media screen and (min-width: 768px) {
         height: 80px;
@@ -92,7 +91,7 @@ export const StyledHeaderNavigationList = styled.ul`
         justify-content: flex-end;
 
         & ${StyledHeaderNavigationItem}:not(:last-child) {
-            margin-right: 24px;
+            margin-right: 40px;
         }
     }
 `;
@@ -103,6 +102,9 @@ export const StyledHeaderNavigationLink = styled(NavLink)`
     width: 100%;
     display: block;
     padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: ${({theme}) => theme.palette.boston};
 
     &:hover {
         background: #cbcbcb;

@@ -14,7 +14,7 @@ export const StyledContactCardContainer = styled.div`
 export const StyledContactCardContent = styled.div``;
 
 export const StyledContactCardLeftBorder = styled.div`
-    background: #000;
+    background: ${({theme}) => theme.palette.thunder};
     clip-path: polygon(50% 0, 50% 30%, 100% 50%, 100% 100%, 0 100%, 0% 60%, 0 0);
     position: absolute;
     top: 0;
@@ -58,7 +58,7 @@ export const StyledContactCardPosition = styled.p`
 `;
 
 export const StyledContactCardHeaderSeparator = styled.div`
-    background: orange;
+    background: ${({theme}) => theme.palette.boston};
     height: 2px;
     margin: 5px 0;
     width: 100%;
@@ -75,7 +75,7 @@ export const StyledContactCardInfoContent = styled.div`
 `;
 
 export const StyledContactCardInfoLabel = styled.p`
-    color: orange;
+    color: ${({theme}) => theme.palette.boston};;
     font-weight: bold;
     font-size: 14px;
 `;
@@ -89,7 +89,7 @@ export const StyledContactCardTopTrapezoid = styled.div`
     top: 0;
     right: 0;
     height: 30px;
-    background: orange;
+    background: ${({theme}) => theme.palette.boston};
     width: 30%;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
     display: none;
@@ -100,7 +100,7 @@ export const StyledContactCardImgContainer = styled.div`
     width: 170px;
     bottom: 30px;
     right: 30px;
-    background: orange;
+    background: ${({theme}) => theme.palette.boston};
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     align-items: center;
@@ -128,7 +128,7 @@ export const StyledContactCardRightTrapezoidSmall = styled.div`
     height: 80px;
     width: 150px;
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-    background: #000;
+    background: ${({theme}) => theme.palette.thunder};
     bottom: 0;
     right: 0;
     position: absolute;
@@ -152,7 +152,7 @@ export const StyledContactCardRightTrapezoidBig = styled.div`
     height: 100px;
     width: 175px;
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-    background: orange;
+    background: ${({theme}) => theme.palette.boston};;
     bottom: 0;
     right: 0;
     position: absolute;

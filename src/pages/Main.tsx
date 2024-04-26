@@ -7,7 +7,6 @@ import {
   StyledHomeSection,
   StyledPrimaryTitle,
   StyledSecondaryTitle,
-  StyledSecondaryTitleEmphasis,
   StyledSection,
   StyledText,
 } from '../styles';
@@ -17,6 +16,7 @@ import Gallery from '../layouts/Gallery';
 import Contacts from '../layouts/Contacts';
 import ContactUs from '../layouts/ContactUs';
 import Products from '../layouts/Products';
+import Home from '../layouts/Home';
 
 const formInputs: InputProps[] = [
   {
@@ -70,7 +70,7 @@ const HomePage = ({ currentText }: { currentText: number }) => {
   );
 };
 
-const Home: FC = () => {
+const Main: FC = () => {
   const [currentText, setCurrentText] = useState(0);
 
   const changeTextHandler = (activeSliderIndex: number) => {
@@ -79,10 +79,10 @@ const Home: FC = () => {
 
   return (
     <>
-      <StyledHomeSection>
+      <Home />
+      {/* <StyledHomeSection>
         <SwiperComponent onSliderChange={changeTextHandler} />
-        {/* <HomePage currentText={currentText} /> */}
-      </StyledHomeSection>
+      </StyledHomeSection> */}
       {/* <div className="flex h-screen">
         <Card
           title="Quem somos"
@@ -97,23 +97,17 @@ const Home: FC = () => {
       <Misson />
 
       <StyledSection>
-        <StyledSecondaryTitle>
-          O nosso{' '}
-          <StyledSecondaryTitleEmphasis>portfólio</StyledSecondaryTitleEmphasis>
-        </StyledSecondaryTitle>
+        <StyledSecondaryTitle>Portfólio</StyledSecondaryTitle>
         <Gallery />
       </StyledSection>
 
       <StyledSection>
-        <StyledSecondaryTitle>
-          Os nossos{' '}
-          <StyledSecondaryTitleEmphasis>produtos</StyledSecondaryTitleEmphasis>
-        </StyledSecondaryTitle>
+        <StyledSecondaryTitle>Produtos</StyledSecondaryTitle>
         <Products />
       </StyledSection>
 
       <StyledSection>
-        <StyledSecondaryTitle>A nossa equipa</StyledSecondaryTitle>
+        <StyledSecondaryTitle>Equipa</StyledSecondaryTitle>
         <Contacts />
       </StyledSection>
 
@@ -291,4 +285,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default Main;

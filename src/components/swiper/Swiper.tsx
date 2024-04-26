@@ -5,19 +5,15 @@ import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 
-const SwiperComponent = ({
-  onSliderChange,
-}: {
-  onSliderChange: (activeSliderIndex: number) => void;
-}) => {
+const SwiperComponent = () => {
   return (
     <Swiper
       modules={[Autoplay]}
       slidesPerView={1}
-      onSlideChange={(swiper) => {
-        console.log(swiper);
-        onSliderChange(swiper.realIndex);
-      }}
+      // onSlideChange={(swiper) => {
+      //   console.log(swiper);
+      //   onSliderChange(swiper.realIndex);
+      // }}
       onSwiper={(swiper) => console.log(swiper)}
       loop
       autoplay={{ delay: 5000 }}
@@ -34,7 +30,6 @@ const SwiperComponent = ({
       <SwiperSlide>
         <img src="../../public/Conversores.png" />
       </SwiperSlide>
-      ...
     </Swiper>
   );
 };

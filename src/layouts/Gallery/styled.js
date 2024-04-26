@@ -24,9 +24,10 @@ export const StyledGalleryGrid = styled.div`
             left: 0;
             width: 100%;
             padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(44, 40, 44, 0.9);
             color: #fff;
             text-align: center;
+            color: ${({theme}) => theme.palette.iron};
         }
     }
 

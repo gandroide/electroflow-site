@@ -120,12 +120,27 @@ const Header = () => {
         <StyledHeaderNavigationList>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationLink to="/budget">
-              Link 1
+              Missão
             </StyledHeaderNavigationLink>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationLink to="/budget">
-              Link 1
+              Portfólio
+            </StyledHeaderNavigationLink>
+          </StyledHeaderNavigationItem>
+          <StyledHeaderNavigationItem>
+            <StyledHeaderNavigationLink to="/budget">
+              Produtos
+            </StyledHeaderNavigationLink>
+          </StyledHeaderNavigationItem>
+          <StyledHeaderNavigationItem>
+            <StyledHeaderNavigationLink to="/budget">
+              Equipa
+            </StyledHeaderNavigationLink>
+          </StyledHeaderNavigationItem>
+          <StyledHeaderNavigationItem>
+            <StyledHeaderNavigationLink to="/budget">
+              Contacto
             </StyledHeaderNavigationLink>
           </StyledHeaderNavigationItem>
         </StyledHeaderNavigationList>

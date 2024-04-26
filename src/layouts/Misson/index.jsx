@@ -1,9 +1,11 @@
 import react from 'react';
 
 import { Grid, GridItem } from '../../components/Grid'; 
+import { GiProgression } from "react-icons/gi";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
-import { StyledMissonSection, StyledMissonContainer, StyledMissonText, StyledMissonSeparator } from "./styled";
-import { StyledSecondaryTitle, StyledSecondaryTitleEmphasis } from '../../styles';
+import { StyledMissonSection, StyledMissonContainer, StyledMissonText, StyledMissonSeparator, StyledMissonIcon } from "./styled";
+import { StyledSecondaryTitle } from '../../styles';
 
 const Misson = () => {
     return (
@@ -11,8 +13,11 @@ const Misson = () => {
             <Grid>
                 <GridItem columns={{ lg: 5 }}>
                     <StyledMissonContainer>
+                    <StyledMissonIcon>
+                            <VscWorkspaceTrusted />
+                        </StyledMissonIcon>
                         <StyledSecondaryTitle>
-                            A nossa <StyledSecondaryTitleEmphasis>missão</StyledSecondaryTitleEmphasis>
+                            Missão
                         </StyledSecondaryTitle>
                         <StyledMissonText>
                             A Electroflow tem como principal missão satisfazer as necessidades
@@ -27,7 +32,10 @@ const Misson = () => {
                 </GridItem>
                 <GridItem columns={{ lg: 5 }}>
                     <StyledMissonContainer>
-                        <StyledSecondaryTitle>A nossa <StyledSecondaryTitleEmphasis>visão</StyledSecondaryTitleEmphasis></StyledSecondaryTitle>
+                        <StyledMissonIcon>
+                            <GiProgression />
+                        </StyledMissonIcon>
+                        <StyledSecondaryTitle>Visão</StyledSecondaryTitle>
                         <StyledMissonText>
                             Pretendemos destacar-nos como referência em oferta integrada de
                             projeto, instalação e manutenção das áreas de negócio em que estamos

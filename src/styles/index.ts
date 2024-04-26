@@ -12,7 +12,7 @@ export const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid red;
+    border-top: 3px solid ${({theme}) => theme.palette.thunder};
     padding: 50px 20px;
     position: relative;
 
@@ -54,26 +54,25 @@ export const StyledSecondaryTitle = styled.h2`
     margin-bottom: 50px;
     line-height: 42px;
     text-align: center;
-
-    @media screen and (min-width: 1200px) {
-        margin-bottom: 75px;
-    }
-`;
-
-export const StyledSecondaryTitleEmphasis = styled.span`
     text-transform: uppercase;
     position: relative;
+    color: ${({theme}) => theme.palette.boston};
+    display: inline-block;
 
     &:before {
         content: '';
         position: absolute;
         bottom: -5px;
-        left: -5px;
-        width: calc(100% + 10px);
+        left: -10px;
+        width: calc(100% + 20px);
         height: 3px;
-        background-color: red;
+        background-color: ${({theme}) => theme.palette.boston};
     }
-`
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 75px;
+    }
+`;
 
 export const StyledTertiaryTtile = styled.h3`
     font-size: 18px;
@@ -98,8 +97,22 @@ export const StyledHomeContainer = styled.div`
 `;
 
 export const StyledPrimaryTitle = styled.h1`
-    font-size: 124px;
-    margin: 112px 0;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    color: ${({theme}) => theme.palette.thunder};
+    position: relative;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: 4px;
+        background-color: ${({theme}) => theme.palette.thunder};
+    }
 `;
 
 export const StyledQuaternaryTitle = styled.h4`

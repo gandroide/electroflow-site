@@ -1,5 +1,4 @@
 import react from 'react';
-import { TfiUser } from 'react-icons/tfi';
 
 import {
   StyledContactCardContainer,
@@ -29,7 +28,6 @@ const ContactCard = () => {
       <StyledContactCardHeaderContainer>
         <StyledContactCardImgContainer>
           <StyledContactCardImg>
-            {/* <TfiUser size={80} /> */}
             <img src={Mariana} />
           </StyledContactCardImg>
         </StyledContactCardImgContainer>

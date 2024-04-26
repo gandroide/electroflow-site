@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { StyledSection } from '../../styles';
 
-export const StyledMissonContainer = styled.div``;
+export const StyledMissonContainer = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+`;
 
 export const StyledMissonSection = styled(StyledSection)`
     min-height: unset;
@@ -9,6 +13,7 @@ export const StyledMissonSection = styled(StyledSection)`
 
 export const StyledMissonText = styled.p`
     text-align: center;
+    color: ${({theme}) => theme.palette.thunder};
 
     @media screen and (min-width: 992px) {
         font-size: 18px;
@@ -22,12 +27,18 @@ export const StyledMissonText = styled.p`
 export const StyledMissonSeparator = styled.div`
     width: 50%;
     height: 2px;
-    background-color: red;
+    background-color: ${({theme}) => theme.palette.boston};
     margin: 75px auto;
 
     @media screen and (min-width: 992px) {
-        width: 2px;
+        width: 3px;
         height: 100%;
         margin: 0 auto;
     }
+`;
+
+export const StyledMissonIcon = styled.span`
+    font-size: 128px;
+    margin-bottom: 64px;
+    color: ${({theme}) => theme.palette.boston};
 `;
