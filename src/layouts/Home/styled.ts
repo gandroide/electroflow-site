@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { StyledPrimaryTitle, StyledSection } from "../../styles";
 
 export const StyledHomeSection = styled(StyledSection)`
-    /* position: relative; */
+    position: relative;
     height: calc(100vh - 65px);
     min-height: unset;
     width: 100%;
-    background-color: #e2e2e2;
+    /* background-color: #e2e2e2; */
 
     display: flex;
     flex-direction: row;
@@ -30,11 +30,26 @@ export const StyledHomeSection = styled(StyledSection)`
 `;
 
 export const StyledHomeContentText = styled.p`
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 16px;
     color: ${({theme}) => theme.palette.thunder};
+    width: 100%;
+    text-align: center;
 
     &:not(:last-of-type) {
         margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
     }
 `;
 
@@ -44,8 +59,32 @@ export const StyledHomeContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    padding: 64px;
+    /* width: 40%; */
+    /* padding: 64px; */
+    padding: 0 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+
+    @media screen and (min-width: 768px) {
+        padding: 0 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 0 100px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 40%;
+        position: unset;
+        background: #e2e2e2;
+        padding: 0 64px;
+    }
 
     & ${StyledPrimaryTitle},
     & ${StyledHomeContentText} {
@@ -89,18 +128,24 @@ export const StyledHomeContent = styled.div`
 
 export const StyledHomeSlider = styled.div`
     height: 100%;
-    width: 60%;
+    /* width: 60%; */
+
+    width: 100%;
+    z-index: -1;
+
+    @media screen and (min-width: 1400px) {
+        width: 60%;
+    }
 `;
 
 export const StyledAnimatedTextContainer = styled.span`
     display: block;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px 0 40px;
 `;
 
 export const StyledHomeContentAnimated = styled.span<{ $first: boolean }>`
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: ${({theme}) => theme.palette.boston};
     display: block;
@@ -108,7 +153,21 @@ export const StyledHomeContentAnimated = styled.span<{ $first: boolean }>`
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 24px;
+    }
 
     &.teste-enter {
         opacity: 0;

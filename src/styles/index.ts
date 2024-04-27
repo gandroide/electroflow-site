@@ -113,12 +113,13 @@ export const StyledHomeContainer = styled.div`
 `;
 
 export const StyledPrimaryTitle = styled.h1`
-    font-size: 56px;
+    /* font-size: 56px; */
     font-weight: bold;
     margin-bottom: 80px;
     color: ${({theme}) => theme.palette.thunder};
     position: relative;
     display: inline-block;
+    font-size: 40px;
 
     &:before {
         content: '';
