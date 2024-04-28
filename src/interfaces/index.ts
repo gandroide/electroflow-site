@@ -99,6 +99,17 @@ export type ModalProps = {
   isOpen: boolean;
 };
 
+export type ContactCardData = {
+  id: number;
+  name: string;
+  position: string;
+  email: string;
+  phone: string;
+  photo: string;
+}
+
+export type ContactCardProps = Omit<ContactCardData, 'id'>;
+
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
   return input.type === 'text';

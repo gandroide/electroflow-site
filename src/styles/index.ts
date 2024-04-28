@@ -6,6 +6,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
     outline: none;
 
+    input:focus {
+        outline: none;
+    }
+
     & .animated-enter {
         opacity: 0;
         transform: translateY(200px);
@@ -28,7 +32,7 @@ export const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 3px solid ${({theme}) => theme.palette.thunder};
+    border-top: 1px solid ${({theme}) => theme.palette.thunder};
     padding: 50px 20px;
     position: relative;
 

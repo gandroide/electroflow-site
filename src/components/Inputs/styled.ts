@@ -19,11 +19,14 @@ export const StyledInputContainer = styled.div<StyledInputErrorProps>`
     }}
 `;
 
-export const StyledInputLabel = styled.label``;
+export const StyledInputLabel = styled.label`
+    color: ${({theme}) => theme.palette.boston};
+    font-weight: bold;
+`;
 
 export const StyledInputContent = styled.div`
     display: flex;
-    border: 1px solid #cbcbcb;
+    border: 1px solid ${({theme}) => theme.palette.thunder};
     border-radius: 4px;
     overflow: hidden;
 `;

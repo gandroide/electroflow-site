@@ -9,7 +9,7 @@ export const StyledHeaderContainer = styled.header`
     height: 65px;
     display: flex;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: rgba(0, 122, 169, 0.6);
     padding: 0 20px;
 
     @media screen and (min-width: 768px) {
@@ -104,7 +104,7 @@ export const StyledHeaderNavigationLink = styled(NavLink)`
     padding: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    color: ${({theme}) => theme.palette.boston};
+    color: ${({theme}) => theme.palette.thunder};
 
     &:hover {
         background: #cbcbcb;

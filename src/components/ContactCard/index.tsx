@@ -1,4 +1,4 @@
-import react from 'react';
+import react, { FC } from 'react';
 
 import {
   StyledContactCardContainer,
@@ -20,44 +20,43 @@ import {
   StyledContactCardTopTrapezoid,
 } from './styled';
 
-import Mariana from '../../assets/imgs/mariana.jpg';
+import { ContactCardProps } from '../../interfaces';
 
-const ContactCard = () => {
+const ContactCard: FC<ContactCardProps> = ({
+  name,
+  position,
+  email,
+  phone,
+  photo,
+}) => {
   return (
     <StyledContactCardContainer>
       <StyledContactCardHeaderContainer>
         <StyledContactCardImgContainer>
           <StyledContactCardImg>
-            <img src={Mariana} />
+            <img src={photo} />
           </StyledContactCardImg>
         </StyledContactCardImgContainer>
         <StyledContactCardHeader>
           <StyledContactCardTopTrapezoid />
-          <StyledContactCardName>Gervásio Fernandes</StyledContactCardName>
+          <StyledContactCardName>{name}</StyledContactCardName>
           <StyledContactCardHeaderSeparator />
-          <StyledContactCardPosition>
-            Automação e Manutenção Industrial
-          </StyledContactCardPosition>
+          <StyledContactCardPosition>{position}</StyledContactCardPosition>
         </StyledContactCardHeader>
       </StyledContactCardHeaderContainer>
       <StyledContactCardContent>
         <StyledContactCardInfoContainer>
           <StyledContactCardInfoContent>
             <StyledContactCardInfoLabel>Telefone</StyledContactCardInfoLabel>
-            <StyledContactCardInfoValue>963048614</StyledContactCardInfoValue>
+            <StyledContactCardInfoValue>{phone}</StyledContactCardInfoValue>
           </StyledContactCardInfoContent>
           <StyledContactCardInfoContent>
             <StyledContactCardInfoLabel>Email</StyledContactCardInfoLabel>
-            <StyledContactCardInfoValue>
-              gervasio.fernandes@electroflow.pt
-            </StyledContactCardInfoValue>
+            <StyledContactCardInfoValue>{email}</StyledContactCardInfoValue>
           </StyledContactCardInfoContent>
         </StyledContactCardInfoContainer>
       </StyledContactCardContent>
       <StyledContactCardLeftBorder />
-      {/* <StyledContactCardImgContainer>
-        <StyledContactCardImg />
-      </StyledContactCardImgContainer> */}
       <StyledContactCardRightTrapezoidSmall />
       <StyledContactCardRightTrapezoidBig />
     </StyledContactCardContainer>

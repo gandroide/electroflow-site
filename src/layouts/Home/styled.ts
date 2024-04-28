@@ -82,8 +82,9 @@ export const StyledHomeContent = styled.div`
     @media screen and (min-width: 1400px) {
         width: 40%;
         position: unset;
-        background: #e2e2e2;
+        background: rgba(158, 195, 224, 0.1);
         padding: 0 64px;
+        border-right: 1px solid ${({theme}) => theme.palette.thunder};
     }
 
     & ${StyledPrimaryTitle},

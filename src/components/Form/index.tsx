@@ -10,6 +10,12 @@ import {
 import { Grid, GridItem } from '../Grid';
 import RadioInput from '../Inputs/RadioInput';
 
+import {
+  StyledForm,
+  StyledFormButton,
+  StyledFormButtosContainer,
+} from './styled';
+
 const Form: FC<FormProps> = ({ inputs }) => {
   const { formInputs, formActions } = useFormInputs(inputs);
 
@@ -84,28 +90,12 @@ const Form: FC<FormProps> = ({ inputs }) => {
   };
 
   return (
-    <form style={{ width: '100%' }}>
+    <StyledForm>
       <Grid gap={20}>{generatedInputs()}</Grid>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          marginTop: '48px',
-        }}
-      >
-        <button
-          style={{
-            border: '1px solid blue',
-            padding: '8px 48px',
-            borderRadius: '4px',
-            background: 'blue',
-            color: '#fff',
-          }}
-        >
-          Send
-        </button>
-      </div>
-    </form>
+      <StyledFormButtosContainer>
+        <StyledFormButton>Send</StyledFormButton>
+      </StyledFormButtosContainer>
+    </StyledForm>
   );
 };
 

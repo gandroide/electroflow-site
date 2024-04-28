@@ -4,7 +4,8 @@ export const StyledContactCardContainer = styled.div`
     box-shadow: 0 0 10px #cbcbcb;
     /* padding: 30px 0 30px 60px; */
     position: relative;
-    padding: 20px 40px;
+    padding: 20px 60px;
+    color: ${({theme}) => theme.palette.thunder};
 
     @media screen and (min-width: 650px) {
         padding: 20px 60px;
@@ -14,17 +15,13 @@ export const StyledContactCardContainer = styled.div`
 export const StyledContactCardContent = styled.div``;
 
 export const StyledContactCardLeftBorder = styled.div`
-    background: ${({theme}) => theme.palette.thunder};
+    background: ${({theme}) => theme.palette.boston};
     clip-path: polygon(50% 0, 50% 30%, 100% 50%, 100% 100%, 0 100%, 0% 60%, 0 0);
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
+    width: 40px;
     height: 100%;
-
-    @media screen and (min-width: 650px) {
-        width: 40px;
-    }
 `;
 
 export const StyledContactCardHeader = styled.div`
@@ -51,10 +48,23 @@ export const StyledContactCardHeader = styled.div`
 export const StyledContactCardName = styled.p`
     font-size: 16px;
     font-weight: bold;
+
+    @media screen and (min-width: 992px) {
+        font-size: 18px;
+    }
 `;
 
 export const StyledContactCardPosition = styled.p`
     font-size: 14px;
+    text-align: center;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    @media screen and (min-width: 992px) {
+        font-size: 16px;
+    }
 `;
 
 export const StyledContactCardHeaderSeparator = styled.div`
@@ -78,10 +88,18 @@ export const StyledContactCardInfoLabel = styled.p`
     color: ${({theme}) => theme.palette.boston};;
     font-weight: bold;
     font-size: 14px;
+
+    @media screen and (min-width: 992px) {
+        font-size: 16px;
+    }
 `;
 
 export const StyledContactCardInfoValue = styled.p`
-    font-size: 14px;
+    font-size: 16px;
+
+    @media screen and (min-width: 992px) {
+        font-size: 18px;
+    }
 `;
 
 export const StyledContactCardTopTrapezoid = styled.div`
