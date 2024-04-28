@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledContactCardContainer = styled.div`
-    box-shadow: 0 0 10px #cbcbcb;
+    box-shadow: 0 0 10px -2px ${({theme}) => theme.palette.thunder};
     /* padding: 30px 0 30px 60px; */
     position: relative;
     padding: 20px 60px;

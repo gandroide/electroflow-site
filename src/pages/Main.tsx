@@ -18,42 +18,6 @@ import ContactUs from '../layouts/ContactUs';
 import Products from '../layouts/Products';
 import Home from '../layouts/Home';
 
-const formInputs: InputProps[] = [
-  {
-    id: 'name',
-    label: 'Nome',
-    value: '',
-    hasError: false,
-    errorMsg: '',
-    isRequired: true,
-    type: 'text',
-    columns: {
-      sm: 6,
-    },
-  },
-  {
-    id: 'email',
-    label: 'Email',
-    value: '',
-    hasError: false,
-    errorMsg: '',
-    isRequired: true,
-    type: 'text',
-    columns: {
-      sm: 6,
-    },
-  },
-  {
-    id: 'message',
-    label: 'Mensagem',
-    value: '',
-    hasError: false,
-    errorMsg: '',
-    isRequired: true,
-    type: 'textarea',
-  },
-];
-
 const homePageText = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
   'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
@@ -101,10 +65,7 @@ const Main: FC = () => {
         <Gallery />
       </StyledSection>
 
-      <StyledSection>
-        <StyledSecondaryTitle>Produtos</StyledSecondaryTitle>
-        <Products />
-      </StyledSection>
+      <Products />
 
       <StyledSection>
         <StyledSecondaryTitle>Equipa</StyledSecondaryTitle>
