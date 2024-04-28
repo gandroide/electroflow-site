@@ -17,6 +17,7 @@ import Contacts from '../layouts/Contacts';
 import ContactUs from '../layouts/ContactUs';
 import Products from '../layouts/Products';
 import Home from '../layouts/Home';
+import Services from '../layouts/Services';
 
 const homePageText = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
@@ -59,6 +60,7 @@ const Main: FC = () => {
       <div className="h-screen">cosas de la empresa! fotos y logros!</div> */}
 
       <Misson />
+      <Services />
 
       <StyledSection>
         <StyledSecondaryTitle>Portfólio</StyledSecondaryTitle>
