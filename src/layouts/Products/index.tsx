@@ -1,7 +1,7 @@
 import react from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 import Quadros from '../../assets/imgs/products/quadros.png';
 import Motoredutores from '../../assets/imgs/products/motoredutor.jpg';
@@ -19,6 +19,7 @@ import {
   StyledProductImageContainer,
   StyledProductName,
   StyledProductsSection,
+  StyledProductLink,
 } from './styled';
 import { StyledSecondaryTitle } from '../../styles';
 
@@ -28,11 +29,11 @@ const Products = () => {
       <StyledSecondaryTitle>Produtos</StyledSecondaryTitle>
       <StyledProductsSwiperContainer>
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
           slidesPerView={1}
           autoplay={{ delay: 3000 }}
           loop
-          // spaceBetween={10}
+          pagination
           breakpoints={{
             992: {
               slidesPerView: 2,
@@ -58,14 +59,11 @@ const Products = () => {
                     projeta, fabrica e monta quadros elétricos, tanto de
                     potência como de comando, de acordo com as especificações do
                     cliente, e utilizando componentes dos mais prestigiados
-                    fabricantes.
-                    <br />
-                    <br />
-                    Um quadro elétrico, ou de distribuição, é um equipamento
-                    elétrico destinado a receber energia elétrica de uma ou mais
-                    fontes de alimentação e distribui-las a um ou mais
-                    circuitos. Destinado a abrigar um ou mais dispositivos de
-                    proteção e/ou manobra e a conexão de condutores elétricos
+                    fabricantes. Um quadro elétrico, ou de distribuição, é um
+                    equipamento elétrico destinado a receber energia elétrica de
+                    uma ou mais fontes de alimentação e distribui-las a um ou
+                    mais circuitos. Destinado a abrigar um ou mais dispositivos
+                    de proteção e/ou manobra e a conexão de condutores elétricos
                     interligados a eles, a fim de distribuir a energia elétrica
                     aos diversos circuitos. Em qualquer instalação elétrica,
                     devemos saber como realizar os procedimentos correspondentes
@@ -75,22 +73,8 @@ const Products = () => {
                     tensão) e NR-10 (segurança em instalações e serviços em
                     eletricidade).
                   </StyledProductDescription>
-                  {/* <StyledProductDescription>
-                    Um quadro elétrico, ou de distribuição, é um equipamento
-                    elétrico destinado a receber energia elétrica de uma ou mais
-                    fontes de alimentação e distribui-las a um ou mais
-                    circuitos. Destinado a abrigar um ou mais dispositivos de
-                    proteção e/ou manobra e a conexão de condutores elétricos
-                    interligados a eles, a fim de distribuir a energia elétrica
-                    aos diversos circuitos. Em qualquer instalação elétrica,
-                    devemos saber como realizar os procedimentos correspondentes
-                    à execução de um projeto elaborado previamente, em
-                    conformidade com as especificações previstas na NBR 5410
-                    (norma que regulamenta as instalações elétricas em baixa
-                    tensão) e NR-10 (segurança em instalações e serviços em
-                    eletricidade).
-                  </StyledProductDescription> */}
                 </StyledProductDescriptionContainer>
+                <StyledProductLink to="">Saber mais</StyledProductLink>
               </StyledProductContent>
             </StyledProductContainer>
           </SwiperSlide>
@@ -106,29 +90,24 @@ const Products = () => {
                 <StyledProductDescriptionContainer>
                   <StyledProductDescription>
                     Nesta gama de produtos somos distribuidores exclusivos da
-                    SEW.
-                  </StyledProductDescription>
-                  <StyledProductDescription>
-                    O sistema modular de motorredutores SEW está orientado para
-                    uma panóplia de áreas de aplicação. Seleccione o
+                    SEW. O sistema modular de motorredutores SEW está orientado
+                    para uma panóplia de áreas de aplicação. Seleccione o
                     accionamento ideal para si, entre os motorredutores
                     standard, de sistema de suporte suspenso elétrico,
                     servomotoredutores, motoredutores de ajuste, em aço
-                    inoxidável ou à prova de explosão.
-                  </StyledProductDescription>
-                  <StyledProductDescription>
-                    A gama de funções compacta, o manuseamento simples e uma
-                    integração rápida na aplicação são características que
-                    distinguem os conversores de frequência MOVITRAC® LTE-B.
-                    Estão disponíveis em 3 tamanhos na gama de potências de 0,37
-                    kW até 7,5 kW para as tensões de alimentação de 115 V, 230 V
-                    e 400 V. Concebido e desenvolvido para o controlo da
-                    velocidade de motores assíncronos sem encoder, o conversor
-                    realiza de forma fiável as suas aplicações de transporte
-                    simples. Especialmente em pequenos tranportadores modulares,
-                    em ventiladores e bombas.
+                    inoxidável ou à prova de explosão. A gama de funções
+                    compacta, o manuseamento simples e uma integração rápida na
+                    aplicação são características que distinguem os conversores
+                    de frequência MOVITRAC® LTE-B. Estão disponíveis em 3
+                    tamanhos na gama de potências de 0,37 kW até 7,5 kW para as
+                    tensões de alimentação de 115 V, 230 V e 400 V. Concebido e
+                    desenvolvido para o controlo da velocidade de motores
+                    assíncronos sem encoder, o conversor realiza de forma fiável
+                    as suas aplicações de transporte simples. Especialmente em
+                    pequenos tranportadores modulares, em ventiladores e bombas.
                   </StyledProductDescription>
                 </StyledProductDescriptionContainer>
+                <StyledProductLink to="">Saber mais</StyledProductLink>
               </StyledProductContent>
             </StyledProductContainer>
           </SwiperSlide>
@@ -145,18 +124,15 @@ const Products = () => {
                   <StyledProductDescription>
                     Fornecemos todo o tipo de bombas para abastecimento
                     doméstico, industrial, piscina, rega ou qualquer outro tipo
-                    de situação.
-                  </StyledProductDescription>
-                  <StyledProductDescription>
-                    A escolha do tipo de bomba de água ou de outro fluído requer
-                    conhecer o caudal e a pressão pretendida no ponto mais
-                    desfavorável, seja para abastecimento doméstico, industrial,
-                    piscina, rega ou qualquer outro tipo de situação.
-                  </StyledProductDescription>
-                  <StyledProductDescription>
-                    Como principais parceiros temos as Marcas CAPRARI e a EBARA.
+                    de situação. A escolha do tipo de bomba de água ou de outro
+                    fluído requer conhecer o caudal e a pressão pretendida no
+                    ponto mais desfavorável, seja para abastecimento doméstico,
+                    industrial, piscina, rega ou qualquer outro tipo de
+                    situação. Como principais parceiros temos as Marcas CAPRARI
+                    e a EBARA.
                   </StyledProductDescription>
                 </StyledProductDescriptionContainer>
+                <StyledProductLink to="">Saber mais</StyledProductLink>
               </StyledProductContent>
             </StyledProductContainer>
           </SwiperSlide>
@@ -171,8 +147,6 @@ const Products = () => {
                   <StyledProductDescription>
                     Nesta área de negócio somos distribuidores e de assistência
                     técnica aprovados das Marcas DAIKIN, SAMSUNG e TOYOTOMI.
-                  </StyledProductDescription>
-                  <StyledProductDescription>
                     O aquecimento, ventilação e ar condicionado (AVAC) refere-se
                     a uma gama de equipamentos que tem como finalidade
                     climatizar diversos ambientes para, assim, garantir o
@@ -184,6 +158,7 @@ const Products = () => {
                     poupança energética.
                   </StyledProductDescription>
                 </StyledProductDescriptionContainer>
+                <StyledProductLink to="">Saber mais</StyledProductLink>
               </StyledProductContent>
             </StyledProductContainer>
           </SwiperSlide>
@@ -200,19 +175,17 @@ const Products = () => {
                     conversão direta da luz em eletricidade por meio do efeito
                     fotovoltaico. A célula fotovoltaica, um dispositivo
                     fabricado com material semicondutor, é a unidade fundamental
-                    desse processo de conversão.
-                  </StyledProductDescription>
-                  <StyledProductDescription>
-                    Este tipo de energia usa-se para alimentar uma grande
-                    variedade de aplicativos e aparelhos autónomos, para
-                    abastecer refúgios ou moradias isoladas da rede elétrica e
-                    para produzir eletricidade a grande escala através de redes
-                    de distribuição. Devido à crescente demanda de energias
-                    renováveis, a fabricação de células solares e instalações
-                    fotovoltaicas tem avançado consideravelmente nos últimos
-                    anos.
+                    desse processo de conversão. Este tipo de energia usa-se
+                    para alimentar uma grande variedade de aplicativos e
+                    aparelhos autónomos, para abastecer refúgios ou moradias
+                    isoladas da rede elétrica e para produzir eletricidade a
+                    grande escala através de redes de distribuição. Devido à
+                    crescente demanda de energias renováveis, a fabricação de
+                    células solares e instalações fotovoltaicas tem avançado
+                    consideravelmente nos últimos anos.
                   </StyledProductDescription>
                 </StyledProductDescriptionContainer>
+                <StyledProductLink to="">Saber mais</StyledProductLink>
               </StyledProductContent>
             </StyledProductContainer>
           </SwiperSlide>

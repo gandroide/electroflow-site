@@ -110,6 +110,20 @@ export type ContactCardData = {
 
 export type ContactCardProps = Omit<ContactCardData, 'id'>;
 
+export type ServiceCardItemData = {
+  id: number;
+  text: string;
+}
+
+export type ServiceCardData = {
+  id: number;
+  img: string;
+  title: string;
+  items: ServiceCardItemData[];
+}
+
+export type ServiceCardProps = Omit<ServiceCardData, 'id'>;
+
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
   return input.type === 'text';

@@ -35,7 +35,7 @@ export const StyledModalBackdrop = styled.div`
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     z-index: -1;
 `;
 
@@ -48,6 +48,9 @@ export const StyledModalContainer = styled.div`
     transform: translate(-50%, -50%);
     max-height: calc(100% - 40px);
     overflow: auto;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 4px;
 `;
 
 export const StyledModalHeader = styled.div`
@@ -58,6 +61,9 @@ export const StyledModalHeader = styled.div`
 export const StyledModalTitle = styled.h3`
     margin-right: 100px;
     white-space: nowrap;
+    color: ${({theme}) => theme.palette.boston};
+    font-size: 24px;
+    font-weight: bold;
 `;
 
 export const StyledModalContent = styled.div``;
