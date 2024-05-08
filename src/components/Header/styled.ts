@@ -91,7 +91,7 @@ export const StyledHeaderNavigationList = styled.ul`
         justify-content: flex-end;
 
         & ${StyledHeaderNavigationItem}:not(:last-child) {
-            margin-right: 40px;
+            margin-right: 20px;
         }
     }
 `;
@@ -105,9 +105,16 @@ export const StyledHeaderNavigationLink = styled(NavLink)`
     font-size: 18px;
     font-weight: bold;
     color: ${({theme}) => theme.palette.thunder};
+    position: relative;
 
-    &:hover {
-        background: #cbcbcb;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: ${({theme}) => theme.palette.thunder};;
     }
 `;
 
@@ -119,9 +126,27 @@ export const StyledHeaderNavigationAnchor = styled.a`
     font-size: 18px;
     font-weight: bold;
     color: ${({theme}) => theme.palette.thunder};
+    position: relative;
 
-    &:hover {
-        background: #cbcbcb;
+    @media screen and (min-width: 768px) {
+        padding: 0 10px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            transition: width 0.2s linear;
+            height: 2px;
+            background-color: ${({theme}) => theme.palette.thunder};;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 `;
 
