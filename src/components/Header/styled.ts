@@ -111,6 +111,20 @@ export const StyledHeaderNavigationLink = styled(NavLink)`
     }
 `;
 
+export const StyledHeaderNavigationAnchor = styled.a`
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: ${({theme}) => theme.palette.thunder};
+
+    &:hover {
+        background: #cbcbcb;
+    }
+`;
+
 export const StyledLanguageDropdownContainer = styled.div`
     position: relative;
     margin-right: 20px;

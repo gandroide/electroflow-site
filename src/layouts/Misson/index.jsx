@@ -17,7 +17,7 @@ const Misson = () => {
     const isVisionVisible = useIntersectionObserver({ ref: visionRef });
 
     return (
-        <StyledMissonSection>
+        <StyledMissonSection id="mission">
             <Grid>
                 <GridItem columns={{ lg: 5 }}>
                     <CSSTransition in={isMissonVisible} timeout={750} classNames="animated">

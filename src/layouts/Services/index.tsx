@@ -68,7 +68,7 @@ const servicesData: ServiceCardData[] = [
 
 const Services = () => {
   return (
-    <StyledServicesSection>
+    <StyledServicesSection id="services">
       <StyledSecondaryTitle>Serviços</StyledSecondaryTitle>
       <StyledServicesContainer>
         {servicesData.map((service) => (

@@ -19,6 +19,7 @@ import {
   StyledLanguageDropdownOption,
   StyledLanguageDropdownValue,
   StyledLanguageDropdownArrow,
+  StyledHeaderNavigationAnchor,
 } from './styled';
 
 import { Language } from '../../interfaces';
@@ -119,29 +120,34 @@ const Header = () => {
         </StyledHeaderNavigationHeader>
         <StyledHeaderNavigationList>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationLink to="/budget">
+            <StyledHeaderNavigationAnchor href="#mission">
               Missão
-            </StyledHeaderNavigationLink>
+            </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationLink to="/budget">
+            <StyledHeaderNavigationAnchor href="#services">
+              Serviços
+            </StyledHeaderNavigationAnchor>
+          </StyledHeaderNavigationItem>
+          <StyledHeaderNavigationItem>
+            <StyledHeaderNavigationAnchor href="#gallery">
               Portfólio
-            </StyledHeaderNavigationLink>
+            </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationLink to="/budget">
+            <StyledHeaderNavigationAnchor href="#products">
               Produtos
-            </StyledHeaderNavigationLink>
+            </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationLink to="/budget">
+            <StyledHeaderNavigationAnchor href="#team">
               Equipa
-            </StyledHeaderNavigationLink>
+            </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationLink to="/budget">
+            <StyledHeaderNavigationAnchor href="#contact">
               Contacto
-            </StyledHeaderNavigationLink>
+            </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
         </StyledHeaderNavigationList>
       </StyledHeaderNavigation>

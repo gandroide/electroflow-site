@@ -25,7 +25,7 @@ import { StyledSecondaryTitle } from '../../styles';
 
 const Products = () => {
   return (
-    <StyledProductsSection>
+    <StyledProductsSection id="products">
       <StyledSecondaryTitle>Produtos</StyledSecondaryTitle>
       <StyledProductsSwiperContainer>
         <Swiper

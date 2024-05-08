@@ -65,7 +65,7 @@ const formInputs: InputProps[] = [
 
 const ContactUs = () => {
   return (
-    <StyledContactUsSection>
+    <StyledContactUsSection id="contact">
       <StyledContactUsOverlay $background={Map} />
       <StyledContactUsContainer>
         <StyledSecondaryTitle>Contacte-nos</StyledSecondaryTitle>
