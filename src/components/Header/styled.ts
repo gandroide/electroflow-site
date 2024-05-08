@@ -47,12 +47,12 @@ export const StyledHeaderNavigationButton = styled.button<StyledHeaderNavigation
 export const StyledHeaderNavigation = styled.nav<StyledHeaderNavigationProps>`
     position: fixed;
     top: 0;
-    left: 0;
+    right: -100%;
     width: 100%;
     height: 100%;
     background: #fff;
     z-index: 10;
-    transform: translateX(${({$isOpen}) => $isOpen ? '0' : '100%'});
+    transform: translateX(${({$isOpen}) => $isOpen ? '-100%' : '100%'});
     transition: transform 0.5s linear;
 
     @media screen and (min-width: 768px) {
