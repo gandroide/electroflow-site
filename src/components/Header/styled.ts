@@ -18,8 +18,9 @@ export const StyledHeaderContainer = styled.header`
     }
 `;
 
-export const StyledHeaderLogoContainer = styled.span`
+export const StyledHeaderLogoContainer = styled.span<StyledHeaderNavigationProps>`
     width: 200px;
+    z-index: ${({$isOpen}) => $isOpen ? 100 : 0};
 `;
 
 export const StyledHeaderLogo = styled.img``;
@@ -35,7 +36,9 @@ export const StyledHeaderContent = styled.div`
     }
 `;
 
-export const StyledHeaderNavigationButton = styled.button`
+export const StyledHeaderNavigationButton = styled.button<StyledHeaderNavigationProps>`
+    z-index: ${({$isOpen}) => $isOpen ? 100 : 0};
+
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -82,13 +85,18 @@ export const StyledHeaderNavigationItem = styled.li``;
 export const StyledHeaderNavigationList = styled.ul`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 64px;
+    height: calc(100% - 64px);
+    border-top: 1px solid ${({theme}) => theme.palette.thunder};
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
+        padding-top: 0;
         margin-top: 0;
         width: 100%;
         justify-content: flex-end;
+        border-top: unset;
 
         & ${StyledHeaderNavigationItem}:not(:last-child) {
             margin-right: 20px;
@@ -122,14 +130,15 @@ export const StyledHeaderNavigationAnchor = styled.a`
     text-align: center;
     width: 100%;
     display: block;
-    padding: 10px 0;
-    font-size: 18px;
+    padding: 20px 0;
     font-weight: bold;
     color: ${({theme}) => theme.palette.thunder};
     position: relative;
+    font-size: 24px;
 
     @media screen and (min-width: 768px) {
         padding: 0 10px;
+        font-size: 18px;
 
         &::after {
             content: '';

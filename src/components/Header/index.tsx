@@ -102,50 +102,65 @@ const Header = () => {
 
   return (
     <StyledHeaderContainer>
-      <StyledHeaderLogoContainer>
+      <StyledHeaderLogoContainer $isOpen={isOpen}>
         <img src={Logo} />
       </StyledHeaderLogoContainer>
       <StyledHeaderContent>
         <LanguageDropdown />
-        <StyledHeaderNavigationButton onClick={toggleOpenHandler}>
+        <StyledHeaderNavigationButton
+          onClick={toggleOpenHandler}
+          $isOpen={isOpen}
+        >
           <TfiMenu />
         </StyledHeaderNavigationButton>
       </StyledHeaderContent>
       <StyledHeaderNavigation $isOpen={isOpen}>
-        <StyledHeaderNavigationHeader>
-          <StyledHeaderLogoContainer>Logo</StyledHeaderLogoContainer>
-          <StyledHeaderNavigationCloseButton onClick={toggleOpenHandler}>
-            <TfiClose />
-          </StyledHeaderNavigationCloseButton>
-        </StyledHeaderNavigationHeader>
         <StyledHeaderNavigationList>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationAnchor href="#mission">
+            <StyledHeaderNavigationAnchor
+              href="#mission"
+              onClick={toggleOpenHandler}
+            >
               Missão
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationAnchor href="#services">
+            <StyledHeaderNavigationAnchor
+              href="#services"
+              onClick={toggleOpenHandler}
+            >
               Serviços
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationAnchor href="#gallery">
+            <StyledHeaderNavigationAnchor
+              href="#gallery"
+              onClick={toggleOpenHandler}
+            >
               Portfólio
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationAnchor href="#products">
+            <StyledHeaderNavigationAnchor
+              href="#products"
+              onClick={toggleOpenHandler}
+            >
               Produtos
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationAnchor href="#team">
+            <StyledHeaderNavigationAnchor
+              href="#team"
+              onClick={toggleOpenHandler}
+            >
               Equipa
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationAnchor href="#contact">
+            <StyledHeaderNavigationAnchor
+              href="#contact"
+              onClick={toggleOpenHandler}
+            >
               Contacto
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
