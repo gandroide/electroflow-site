@@ -1,10 +1,16 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        font-family: "Source Sans 3";
+        font-size: ${({theme}) => theme.fonts.text.small};
+        color: ${({theme}) => theme.palette.thunder};
+        line-height: 26px;
+    }
 
     input:focus {
         outline: none;
@@ -24,6 +30,18 @@ export default createGlobalStyle`
     & .animated-enter-done {
         transform: translateY(0);
         opacity: 1;
+    }
+
+    @media screen and (min-width: 992px) {
+        * {
+            font-size: ${({theme}) => theme.fonts.text.medium};
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        * {
+            font-size: ${({theme}) => theme.fonts.text.big};
+        }
     }
 `;
 

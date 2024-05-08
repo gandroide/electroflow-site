@@ -8,7 +8,6 @@ export const StyledGalleryGrid = styled.div`
     gap: 10px;
 
     & > div {
-        /* height: 200px; */
         border: 1px solid #cbcbcb;
         position: relative;
 
@@ -24,10 +23,9 @@ export const StyledGalleryGrid = styled.div`
             left: 0;
             width: 100%;
             padding: 10px;
-            background: rgba(44, 40, 44, 0.9);
+            background: rgba(31, 53, 65, 0.9);
             color: #fff;
             text-align: center;
-            color: ${({theme}) => theme.palette.iron};
         }
     }
 

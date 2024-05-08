@@ -9,11 +9,11 @@ export const StyledHeaderContainer = styled.header`
     height: 65px;
     display: flex;
     align-items: center;
-    background-color: rgba(0, 122, 169, 0.6);
+    background-color: rgba(0, 122, 169, 0.3);
     padding: 0 20px;
 
     @media screen and (min-width: 768px) {
-        height: 80px;
+        height: 70px;
         padding: 0 40px;
     }
 `;

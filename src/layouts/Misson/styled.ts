@@ -11,6 +11,7 @@ export const StyledMissonContainer = styled.div`
 
 export const StyledMissonSection = styled(StyledSection)`
     min-height: unset;
+    overflow: hidden;
 `;
 
 export const StyledMissonText = styled.p`
@@ -40,7 +41,10 @@ export const StyledMissonSeparator = styled.div`
 `;
 
 export const StyledMissonIcon = styled.span`
-    font-size: 128px;
     margin-bottom: 64px;
-    color: ${({theme}) => theme.palette.boston};
+
+    & svg {
+        font-size: 128px;
+        fill: ${({theme}) => theme.palette.boston};
+    }
 `;

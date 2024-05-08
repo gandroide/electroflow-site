@@ -9,7 +9,7 @@ export const StyledServiceItem = styled.div`
     opacity: 0;
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 32px;
     }
 
     @media screen and (min-width: 768px) {
@@ -127,6 +127,7 @@ export const StyledServiceTitle = styled.h3`
     text-align: center;
     font-size: 24px;
     margin-bottom: 24px;
+    font-weight: bold;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 48px;
@@ -141,6 +142,7 @@ export const StyledServiceListItem = styled.li`
     & svg {
         min-width: 24px;
         height: 24px;
+        fill: ${({theme}) => theme.palette.boston};
     }
 
     &:not(:last-child) {

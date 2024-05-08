@@ -25,7 +25,7 @@ export const StyledHomeSection = styled(StyledSection)`
     }
 
     @media screen and (min-width: 768px) {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 70px);
     }
 `;
 

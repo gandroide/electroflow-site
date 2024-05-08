@@ -7,6 +7,17 @@ declare module 'styled-components' {
             iron: string;
             boston: string;
             picton: string;
+        },
+        fonts: {
+            text: {
+                small: string;
+                medium: string;
+                big: string;
+            },
+            h2: {
+                small: string;
+                big: string;
+            }
         }
     }
 }
