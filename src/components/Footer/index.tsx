@@ -32,11 +32,7 @@ const Footer = () => {
           {t('translations.footer.privacyPolicyTitle')}
         </StyledLinkButton>
       </StyledFooterContent>
-      <Modal
-        closeCallback={handleCloseCallback}
-        isOpen={open}
-        title="Política de privacidade da Electroflow"
-      >
+      <Modal closeCallback={handleCloseCallback} isOpen={open}>
         <PrivacyPolicy />
       </Modal>
     </StyledFooter>

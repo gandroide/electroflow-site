@@ -16,6 +16,14 @@ export const theme: DefaultTheme = {
         h2: {
             small: '40px',
             big: '56px'
+        },
+        h3: {
+            small: '32px',
+            big: '40px'
+        },
+        h4: {
+            small: '18px',
+            big: '24px'
         }
     }
 }

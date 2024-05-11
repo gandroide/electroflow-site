@@ -9,11 +9,15 @@ import {
   StyledPrivacyPolicyListItemIdentifier,
   StyledPrivacyPolicyListItemText,
   StyledPrivacyPolicyDateText,
+  StyledPrivacyPolicyMainTitle,
 } from './styled';
 
 const PrivacyPolicy = () => {
   return (
     <StyledPrivacyPolicyContainer>
+      <StyledPrivacyPolicyMainTitle>
+        Política de privacidade da Electroflow
+      </StyledPrivacyPolicyMainTitle>
       <StyledPrivacyPolicyDateText>
         Data de emissão: Abril de 2022
       </StyledPrivacyPolicyDateText>

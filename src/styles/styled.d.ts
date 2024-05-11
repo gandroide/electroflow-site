@@ -17,6 +17,14 @@ declare module 'styled-components' {
             h2: {
                 small: string;
                 big: string;
+            },
+            h3: {
+                small: string;
+                big: string;
+            },
+            h4: {
+                small: string;
+                big: string;
             }
         }
     }

@@ -94,7 +94,6 @@ export type GridItemProps = {
 };
 
 export type ModalProps = {
-  title: string;
   children: ReactNode;
   closeCallback: () => void;
   isOpen: boolean;

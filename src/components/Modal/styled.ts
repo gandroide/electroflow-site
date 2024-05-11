@@ -7,6 +7,10 @@ export const StyledModal = styled.div`
     right: 0;
     bottom: 0;
     z-index: 10;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /* Scroll bar stylings */
     &::-webkit-scrollbar {
@@ -32,38 +36,37 @@ export const StyledModal = styled.div`
 `;
 
 export const StyledModalBackdrop = styled.div`
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: -1;
+    top: 0;
+    left: 0;
 `;
 
 export const StyledModalContainer = styled.div`
     background: #fff;
     padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-height: calc(100% - 40px);
+    max-height: 100%;
     overflow: auto;
-    width: 100%;
-    max-width: 700px;
     border-radius: 4px;
 `;
 
 export const StyledModalHeader = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 `;
 
-export const StyledModalTitle = styled.h3`
-    margin-right: 100px;
-    white-space: nowrap;
-    color: ${({theme}) => theme.palette.boston};
-    font-size: 24px;
-    font-weight: bold;
+export const StyledModalCloseButton = styled.button`
+    border: none;
+    background: none;
+
+    & svg {
+        height: 32px;
+        width: 32px;
+        fill: ${({theme}) => theme.palette.thunder};
+    }
 `;
 
 export const StyledModalContent = styled.div``;
