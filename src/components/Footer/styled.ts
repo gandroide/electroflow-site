@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledFooterContent = styled.p`
-  display: flex;
-  justify-content: center;
   text-align: center;
+  
+  & * {
+    color: #fff;
+  }
 `;
 
 export const StyledLinkButton = styled.button`
@@ -18,6 +20,5 @@ export const StyledFooterRights = styled.span`
 
 export const StyledFooter = styled.footer`
   padding: 15px;
-  background-color: #f5f5f5;
-  border-top: 2px solid ${({theme}) => theme.palette.thunder};
+  background-color: ${({theme}) => theme.palette.thunder};
 `;
