@@ -61,6 +61,7 @@ export type InputProps = TextareaInput | BasicInput | RadioInput;
 
 export type FormProps = {
   inputs: InputProps[];
+  submitCallback: (inputs: InputProps[]) => void;
 };
 
 export type BasicInputProps = BasicInput & {

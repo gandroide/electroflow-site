@@ -20,7 +20,7 @@ import {
 
 import Map from '../../assets/imgs/map.png';
 import Form from '../../components/Form';
-import { InputProps } from '../../interfaces';
+import { FormProps, InputProps } from '../../interfaces';
 import { TfiEmail, TfiLocationPin, TfiMobile } from 'react-icons/tfi';
 
 const formInputs: InputProps[] = [
@@ -64,6 +64,10 @@ const formInputs: InputProps[] = [
 ];
 
 const ContactUs = () => {
+  const onSubmitCallback: FormProps['submitCallback'] = (inputs) => {
+    console.log(inputs);
+  };
+
   return (
     <StyledContactUsSection id="contact">
       <StyledContactUsOverlay $background={Map} />
@@ -79,7 +83,7 @@ const ContactUs = () => {
       <StyledContactUsContent>
         <StyledFormContainer>
           <StyledQuaternaryTitle>Envie-nos uma mensagem</StyledQuaternaryTitle>
-          <Form inputs={formInputs} />
+          <Form inputs={formInputs} submitCallback={onSubmitCallback} />
         </StyledFormContainer>
         <StyledContactUsInformationContainer>
           <StyledQuaternaryTitle>Informação do contacto</StyledQuaternaryTitle>

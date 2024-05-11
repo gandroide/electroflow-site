@@ -16,7 +16,7 @@ import {
   StyledFormButtosContainer,
 } from './styled';
 
-const Form: FC<FormProps> = ({ inputs }) => {
+const Form: FC<FormProps> = ({ inputs, submitCallback }) => {
   const { formInputs, formActions } = useFormInputs(inputs);
 
   const generatedInputs = () => {
@@ -93,7 +93,12 @@ const Form: FC<FormProps> = ({ inputs }) => {
     <StyledForm>
       <Grid gap={20}>{generatedInputs()}</Grid>
       <StyledFormButtosContainer>
-        <StyledFormButton>Send</StyledFormButton>
+        <StyledFormButton
+          type="button"
+          onClick={() => submitCallback(formInputs)}
+        >
+          Send
+        </StyledFormButton>
       </StyledFormButtosContainer>
     </StyledForm>
   );
