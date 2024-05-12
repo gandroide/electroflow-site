@@ -1,8 +1,7 @@
-import react from 'react';
+import react, { useRef } from 'react';
 import {
   StyledQuaternaryTitle,
   StyledSecondaryTitle,
-  StyledSection,
   StyledTertiaryTtile,
 } from '../../styles';
 import {
@@ -17,7 +16,7 @@ import {
   StyledFormContainer,
   StyledTertiaryTitleContainer,
 } from './styled';
-
+import emailjs from 'emailjs-com';
 import Map from '../../assets/imgs/map.png';
 import Form from '../../components/Form';
 import { FormProps, InputProps } from '../../interfaces';
@@ -66,6 +65,29 @@ const formInputs: InputProps[] = [
 const ContactUs = () => {
   const onSubmitCallback: FormProps['submitCallback'] = (inputs) => {
     console.log(inputs);
+    const handleSubmit = (e: any) => {
+      e.preventDefault();
+
+      const serviceId = 'service_yaj63pi';
+      const templateId = 'template_i6j2fkx';
+      const publicKey = 'MwjIzGM8lMjpEKNPb';
+
+      emailjs
+        .sendForm(
+          'YOUR_SERVICE_ID',
+          'YOUR_TEMPLATE_ID',
+          e.target,
+          'YOUR_USER_ID',
+        )
+        .then(
+          (result) => {
+            console.log('Correo enviado correctamente:', result.text);
+          },
+          (error) => {
+            console.log('Error al enviar el correo:', error.text);
+          },
+        );
+    };
   };
 
   return (
