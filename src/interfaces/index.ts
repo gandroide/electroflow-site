@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactNode, RefObject } from 'react';
+import { ChangeEvent, ReactNode, Ref, RefObject } from 'react';
 
 // Types
 export type SharedInputProperties = {
@@ -60,6 +60,7 @@ export type Language = {
 export type InputProps = TextareaInput | BasicInput | RadioInput;
 
 export type FormProps = {
+  ref?: React.MutableRefObject<HTMLInputElement | null>;
   inputs: InputProps[];
   submitCallback: (inputs: InputProps[]) => void;
 };

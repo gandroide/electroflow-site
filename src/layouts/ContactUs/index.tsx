@@ -1,4 +1,4 @@
-import react, { useRef } from 'react';
+import react, { useRef, useState } from 'react';
 import {
   StyledQuaternaryTitle,
   StyledSecondaryTitle,
@@ -21,6 +21,7 @@ import Map from '../../assets/imgs/map.png';
 import Form from '../../components/Form';
 import { FormProps, InputProps } from '../../interfaces';
 import { TfiEmail, TfiLocationPin, TfiMobile } from 'react-icons/tfi';
+import axios from 'axios';
 
 const formInputs: InputProps[] = [
   {
@@ -63,31 +64,50 @@ const formInputs: InputProps[] = [
 ];
 
 const ContactUs = () => {
-  const onSubmitCallback: FormProps['submitCallback'] = (inputs) => {
-    console.log(inputs);
-    const handleSubmit = (e: any) => {
-      e.preventDefault();
+  // const formRef = useRef();
+  // const [name, setName] = useState<string>();
+  // const [email, setEmail] = useState<string>();
+  // const [message, setMessage] = useState<string>();
 
-      const serviceId = 'service_yaj63pi';
-      const templateId = 'template_i6j2fkx';
-      const publicKey = 'MwjIzGM8lMjpEKNPb';
+  // const onSubmitCallback: FormProps['submitCallback'] = async (inputs) => {
+  const serviceId = 'service_yaj63pi';
+  const templateId = 'template_i6j2fkx';
+  const publicKey = 'MwjIzGM8lMjpEKNPb';
 
-      emailjs
-        .sendForm(
-          'YOUR_SERVICE_ID',
-          'YOUR_TEMPLATE_ID',
-          e.target,
-          'YOUR_USER_ID',
-        )
-        .then(
-          (result) => {
-            console.log('Correo enviado correctamente:', result.text);
-          },
-          (error) => {
-            console.log('Error al enviar el correo:', error.text);
-          },
-        );
-    };
+  const handleSubmit = async (e: any) => {
+    // e.preventDefault();
+    // const data = {
+    //   serviceId: serviceId,
+    //   templateId: templateId,
+    //   publicKey: publicKey,
+    //   templateParams: {
+    //     formName: name,
+    //     formEmail: email,
+    //     formMessage: message,
+    //   },
+    // };
+
+    // try {
+    //   const res = await axios.post(
+    //     "'https://api.emailjs.com/api/v1.0/email/send",
+    //     data,{
+    //     contentType: 'application/json'}
+    //   );
+    //   console.log(res.data, 'data');
+    //   setName('');
+    //   setEmail('');
+    //   setMessage('');
+    // } catch (error) {
+    //   console.error(error);
+
+    emailjs.sendForm(serviceId, templateId, e.target, publicKey).then(
+      (result) => {
+        console.log('Correo enviado correctamente:', result.text);
+      },
+      (error) => {
+        console.log('Error al enviar el correo:', error.text);
+      },
+    );
   };
 
   return (
@@ -105,7 +125,22 @@ const ContactUs = () => {
       <StyledContactUsContent>
         <StyledFormContainer>
           <StyledQuaternaryTitle>Envie-nos uma mensagem</StyledQuaternaryTitle>
-          <Form inputs={formInputs} submitCallback={onSubmitCallback} />
+          {/* <Form
+            // ref={formRef}
+            inputs={formInputs}
+            submitCallback={handleSubmit}
+          /> */}
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">namesdgsdsdgdgd</label>
+            <input
+              style={{ backgroundColor: 'aqua' }}
+              type="text"
+              name="name"
+            />
+            <input type="text" name="name" />
+            <input type="text" name="name" />
+            <button>enviar</button>
+          </form>
         </StyledFormContainer>
         <StyledContactUsInformationContainer>
           <StyledQuaternaryTitle>Informação do contacto</StyledQuaternaryTitle>
