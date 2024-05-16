@@ -13,5 +13,5 @@ export const StyledFormButton = styled.button`
     color: #fff;
     padding: 8px 48px;
     border-radius: 4px;
-    background: ${({theme}) => theme.palette.boston};
+    background: ${({theme}) => theme.palette.thunder};
 `;

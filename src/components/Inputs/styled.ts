@@ -20,7 +20,7 @@ export const StyledInputContainer = styled.div<StyledInputErrorProps>`
 `;
 
 export const StyledInputLabel = styled.label`
-    color: ${({theme}) => theme.palette.boston};
+    color: ${({theme}) => theme.palette.thunder};
     font-weight: bold;
 `;
 

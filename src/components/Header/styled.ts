@@ -9,7 +9,7 @@ export const StyledHeaderContainer = styled.header`
     height: 65px;
     display: flex;
     align-items: center;
-    background-color: rgba(0, 122, 169, 0.3);
+    background: linear-gradient(to right, rgba(31, 53, 65, 0.1) 5%, rgba(31, 53, 65, 1));
     padding: 0 20px;
 
     @media screen and (min-width: 768px) {
@@ -132,7 +132,7 @@ export const StyledHeaderNavigationAnchor = styled.a`
     display: block;
     padding: 20px 0;
     font-weight: bold;
-    color: ${({theme}) => theme.palette.thunder};
+    color: #fff;
     position: relative;
     font-size: 24px;
 
@@ -148,7 +148,7 @@ export const StyledHeaderNavigationAnchor = styled.a`
             width: 0;
             transition: width 0.2s linear;
             height: 2px;
-            background-color: ${({theme}) => theme.palette.thunder};;
+            background-color: ${({theme}) => theme.palette.thunder};
         }
 
         &:hover {

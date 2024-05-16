@@ -20,5 +20,5 @@ export const StyledFooterRights = styled.span`
 
 export const StyledFooter = styled.footer`
   padding: 15px;
-  background-color: ${({theme}) => theme.palette.thunder};
+  background: linear-gradient(to right, rgba(31, 53, 65, 0.4) 5%, rgba(31, 53, 65, 1));
 `;

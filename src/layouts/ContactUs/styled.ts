@@ -55,7 +55,7 @@ export const StyledFormContainer = styled.div`
     background-color: #fff;
     width: 100%;
     padding: 20px;
-    border: 1px solid ${({theme}) => theme.palette.boston};
+    border: 1px solid ${({theme}) => theme.palette.thunder};
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
 
@@ -80,13 +80,16 @@ export const StyledTertiaryTitleContainer = styled.div`
 `;
 
 export const StyledContactUsInformationContainer = styled.div`
-    background-color: ${({theme}) => theme.palette.boston};
+    background-color: ${({theme}) => theme.palette.thunder};
     width: 100%;
     padding: 20px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     z-index: 1;
-    color: #fff;
+    
+    & * {
+        color: #fff;
+    }
 
     @media screen and (min-width: 768px) {
         border-bottom-left-radius: unset;

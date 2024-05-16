@@ -94,7 +94,7 @@ export const StyledSecondaryTitle = styled.h2`
     text-align: center;
     text-transform: uppercase;
     position: relative;
-    color: ${({theme}) => theme.palette.boston};
+    color: ${({theme}) => theme.palette.thunder};
     display: inline-block;
 
     &:before {
@@ -104,7 +104,7 @@ export const StyledSecondaryTitle = styled.h2`
         left: -10px;
         width: calc(100% + 20px);
         height: 3px;
-        background-color: ${({theme}) => theme.palette.boston};
+        background-color: ${({theme}) => theme.palette.thunder};
     }
 
     @media screen and (min-width: 1200px) {
