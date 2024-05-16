@@ -75,7 +75,7 @@ const ContactUs = () => {
   const publicKey = 'MwjIzGM8lMjpEKNPb';
 
   const handleSubmit = async (e: any) => {
-    // e.preventDefault();
+    e.preventDefault();
     // const data = {
     //   serviceId: serviceId,
     //   templateId: templateId,
@@ -86,7 +86,6 @@ const ContactUs = () => {
     //     formMessage: message,
     //   },
     // };
-
     // try {
     //   const res = await axios.post(
     //     "'https://api.emailjs.com/api/v1.0/email/send",
@@ -99,15 +98,31 @@ const ContactUs = () => {
     //   setMessage('');
     // } catch (error) {
     //   console.error(error);
+    // debugger;
+    // emailjs.sendForm(serviceId, templateId, e.target, publicKey).then(
+    //   (result) => {
+    //     console.log('Correo enviado correctamente:', result.text);
+    //   },
+    //   (error) => {
+    //     console.log('Error al enviar el correo:', error.text);
+    //   },
+    // );
 
-    emailjs.sendForm(serviceId, templateId, e.target, publicKey).then(
-      (result) => {
-        console.log('Correo enviado correctamente:', result.text);
-      },
-      (error) => {
-        console.log('Error al enviar el correo:', error.text);
-      },
-    );
+    axios
+      .post('https://api.emailjs.com/api/v1.0/email/send', {
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
+        template_params: {
+          teste: 'filipe',
+        },
+      })
+      .then((response: any) => {
+        console.log(response);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   return (
