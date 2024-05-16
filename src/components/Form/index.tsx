@@ -5,7 +5,7 @@ import {
   FormProps,
   isTextInput,
   isTextareaInput,
-  isRadioInput,
+  // isRadioInput,
 } from '../../interfaces';
 import { Grid, GridItem } from '../Grid';
 import RadioInput from '../Inputs/RadioInput';
@@ -67,26 +67,26 @@ const Form: FC<FormProps> = ({ inputs, submitCallback }) => {
         );
       }
 
-      if (isRadioInput(input)) {
-        return (
-          <GridItem columns={columns} key={id}>
-            <RadioInput
-              id={id}
-              label={label}
-              hasError={hasError}
-              errorMsg={errorMsg}
-              isRequired={isRequired}
-              changeHandler={(e) =>
-                formActions({
-                  type: ActionTypes.CHANGE,
-                  payload: { event: e, index },
-                })
-              }
-              options={input.options}
-            />
-          </GridItem>
-        );
-      }
+      // if (isRadioInput(input)) {
+      //   return (
+      //     <GridItem columns={columns} key={id}>
+      //       <RadioInput
+      //         id={id}
+      //         label={label}
+      //         hasError={hasError}
+      //         errorMsg={errorMsg}
+      //         isRequired={isRequired}
+      //         changeHandler={(e) =>
+      //           formActions({
+      //             type: ActionTypes.CHANGE,
+      //             payload: { event: e, index },
+      //           })
+      //         }
+      //         options={input.options}
+      //       />
+      //     </GridItem>
+      //   );
+      // }
     });
   };
 

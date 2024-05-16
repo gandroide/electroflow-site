@@ -57,7 +57,7 @@ export type Language = {
 };
 
 // Component Props
-export type InputProps = TextareaInput | BasicInput | RadioInput;
+export type InputProps = TextareaInput | BasicInput;
 
 export type FormProps = {
   ref?: React.MutableRefObject<HTMLInputElement | null>;
@@ -134,6 +134,6 @@ export const isTextareaInput = (input: InputProps): input is TextareaInput => {
   return input.type === 'textarea';
 };
 
-export const isRadioInput = (input: InputProps): input is RadioInput => {
-  return input.type === 'radio';
-};
+// export const isRadioInput = (input: InputProps): input is RadioInput => {
+//   return input.type === 'radio';
+// };

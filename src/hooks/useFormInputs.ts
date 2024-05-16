@@ -1,5 +1,5 @@
 import react, { useReducer, ChangeEvent, Dispatch } from 'react';
-import { InputProps, isRadioInput, isTextInput, isTextareaInput } from '../interfaces';
+import { InputProps, isTextInput, isTextareaInput } from '../interfaces';
 
 type UseFormInputs = (inputs: InputProps[]) => { formInputs: UseFormInputsState, formActions: Dispatch<UseFormInputsActions> };
 
@@ -29,10 +29,10 @@ const reducer = (state: UseFormInputsState, { type, payload }: UseFormInputsActi
                 currentInput.value = payload.event.target.value;
             }
 
-            if (isRadioInput(currentInput)) {
-                const optionIndex = currentInput.options.findIndex((option) => option.value === payload.event.target.value);
-                currentInput.options = currentInput.options.map((option, index) => ({...option, isChecked: optionIndex === index}));
-            }
+            // if (isRadioInput(currentInput)) {
+            //     const optionIndex = currentInput.options.findIndex((option) => option.value === payload.event.target.value);
+            //     currentInput.options = currentInput.options.map((option, index) => ({...option, isChecked: optionIndex === index}));
+            // }
 
             return stateCopy;
         default:

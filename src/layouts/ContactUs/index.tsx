@@ -25,7 +25,7 @@ import axios from 'axios';
 
 const formInputs: InputProps[] = [
   {
-    id: 'name',
+    id: 'from_name',
     label: 'Nome',
     value: '',
     hasError: false,
@@ -39,7 +39,7 @@ const formInputs: InputProps[] = [
     },
   },
   {
-    id: 'email',
+    id: 'from_email',
     label: 'Email',
     value: '',
     hasError: false,
@@ -73,6 +73,32 @@ const ContactUs = () => {
   const serviceId = 'service_yaj63pi';
   const templateId = 'template_i6j2fkx';
   const publicKey = 'MwjIzGM8lMjpEKNPb';
+
+  const onSubmitCallback: FormProps['submitCallback'] = (inputs) => {
+    console.log(inputs);
+
+    const emailObj: {
+      [key: string]: string;
+    } = {};
+
+    inputs.forEach((input) => {
+      emailObj[input.id] = input.value;
+    });
+
+    axios
+      .post('https://api.emailjs.com/api/v1.0/email/send', {
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
+        template_params: emailObj,
+      })
+      .then((response: any) => {
+        console.log(response);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -140,22 +166,7 @@ const ContactUs = () => {
       <StyledContactUsContent>
         <StyledFormContainer>
           <StyledQuaternaryTitle>Envie-nos uma mensagem</StyledQuaternaryTitle>
-          {/* <Form
-            // ref={formRef}
-            inputs={formInputs}
-            submitCallback={handleSubmit}
-          /> */}
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="name">namesdgsdsdgdgd</label>
-            <input
-              style={{ backgroundColor: 'aqua' }}
-              type="text"
-              name="name"
-            />
-            <input type="text" name="name" />
-            <input type="text" name="name" />
-            <button>enviar</button>
-          </form>
+          <Form inputs={formInputs} submitCallback={onSubmitCallback} />
         </StyledFormContainer>
         <StyledContactUsInformationContainer>
           <StyledQuaternaryTitle>Informação do contacto</StyledQuaternaryTitle>
