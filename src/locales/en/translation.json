@@ -1,8 +1,37 @@
 {
   "translations": {
+    "main": {
+      "firstParagraph": "It has been operating since 2014, and we have a young and dynamic team with extensive knowledge of the industry, in different areas of engineering, in tune with the needs of our customers in RAM.",
+      "secondParagraph": "We intervene at the project level, assembly/execution and technical assistance in the following business areas:",
+      "thirdParagraph": "In the areas mentioned above, we sell products from reference brands, both for the industrial and commercial sectors, with several partnerships forged with globally recognized business groups.",
+      "animatedText": {
+        "1": "Industrial Automation and Maintenance",
+        "2": "Electricity and ITED",
+        "3": "Air conditioning",
+        "4": "Renewable energy"
+      }
+    },
     "header": {
+      "mission": {
+        "title": "Mission",
+        "visionTilte": "Vision",
+        "mission": "Electroflow's main mission is to satisfy the needs of its customers, developing and implementing integrated engineering solutions, using efficient and sustainable technologies.",
+        "vision": "We intend to stand out as a reference in integrated design, installation and maintenance offerings for the business areas in which we are involved, with a special focus on the regional market."
+      },
       "services": {
         "title": "Services"
+      },
+      "portfolio": {
+        "title": "Portfolio"
+      },
+      "products": {
+        "title": "products"
+      },
+      "team": {
+        "title": "Team"
+      },
+      "contact": {
+        "title": "Contact"
       }
     },
     "cards": {

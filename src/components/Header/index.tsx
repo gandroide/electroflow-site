@@ -46,6 +46,7 @@ const LanguageDropdown = () => {
   const changeLanguageHandler = (index: number) => {
     i18n.changeLanguage(languages[index].code);
     setCurrentLanguage(languages[index]);
+    toggleLanguageDropdownHandler();
   };
 
   const toggleLanguageDropdownHandler = () => {
@@ -95,6 +96,7 @@ const LanguageDropdown = () => {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleOpenHandler = () => {
     setIsOpen((prevState) => !prevState);
@@ -121,7 +123,7 @@ const Header = () => {
               href="#mission"
               onClick={toggleOpenHandler}
             >
-              Missão
+              {t('translations.header.mission.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
@@ -129,7 +131,7 @@ const Header = () => {
               href="#services"
               onClick={toggleOpenHandler}
             >
-              Serviços
+              {t('translations.header.services.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
@@ -137,7 +139,7 @@ const Header = () => {
               href="#gallery"
               onClick={toggleOpenHandler}
             >
-              Portfólio
+              {t('translations.header.portfolio.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
@@ -145,7 +147,7 @@ const Header = () => {
               href="#products"
               onClick={toggleOpenHandler}
             >
-              Produtos
+              {t('translations.header.products.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
@@ -153,7 +155,7 @@ const Header = () => {
               href="#team"
               onClick={toggleOpenHandler}
             >
-              Equipa
+              {t('translations.header.team.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
@@ -161,7 +163,7 @@ const Header = () => {
               href="#contact"
               onClick={toggleOpenHandler}
             >
-              Contacto
+              {t('translations.header.contact.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
         </StyledHeaderNavigationList>
