@@ -11,13 +11,14 @@ import {
 } from './styled';
 
 import { ModalProps } from '../../interfaces';
+import { createPortal } from 'react-dom';
 
 const Modal: FC<ModalProps> = ({ children, isOpen, closeCallback }) => {
   if (!isOpen) {
     return null;
   }
 
-  return (
+  return createPortal(
     <StyledModal>
       <StyledModalBackdrop onClick={closeCallback} />
       <StyledModalContainer>
@@ -28,7 +29,8 @@ const Modal: FC<ModalProps> = ({ children, isOpen, closeCallback }) => {
         </StyledModalHeader>
         <StyledModalContent>{children}</StyledModalContent>
       </StyledModalContainer>
-    </StyledModal>
+    </StyledModal>,
+    document.body,
   );
 };
 

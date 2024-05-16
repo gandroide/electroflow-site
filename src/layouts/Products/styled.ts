@@ -115,13 +115,15 @@ export const StyledProductDescription = styled.p`
     }
 `;
 
-export const StyledProductLink = styled(Link)`
+export const StyledProductLink = styled.button`
     font-weight: bold;
     margin-top: 24px;
     color: ${({theme}) => theme.palette.boston};
     cursor: pointer;
     position: relative;
     display: inline-block;
+    border: none;
+    background: none;
 
     &::after {
         content: '';
@@ -132,4 +134,39 @@ export const StyledProductLink = styled(Link)`
         height: 2px;
         background-color: ${({theme}) => theme.palette.boston};
     }
-`
+`;
+
+export const StyledProductModalContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+`;
+
+export const StyledProductModalImageContainer = styled.div`
+    height: 350px;
+    border: 2px solid ${({theme}) => theme.palette.thunder};
+`;
+
+export const StyledProductModalImage = styled.img`
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+`;
+
+export const StyledProductModalContent = styled.div`
+    margin-top: 24px;
+`;
+
+export const StyledProductModalText = styled.p`
+    font-size: 14px;
+    margin-bottom: 8px;
+
+    &:first-of-type {
+        margin-top: 16px;
+    }
+
+    @media screen and (min-width: 968px) {
+        font-size: 16px;
+    }
+`;
