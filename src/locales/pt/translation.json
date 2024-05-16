@@ -1,8 +1,37 @@
 {
   "translations": {
+    "main": {
+      "firstParagraph": "Exerce a atividade desde 2014, e contamos com uma equipa jovem e dinâmica com amplos conhecimentos da indústria, em diversas áreas de engenharia, em sintonia com as necessidades dos nossos clientes na RAM.",
+      "secondParagraph": "Intervimos ao nível do projeto, montagem/execução e assistência técnica nas seguintes áreas de negócio:",
+      "thirdParagraph": "Nas áreas acima mencionadas comercializamos produtos de Marcas de referência, tanto para o setor industrial como comercial, com várias parcerias forjadas com grupos empresariais reconhecidos globalmente.",
+      "animatedText": {
+        "1": "Automação e Manutenção Industrial",
+        "2": "Eletricidade e ITED",
+        "3": "Climatização",
+        "4": "Energias renováveis"
+      }
+    },
     "header": {
+      "mission": {
+        "title": "Mission",
+        "visionTilte": "Visão",
+        "mission": "A Electroflow tem como principal missão satisfazer as necessidades dos seus clientes, desenvolvendo e implementando soluções de engenharia integradas, com recurso a tecnologias eficientes e sustentáveis.",
+        "vision": "Pretendemos destacar-nos como referência em oferta integrada de projeto, instalação e manutenção das áreas de negócio em que estamos envolvidos, com especial enfoque no mercado regional."
+      },
       "services": {
         "title": "Serviços"
+      },
+      "portfolio": {
+        "title": "Portfólio"
+      },
+      "products": {
+        "title": "Produtos"
+      },
+      "team": {
+        "title": "Equipa"
+      },
+      "contact": {
+        "title": "Contacto"
       }
     },
     "cards": {

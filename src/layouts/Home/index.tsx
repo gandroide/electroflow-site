@@ -12,16 +12,18 @@ import {
 import SwiperComponent from '../../components/swiper/Swiper';
 import { StyledPrimaryTitle } from '../../styles';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
-
-const animatedTextValues = [
-  'Automação e Manutenção Industrial',
-  'Eletricidade e ITED',
-  'Climatização',
-  'Energias renováveis',
-];
+import { useTranslation } from 'react-i18next';
 
 const AnimatedText = () => {
   const [visibleText, setVisibleText] = useState(0);
+  const { t } = useTranslation();
+
+  const animatedTextValues = [
+    t('translations.main.animatedText.1'),
+    t('translations.main.animatedText.2'),
+    t('translations.main.animatedText.3'),
+    t('translations.main.animatedText.4'),
+  ];
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -57,6 +59,7 @@ const AnimatedText = () => {
 const Home = () => {
   const homeRef = useRef<HTMLDivElement>(null);
   const isHomeVisible = useIntersectionObserver({ ref: homeRef });
+  const { t } = useTranslation();
 
   return (
     <StyledHomeSection>
@@ -68,20 +71,14 @@ const Home = () => {
         <StyledHomeContent ref={homeRef}>
           <StyledPrimaryTitle>ELECTROFLOW</StyledPrimaryTitle>
           <StyledHomeContentText>
-            Exerce a atividade desde 2014, e contamos com uma equipa jovem e
-            dinâmica com amplos conhecimentos da indústria, em diversas áreas de
-            engenharia, em sintonia com as necessidades dos nossos clientes na
-            RAM.
+            {t('translations.main.firstParagraph')}
           </StyledHomeContentText>
           <StyledHomeContentText>
-            Intervimos ao nível do projeto, montagem/execução e assistência
-            técnica nas seguintes áreas de negócio:
+            {t('translations.main.secondParagraph')}
             <AnimatedText />
           </StyledHomeContentText>
           <StyledHomeContentText>
-            Nas áreas acima mencionadas comercializamos produtos de Marcas de
-            referência, tanto para o setor industrial como comercial, com várias
-            parcerias forjadas com grupos empresariais reconhecidos globalmente.
+            {t('translations.main.thirdParagraph')}
           </StyledHomeContentText>
         </StyledHomeContent>
       </CSSTransition>
