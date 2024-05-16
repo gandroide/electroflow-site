@@ -18,6 +18,7 @@ import {
 
 const Form: FC<FormProps> = ({ inputs, submitCallback }) => {
   const { formInputs, formActions } = useFormInputs(inputs);
+  const formData = {};
 
   const generatedInputs = () => {
     return formInputs.map((input, index) => {

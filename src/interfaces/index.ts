@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactNode } from 'react';
+import { ChangeEvent, ReactNode, Ref, RefObject } from 'react';
 
 // Types
 export type SharedInputProperties = {
@@ -37,7 +37,7 @@ export type RadioInputOptions = {
   label: string;
   value: string;
   isChecked: boolean;
-}
+};
 
 export type RadioInput = {
   type: 'radio';
@@ -54,12 +54,13 @@ export type Language = {
   id: number;
   code: string;
   name: string;
-}
+};
 
 // Component Props
 export type InputProps = TextareaInput | BasicInput | RadioInput;
 
 export type FormProps = {
+  ref?: React.MutableRefObject<HTMLInputElement | null>;
   inputs: InputProps[];
   submitCallback: (inputs: InputProps[]) => void;
 };
@@ -106,21 +107,21 @@ export type ContactCardData = {
   email: string;
   phone: string;
   photo: string;
-}
+};
 
 export type ContactCardProps = Omit<ContactCardData, 'id'>;
 
 export type ServiceCardItemData = {
   id: number;
   text: string;
-}
+};
 
 export type ServiceCardData = {
   id: number;
   img: string;
   title: string;
   items: ServiceCardItemData[];
-}
+};
 
 export type ServiceCardProps = Omit<ServiceCardData, 'id'>;
 
