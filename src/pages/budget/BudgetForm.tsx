@@ -229,7 +229,12 @@ export const BudgetForm = () => {
 
   return (
     <Container>
-      <Form inputs={formInputs} />
+      <Form
+        inputs={formInputs}
+        submitCallback={function (inputs: InputProps[]): void {
+          throw new Error('Function not implemented.');
+        }}
+      />
     </Container>
   );
 };

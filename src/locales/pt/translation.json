@@ -19,7 +19,14 @@
         "vision": "Pretendemos destacar-nos como referência em oferta integrada de projeto, instalação e manutenção das áreas de negócio em que estamos envolvidos, com especial enfoque no mercado regional."
       },
       "services": {
-        "title": "Serviços"
+        "title": "Serviços",
+        "firstService": {
+          "title": "Gestão de Projetos",
+          "item1": "Elaboração de Estudo e Projetos de Aquecimento, Ar Condicionado e Ventilação",
+          "item2": "Instalações Elétricas e ITED",
+          "item3": "Energias renováveis",
+          "secondService": {}
+        }
       },
       "portfolio": {
         "title": "Portfólio"
