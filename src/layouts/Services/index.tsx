@@ -9,67 +9,71 @@ import Projectos from '../../assets/imgs/services/projectos.jpg';
 import { StyledSecondaryTitle } from '../../styles';
 import { StyledServicesContainer, StyledServicesSection } from './styled';
 import { ServiceCardData } from '../../interfaces';
-
-const servicesData: ServiceCardData[] = [
-  {
-    id: 1,
-    img: Projectos,
-    title: 'Gestão de Projetos',
-    items: [
-      {
-        id: 1,
-        text: 'Elaboração de Estudo e Projetos de Aquecimento, Ar Condicionado e Ventilação',
-      },
-      {
-        id: 2,
-        text: 'Instalações Elétricas e ITED',
-      },
-      {
-        id: 3,
-        text: 'Energias renováveis',
-      },
-    ],
-  },
-  {
-    id: 2,
-    img: Producao,
-    title: 'Gestão de Produção',
-    items: [
-      {
-        id: 1,
-        text: 'Execução de obras',
-      },
-      {
-        id: 2,
-        text: 'Execução de remodelações',
-      },
-    ],
-  },
-  {
-    id: 3,
-    img: Manutencao,
-    title: 'Gestão de Manutenção',
-    items: [
-      {
-        id: 1,
-        text: 'Elaboração e Execução de Planos de Manutenção Preventiva e Preditiva',
-      },
-      {
-        id: 2,
-        text: 'Assistência Técnica e Manutenção Correctiva',
-      },
-      {
-        id: 3,
-        text: 'Assistência Técnica',
-      },
-    ],
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation();
+  const servicesData: ServiceCardData[] = [
+    {
+      id: 1,
+      img: Projectos,
+      title: t('translations.header.services.firstService.title'),
+      items: [
+        {
+          id: 1,
+          text: t('translations.header.services.firstService.item1'),
+        },
+        {
+          id: 2,
+          text: t('translations.header.services.firstService.item2'),
+        },
+        {
+          id: 3,
+          text: t('translations.header.services.firstService.item3'),
+        },
+      ],
+    },
+    {
+      id: 2,
+      img: Producao,
+      title: t('translations.header.services.secondService.title'),
+      items: [
+        {
+          id: 1,
+          text: t('translations.header.services.secondService.item1'),
+        },
+        {
+          id: 2,
+          text: t('translations.header.services.secondService.item2'),
+        },
+      ],
+    },
+    {
+      id: 3,
+      img: Manutencao,
+      title: t('translations.header.services.thirdService.title'),
+      items: [
+        {
+          id: 1,
+          text: t('translations.header.services.thirdService.item1'),
+        },
+        {
+          id: 2,
+          text: t('translations.header.services.thirdService.item2'),
+        },
+        {
+          id: 3,
+          text: t('translations.header.services.thirdService.item3'),
+        },
+      ],
+    },
+  ];
+
   return (
     <StyledServicesSection id="services">
-      <StyledSecondaryTitle>Serviços</StyledSecondaryTitle>
+      <StyledSecondaryTitle>
+        {t('translations.header.services.title')}
+      </StyledSecondaryTitle>
       <StyledServicesContainer>
         {servicesData.map((service) => (
           <ServiceCard

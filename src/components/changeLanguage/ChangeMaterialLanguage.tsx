@@ -1,60 +1,60 @@
-import react, { FC, useState } from "react"
-import Button from "@mui/material/Button"
-import Menu from "@mui/material/Menu"
-import MenuItem from "@mui/material/MenuItem"
-import { useTranslation } from "react-i18next"
+import react, { FC, useState } from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { useTranslation } from 'react-i18next';
 
 interface Lng {
-  id: number
-  code: string
-  name: string
+  id: number;
+  code: string;
+  name: string;
 }
 
 const languages = [
   {
     id: 1,
-    code: "pt",
-    name: "Português",
+    code: 'pt',
+    name: 'Português',
   },
   {
     id: 2,
-    code: "en",
-    name: "English",
+    code: 'en',
+    name: 'English',
   },
-]
+];
 
 const ChangeLanguageComponent: FC = () => {
-  const { i18n } = useTranslation()
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-  const [currentLanguage, setCurrentLanguage] = useState<Lng>(languages[0])
-  const open = Boolean(anchorEl)
+  const { i18n } = useTranslation();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [currentLanguage, setCurrentLanguage] = useState<Lng>(languages[0]);
+  const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
-  console.log(currentLanguage)
+    setAnchorEl(event.currentTarget);
+  };
+  console.log(currentLanguage);
 
   const changeLanguage = (code: string) => {
-    console.log(code)
-    i18n.changeLanguage(code)
-  }
+    console.log(code);
+    i18n.changeLanguage(code);
+  };
 
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
   const handleChange = (lang: Lng) => {
-    setCurrentLanguage(lang)
-    changeLanguage(lang.code)
-    handleClose()
-  }
+    setCurrentLanguage(lang);
+    changeLanguage(lang.code);
+    handleClose();
+  };
 
   return (
     <div>
       <Button
         id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
+        aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         {currentLanguage.code}
@@ -65,7 +65,7 @@ const ChangeLanguageComponent: FC = () => {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          "aria-labelledby": "basic-button",
+          'aria-labelledby': 'basic-button',
         }}
       >
         <MenuItem onClick={() => handleChange(languages[0])}>
@@ -76,7 +76,7 @@ const ChangeLanguageComponent: FC = () => {
         </MenuItem>
       </Menu>
     </div>
-  )
-}
+  );
+};
 
-export default ChangeLanguageComponent
+export default ChangeLanguageComponent;

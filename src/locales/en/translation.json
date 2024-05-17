@@ -21,11 +21,21 @@
       "services": {
         "title": "Services",
         "firstService": {
-          "title": "Gestão de Projetos",
-          "item1": "Elaboração de Estudo e Projetos de Aquecimento, Ar Condicionado e Ventilação",
-          "item2": "Instalações Elétricas e ITED",
-          "item3": "Energias renováveis",
-          "secondService": {}
+          "title": "Project Management",
+          "item1": "Preparation of Heating, Air Conditioning and Ventilation Studies and Projects",
+          "item2": "Electrical Installations and ITED",
+          "item3": "Renewable Energy"
+        },
+        "secondService": {
+          "title": "Production management",
+          "item1": "Execution of works",
+          "item2": "Execution of renovations"
+        },
+        "thirdService": {
+          "title": "Maintenance Management",
+          "item1": "Preparation and Execution of Preventive and Predictive Maintenance Plans",
+          "item2": "Technical Assistance and Corrective Maintenance",
+          "item3": "Technical assistance"
         }
       },
       "portfolio": {

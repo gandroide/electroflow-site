@@ -24,8 +24,18 @@
           "title": "Gestão de Projetos",
           "item1": "Elaboração de Estudo e Projetos de Aquecimento, Ar Condicionado e Ventilação",
           "item2": "Instalações Elétricas e ITED",
-          "item3": "Energias renováveis",
-          "secondService": {}
+          "item3": "Energias renováveis"
+        },
+        "secondService": {
+          "title": "Gestão de Produção",
+          "item1": "Execução de obras",
+          "item2": "Execução de remodelações"
+        },
+        "thirdService": {
+          "title": "Gestão de Manutenção",
+          "item1": "Elaboração e Execução de Planos de Manutenção Preventiva e Preditiva",
+          "item2": "Assistência Técnica e Manutenção Correctiva",
+          "item3": "Assistência Técnica"
         }
       },
       "portfolio": {
