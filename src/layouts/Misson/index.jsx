@@ -1,4 +1,4 @@
-import react, { useEffect, useRef, useState } from 'react';
+import react, { useRef } from 'react';
 
 import { Grid, GridItem } from '../../components/Grid';
 import { GiProgression } from 'react-icons/gi';

@@ -1,6 +1,10 @@
 import react from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import imagem1 from '../../../public/ManutencaoReparacao.jpg';
+import imagem2 from '../../../public/AcDescMecatronica.png';
+import imagem3 from '../../../public/Gearmotors.jpg';
+import imagem4 from '../../../public/Conversores.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,16 +23,16 @@ const SwiperComponent = () => {
       autoplay={{ delay: 5000 }}
     >
       <SwiperSlide>
-        <img src="../../public/ManutencaoReparacao.jpg" />
+        <img src={imagem1} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="../../public/AcDescMecatronica.png" />
+        <img src={imagem2} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="../../public/Gearmotors.jpg" />
+        <img src={imagem3} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="../../public/Conversores.png" />
+        <img src={imagem4} />
       </SwiperSlide>
     </Swiper>
   );
