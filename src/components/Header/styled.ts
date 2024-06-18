@@ -18,7 +18,7 @@ export const StyledHeaderContainer = styled.header`
     }
 `;
 
-export const StyledHeaderLogoContainer = styled.span<StyledHeaderNavigationProps>`
+export const StyledHeaderLogoContainer = styled(NavLink)<StyledHeaderNavigationProps>`
     width: 200px;
     z-index: ${({$isOpen}) => $isOpen ? 100 : 0};
     position: ${({$isOpen}) => $isOpen ? 'fixed' : 'relative'};
@@ -150,7 +150,7 @@ export const StyledHeaderNavigationAnchor = styled.a`
             width: 0;
             transition: width 0.2s linear;
             height: 2px;
-            background-color: ${({theme}) => theme.palette.thunder};
+            background-color: #fff;
         }
 
         &:hover {

@@ -1,8 +1,13 @@
 import react, { useRef } from 'react';
 import Form from '../../components/Form';
 import { InputProps } from '../../interfaces';
-import { Container } from './styled';
+import {
+  StyledBudgetFormContainer,
+  StyledBudgetFormContent,
+  StyledBudgetPageContainer,
+} from './styled';
 import emailjs from '@emailjs/browser';
+import { StyledPrimaryTitle } from '../../styles';
 
 export const BudgetForm = () => {
   const form = useRef();
@@ -228,13 +233,15 @@ export const BudgetForm = () => {
   };
 
   return (
-    <Container>
-      <Form
-        inputs={formInputs}
-        submitCallback={function (inputs: InputProps[]): void {
-          throw new Error('Function not implemented.');
-        }}
-      />
-    </Container>
+    <StyledBudgetPageContainer>
+      <StyledBudgetFormContainer>
+        <StyledPrimaryTitle>
+          Peça-nos um orçamento preenchendo o formulário
+        </StyledPrimaryTitle>
+        <StyledBudgetFormContent>
+          <Form inputs={formInputs} submitCallback={() => {}} />
+        </StyledBudgetFormContent>
+      </StyledBudgetFormContainer>
+    </StyledBudgetPageContainer>
   );
 };

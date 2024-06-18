@@ -123,7 +123,7 @@ const Header = () => {
 
   return (
     <StyledHeaderContainer>
-      <StyledHeaderLogoContainer $isOpen={isOpen}>
+      <StyledHeaderLogoContainer $isOpen={isOpen} to="/">
         <img src={Logo} />
       </StyledHeaderLogoContainer>
       <StyledHeaderContent>
@@ -186,7 +186,7 @@ const Header = () => {
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
-            <StyledHeaderNavigationLink to="/">
+            <StyledHeaderNavigationLink to="/budget">
               {t('translations.header.budget.title')}
             </StyledHeaderNavigationLink>
           </StyledHeaderNavigationItem>

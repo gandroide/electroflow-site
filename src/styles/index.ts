@@ -147,7 +147,7 @@ export const StyledPrimaryTitle = styled.h1`
   &:before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: -10px;
     width: calc(100% + 20px);
     height: 4px;
