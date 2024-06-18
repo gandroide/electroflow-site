@@ -9,10 +9,10 @@ export const StyledHeaderContainer = styled.header`
     height: 65px;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(31, 53, 65, 0.1) 5%, rgba(31, 53, 65, 1));
+    background: linear-gradient(to right, rgba(31, 53, 65, 0.1), rgba(31, 53, 65, 1) 70%);
     padding: 0 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         height: 70px;
         padding: 0 40px;
     }
@@ -21,6 +21,7 @@ export const StyledHeaderContainer = styled.header`
 export const StyledHeaderLogoContainer = styled.span<StyledHeaderNavigationProps>`
     width: 200px;
     z-index: ${({$isOpen}) => $isOpen ? 100 : 0};
+    position: ${({$isOpen}) => $isOpen ? 'fixed' : 'relative'};
 `;
 
 export const StyledHeaderLogo = styled.img``;
@@ -30,7 +31,7 @@ export const StyledHeaderContent = styled.div`
     flex: 1;
     justify-content: flex-end;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         order: 2;
         flex: unset;
     }
@@ -39,7 +40,7 @@ export const StyledHeaderContent = styled.div`
 export const StyledHeaderNavigationButton = styled.button<StyledHeaderNavigationProps>`
     z-index: ${({$isOpen}) => $isOpen ? 100 : 0};
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         display: none;
     }
 `;
@@ -53,9 +54,9 @@ export const StyledHeaderNavigation = styled.nav<StyledHeaderNavigationProps>`
     background: #fff;
     z-index: 10;
     transform: translateX(${({$isOpen}) => $isOpen ? '-100%' : '100%'});
-    transition: transform 0.5s linear;
+    transition: transform 0.4s linear;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         position: unset;
         top: unset;
         left: unset;
@@ -73,7 +74,7 @@ export const StyledHeaderNavigationHeader = styled.div`
     justify-content: space-between;
     padding: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         display: none;
     }
 `;
@@ -90,13 +91,14 @@ export const StyledHeaderNavigationList = styled.ul`
     height: calc(100% - 64px);
     border-top: 1px solid ${({theme}) => theme.palette.thunder};
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         flex-direction: row;
         padding-top: 0;
         margin-top: 0;
         width: 100%;
         justify-content: flex-end;
         border-top: unset;
+        align-items: center;
 
         & ${StyledHeaderNavigationItem}:not(:last-child) {
             margin-right: 20px;
@@ -109,20 +111,19 @@ export const StyledHeaderNavigationLink = styled(NavLink)`
     text-align: center;
     width: 100%;
     display: block;
-    padding: 10px 0;
-    font-size: 18px;
+    padding: 20px 0;
     font-weight: bold;
     color: ${({theme}) => theme.palette.thunder};
     position: relative;
+    font-size: 24px;
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background-color: ${({theme}) => theme.palette.thunder};;
+    @media screen and (min-width: 1300px) {
+        color: ${({theme}) => theme.palette.thunder};
+        background-color: #fff;
+        padding: 5px 20px;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: bold;
     }
 `;
 
@@ -132,13 +133,14 @@ export const StyledHeaderNavigationAnchor = styled.a`
     display: block;
     padding: 20px 0;
     font-weight: bold;
-    color: #fff;
+    color: ${({theme}) => theme.palette.thunder};
     position: relative;
     font-size: 24px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         padding: 0 10px;
         font-size: 18px;
+        color: #fff;
 
         &::after {
             content: '';
@@ -164,7 +166,7 @@ export const StyledLanguageDropdownContainer = styled.div`
     margin-right: 20px;
     z-index: 10;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1300px) {
         margin-right: 0;
         margin-left: 40px;
     }
@@ -175,6 +177,7 @@ export const StyledLanguageDropdownValue = styled.div`
     font-size: 16px;
     display: flex;
     align-items: center;
+    color: #fff;
 `;
 
 export const StyledLanguageDropdownList = styled.div`
@@ -183,13 +186,19 @@ export const StyledLanguageDropdownList = styled.div`
     right: 0;
     background: #fff;
     border-radius: 4px;
-    margin-top: 5px;
-    padding: 5px 0;
+    margin-top: 15px;
+    border: 1px solid ${({theme}) => theme.palette.thunder};
 `;
 
 export const StyledLanguageDropdownOption = styled.div`
-    padding: 5px 20px;
+    padding: 5px 40px;
     cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+
+    &:not(:last-of-type) {
+        border-bottom: 1px solid ${({theme}) => theme.palette.thunder};
+    }
 `;
 
 export const StyledLanguageDropdownArrow = styled.span`

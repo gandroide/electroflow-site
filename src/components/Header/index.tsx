@@ -1,6 +1,7 @@
-import react, { useState } from 'react';
+import react, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TfiMenu, TfiClose } from 'react-icons/tfi';
+import { TfiMenu } from 'react-icons/tfi';
+import { RiCloseFill } from 'react-icons/ri';
 import { MdOutlineArrowDropDown } from 'react-icons/md';
 
 import {
@@ -11,15 +12,13 @@ import {
   StyledHeaderNavigationButton,
   StyledHeaderNavigationItem,
   StyledHeaderNavigationList,
-  StyledHeaderNavigationLink,
-  StyledHeaderNavigationCloseButton,
-  StyledHeaderNavigationHeader,
   StyledLanguageDropdownContainer,
   StyledLanguageDropdownList,
   StyledLanguageDropdownOption,
   StyledLanguageDropdownValue,
   StyledLanguageDropdownArrow,
   StyledHeaderNavigationAnchor,
+  StyledHeaderNavigationLink,
 } from './styled';
 
 import { Language } from '../../interfaces';
@@ -42,6 +41,7 @@ const LanguageDropdown = () => {
   const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const changeLanguageHandler = (index: number) => {
     i18n.changeLanguage(languages[index].code);
@@ -52,6 +52,24 @@ const LanguageDropdown = () => {
   const toggleLanguageDropdownHandler = () => {
     setIsOpen((prevState) => !prevState);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      event.target &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, !isOpen);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside, !isOpen);
+    };
+  }, []);
 
   return (
     <StyledLanguageDropdownContainer>
@@ -67,7 +85,7 @@ const LanguageDropdown = () => {
       >
         {currentLanguage.code.toUpperCase()}
         <StyledLanguageDropdownArrow>
-          <MdOutlineArrowDropDown />
+          <MdOutlineArrowDropDown fill="#fff" />
         </StyledLanguageDropdownArrow>
       </StyledLanguageDropdownValue>
       {isOpen && (
@@ -76,6 +94,7 @@ const LanguageDropdown = () => {
           id="listLanguage"
           aria-label="Alterar linguagem"
           tabIndex={-1}
+          ref={dropdownRef}
         >
           {languages.map((language, index) => (
             <StyledLanguageDropdownOption
@@ -113,7 +132,7 @@ const Header = () => {
           onClick={toggleOpenHandler}
           $isOpen={isOpen}
         >
-          <TfiMenu />
+          {!isOpen ? <TfiMenu fill="#fff" /> : <RiCloseFill fill="#1F3541" />}
         </StyledHeaderNavigationButton>
       </StyledHeaderContent>
       <StyledHeaderNavigation $isOpen={isOpen}>
@@ -165,6 +184,11 @@ const Header = () => {
             >
               {t('translations.header.contact.title')}
             </StyledHeaderNavigationAnchor>
+          </StyledHeaderNavigationItem>
+          <StyledHeaderNavigationItem>
+            <StyledHeaderNavigationLink to="/">
+              {t('translations.header.budget.title')}
+            </StyledHeaderNavigationLink>
           </StyledHeaderNavigationItem>
         </StyledHeaderNavigationList>
       </StyledHeaderNavigation>

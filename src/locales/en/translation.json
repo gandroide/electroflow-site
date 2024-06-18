@@ -42,13 +42,16 @@
         "title": "Portfolio"
       },
       "products": {
-        "title": "products"
+        "title": "Products"
       },
       "team": {
         "title": "Team"
       },
       "contact": {
         "title": "Contact"
+      },
+      "budget": {
+        "title": "Ask for buget"
       }
     },
     "cards": {
