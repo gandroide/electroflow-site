@@ -191,7 +191,7 @@ const ContactUs = () => {
               <TfiEmail size={20} />
             </StyledContactUsInformationIcon>
             <StyledContactUsInformationValue>
-              eletroflow@eletroflow.pt
+              electroflow@electroflow.pt
             </StyledContactUsInformationValue>
           </StyledContactUsInformationContent>
         </StyledContactUsInformationContainer>
