@@ -8,6 +8,7 @@ import {
   StyledFooterContent,
   StyledFooterRights,
 } from './styled';
+import { ScrollTop } from '../scroll/ScrollTop';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -35,6 +36,7 @@ const Footer = () => {
       <Modal closeCallback={handleCloseCallback} isOpen={open}>
         <PrivacyPolicy />
       </Modal>
+      <ScrollTop />
     </StyledFooter>
   );
 };

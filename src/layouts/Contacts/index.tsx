@@ -19,7 +19,7 @@ const contacts: ContactCardData[] = [
   {
     id: 1,
     name: 'Flávio Figueira',
-    position: 'Admistração',
+    position: 'Diretor Executivo (CEO)',
     email: 'flavio.figueira@electroflow.pt',
     phone: '910952097',
     photo: FlavioPhoto,
@@ -27,7 +27,7 @@ const contacts: ContactCardData[] = [
   {
     id: 2,
     name: 'Mariana Alves',
-    position: 'Departamento admistrativo e financeiro',
+    position: 'Serviços Administrativos e Financeiros',
     email: 'admistrativo@electroflow.pt',
     phone: '291143138',
     photo: MarianaPhoto,
@@ -35,7 +35,7 @@ const contacts: ContactCardData[] = [
   {
     id: 3,
     name: 'Gervásio Fernandes',
-    position: 'Departamento Automação e Manutenção Industrial',
+    position: 'Diretor Técnico (CTO)',
     email: 'gervasio.fernandes@electroflow.pt',
     phone: '963048614',
     photo: GervasioPhoto,
@@ -43,7 +43,7 @@ const contacts: ContactCardData[] = [
   {
     id: 4,
     name: 'Ruben Ramos',
-    position: 'Departamento Automação e Manutenção Industrial',
+    position: 'Automação e Manutenção Industrial',
     email: 'ruben.ramos@electroflow.pt',
     phone: '962387450',
     photo: RubenPhoto,
@@ -51,7 +51,7 @@ const contacts: ContactCardData[] = [
   {
     id: 5,
     name: 'Pedro Correia',
-    position: 'Departamento Instalações Elétricas e Energias Renováveis',
+    position: 'Instalações Elétricas e Energias Renováveis',
     email: 'pedro.correia@electroflow.pt',
     phone: '966301130',
     photo: PedroPhoto,
@@ -59,7 +59,7 @@ const contacts: ContactCardData[] = [
   {
     id: 6,
     name: 'Helder Gois',
-    position: 'Departamento Instalações Elétricas e Energias Renováveis',
+    position: 'Instalações Elétricas e Energias Renováveis',
     email: 'helder.gois@electroflow.pt',
     phone: '968848836',
     photo: HelderPhoto,
@@ -67,7 +67,7 @@ const contacts: ContactCardData[] = [
   {
     id: 7,
     name: 'Emanuel Freitas',
-    position: 'Departamento Climatização',
+    position: 'Climatização',
     email: 'avac@electroflow.pt',
     phone: '966300725',
     photo: EmanuelPhoto,
@@ -75,7 +75,7 @@ const contacts: ContactCardData[] = [
   {
     id: 8,
     name: 'Pedro Silva',
-    position: 'Departamento Climatização',
+    position: 'Climatização',
     email: 'pedro.silva@electroflow.pt',
     phone: '966332403',
     photo: PedroSilvaPhoto,

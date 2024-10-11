@@ -23,23 +23,23 @@ const Gallery = () => {
       </div>
       <div>
         <img src={Imprinews} />
-        <div>Imprinews</div>
+        <div>Imprinews - Automação</div>
       </div>
       <div>
         <img src={Meo1} />
-        <div>Meo - Call center</div>
+        <div>Meo - AVAC</div>
       </div>
       <div>
         <img src={Meo2} />
-        <div>Meo - Call center</div>
+        <div>Meo Call Center - Inst. Elétricas</div>
       </div>
       <div>
         <img src={Abb2} />
-        <div>ABB2</div>
+        <div>Subestação Amparo - Quadros Elétricos</div>
       </div>
       <div>
         <img src={ThePlace} />
-        <div>The place</div>
+        <div>The place - Inst. Elétricas</div>
       </div>
       <div>
         <img src={UpacMoradia} />
@@ -47,17 +47,17 @@ const Gallery = () => {
       </div>
       <div>
         <img src={Judiciaria} />
-        <div>Judiciária</div>
+        <div>Judiciária - Inst. Elétricas</div>
       </div>
       <div>
         <img src={Ferragens} />
-        <div>Ferragens Vieira</div>
+        <div>Ferragens Vieira - Pianeis Fotovoltaicos</div>
       </div>
       <div>
-        <img src={Lourencinha} />
-        <div>Lourencinha</div>
+        <img title="hsidhiad" src={Lourencinha} />
+        <div>Urb. Lourencinha</div>
       </div>
-      <div>
+      <div title="hola?">
         <img src={AvacAltice} />
         <div>Avac - Altice</div>
       </div>

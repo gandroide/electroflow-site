@@ -1,4 +1,4 @@
-import react, { useRef, useState } from 'react';
+import react from 'react';
 import {
   StyledQuaternaryTitle,
   StyledSecondaryTitle,
@@ -183,7 +183,7 @@ const ContactUs = () => {
               <TfiMobile size={20} />
             </StyledContactUsInformationIcon>
             <StyledContactUsInformationValue>
-              (+351) 963 048 614
+              (+351) 291 143 138
             </StyledContactUsInformationValue>
           </StyledContactUsInformationContent>
           <StyledContactUsInformationContent>
@@ -191,7 +191,7 @@ const ContactUs = () => {
               <TfiEmail size={20} />
             </StyledContactUsInformationIcon>
             <StyledContactUsInformationValue>
-              electroflow@electroflow.pt
+              info@electroflow.pt
             </StyledContactUsInformationValue>
           </StyledContactUsInformationContent>
         </StyledContactUsInformationContainer>
