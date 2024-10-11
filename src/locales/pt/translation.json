@@ -57,6 +57,13 @@
     "cards": {
       "title": ""
     },
+    "products": {
+      "title": "Products",
+      "1": {
+        "title": "Quadros elétricos",
+        "description": "Como quadristas certificados pela HAGER, a ELECTROFLOW projeta, fabrica e monta quadros elétricos, tanto de potência como de comando, de acordo com as especificações do cliente, e utilizando componentes dos mais prestigiados fabricantes. Um quadro elétrico, ou de distribuição, é um equipamento elétrico destinado a receber energia elétrica de uma ou mais fontes de alimentação e distribui-las a um ou mais circuitos. Destinado a abrigar um ou mais dispositivos de proteção e/ou manobra e a conexão de condutores elétricos interligados a eles, a fim de distribuir a energia elétrica aos diversos circuitos. Em qualquer instalação elétrica, devemos saber como realizar os procedimentos correspondentes à execução de um projeto elaborado previamente, em conformidade com as especificações previstas na NBR 5410 (norma que regulamenta as instalações elétricas em baixa tensão) e NR-10 (segurança em instalações e serviços em eletricidade)."
+      }
+    },
     "footer": {
       "privacyPolicyTitle": "Política de privacidade"
     }

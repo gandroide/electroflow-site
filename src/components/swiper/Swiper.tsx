@@ -2,9 +2,9 @@ import react from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import imagem1 from '../../../public/ManutencaoReparacao.jpg';
-import imagem2 from '../../../public/AcDescMecatronica.png';
-import imagem3 from '../../../public/Gearmotors.jpg';
-import imagem4 from '../../../public/Conversores.png';
+import imagem2 from '../../../public/instalacoes-eletricas.webp';
+import imagem3 from '../../../public/sistema-climatizacao.webp';
+import imagem4 from '../../../public/paineis-solares.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -18,7 +18,7 @@ const SwiperComponent = () => {
       //   console.log(swiper);
       //   onSliderChange(swiper.realIndex);
       // }}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSwiper={(swiper) => console.log(swiper)}
       loop
       autoplay={{ delay: 5000 }}
     >

@@ -57,6 +57,13 @@
     "cards": {
       "title": ""
     },
+    "products": {
+      "title": "Products",
+      "1": {
+        "title": "Electrical panels",
+        "description": "As HAGER-certified panelists, ELECTROFLOW designs, manufactures and assembles electrical panels, both power and control, in accordance with the specifications of the customer, and using components from the most prestigious manufacturers. An electrical, or distribution, panel is a electrical equipment intended to receive electrical energy from one or more power supplies and distributes them to one or more more circuits. Intended to house one or more devices protection and/or maneuvering and the connection of electrical conductors interconnected to them, in order to distribute electrical energy to the different circuits. In any electrical installation, we must know how to carry out the corresponding procedures the execution of a previously prepared project, in compliance with the specifications provided for in NBR 5410 (standard that regulates electrical installations at low voltage) and NR-10 (safety in installations and services in electricity)."
+      }
+    },
     "footer": {
       "privacyPolicyTitle": "Privacy Policy"
     }

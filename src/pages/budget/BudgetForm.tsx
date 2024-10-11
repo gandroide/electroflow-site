@@ -1,6 +1,6 @@
 import react, { useRef } from 'react';
 import Form from '../../components/Form';
-import { InputProps } from '../../interfaces';
+import { FormProps, InputProps } from '../../interfaces';
 import {
   StyledBudgetFormContainer,
   StyledBudgetFormContent,
@@ -8,9 +8,41 @@ import {
 } from './styled';
 import emailjs from '@emailjs/browser';
 import { StyledPrimaryTitle } from '../../styles';
+import axios from 'axios';
 
 export const BudgetForm = () => {
   const form = useRef();
+
+  const serviceId = 'service_yaj63pi';
+  const templateId = 'template_s7jg1kl';
+  const publicKey = 'MwjIzGM8lMjpEKNPb';
+
+  const onSubmitCallback: FormProps['submitCallback'] = (inputs) => {
+    console.log(inputs);
+
+    const emailObj: {
+      [key: string]: string;
+    } = {};
+
+    inputs.forEach((input) => {
+      emailObj[input.id] = input.value;
+    });
+
+    axios
+      .post('https://api.emailjs.com/api/v1.0/email/send', {
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
+        template_params: emailObj,
+      })
+      .then((response: any) => {
+        console.log(response);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   const formInputs: InputProps[] = [
     {
       id: 'name',
@@ -221,16 +253,16 @@ export const BudgetForm = () => {
     },
   ];
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    // falta acrescentar as envs e criar o serviço no site de emailjs
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
-  };
+  // const sendEmail = (e: any) => {
+  //   e.preventDefault();
+  // falta acrescentar as envs e criar o serviço no site de emailjs
+  // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+  //   .then((result) => {
+  //       console.log(result.text);
+  //   }, (error) => {
+  //       console.log(error.text);
+  //   });
+  // };
 
   return (
     <StyledBudgetPageContainer>
@@ -239,7 +271,7 @@ export const BudgetForm = () => {
           Peça-nos um orçamento preenchendo o formulário
         </StyledPrimaryTitle>
         <StyledBudgetFormContent>
-          <Form inputs={formInputs} submitCallback={() => {}} />
+          <Form inputs={formInputs} submitCallback={onSubmitCallback} />
         </StyledBudgetFormContent>
       </StyledBudgetFormContainer>
     </StyledBudgetPageContainer>

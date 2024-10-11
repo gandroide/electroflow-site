@@ -16,7 +16,6 @@ import {
   StyledFormContainer,
   StyledTertiaryTitleContainer,
 } from './styled';
-import emailjs from 'emailjs-com';
 import Map from '../../assets/imgs/map.png';
 import Form from '../../components/Form';
 import { FormProps, InputProps } from '../../interfaces';
@@ -100,56 +99,56 @@ const ContactUs = () => {
       });
   };
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    // const data = {
-    //   serviceId: serviceId,
-    //   templateId: templateId,
-    //   publicKey: publicKey,
-    //   templateParams: {
-    //     formName: name,
-    //     formEmail: email,
-    //     formMessage: message,
-    //   },
-    // };
-    // try {
-    //   const res = await axios.post(
-    //     "'https://api.emailjs.com/api/v1.0/email/send",
-    //     data,{
-    //     contentType: 'application/json'}
-    //   );
-    //   console.log(res.data, 'data');
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // } catch (error) {
-    //   console.error(error);
-    // debugger;
-    // emailjs.sendForm(serviceId, templateId, e.target, publicKey).then(
-    //   (result) => {
-    //     console.log('Correo enviado correctamente:', result.text);
-    //   },
-    //   (error) => {
-    //     console.log('Error al enviar el correo:', error.text);
-    //   },
-    // );
+  // const handleSubmit = async (e: any) => {
+  //   e.preventDefault();
+  // const data = {
+  //   serviceId: serviceId,
+  //   templateId: templateId,
+  //   publicKey: publicKey,
+  //   templateParams: {
+  //     formName: name,
+  //     formEmail: email,
+  //     formMessage: message,
+  //   },
+  // };
+  // try {
+  //   const res = await axios.post(
+  //     "'https://api.emailjs.com/api/v1.0/email/send",
+  //     data,{
+  //     contentType: 'application/json'}
+  //   );
+  //   console.log(res.data, 'data');
+  //   setName('');
+  //   setEmail('');
+  //   setMessage('');
+  // } catch (error) {
+  //   console.error(error);
+  // debugger;
+  // emailjs.sendForm(serviceId, templateId, e.target, publicKey).then(
+  //   (result) => {
+  //     console.log('Correo enviado correctamente:', result.text);
+  //   },
+  //   (error) => {
+  //     console.log('Error al enviar el correo:', error.text);
+  //   },
+  // );
 
-    axios
-      .post('https://api.emailjs.com/api/v1.0/email/send', {
-        service_id: serviceId,
-        template_id: templateId,
-        user_id: publicKey,
-        template_params: {
-          teste: 'filipe',
-        },
-      })
-      .then((response: any) => {
-        console.log(response);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  };
+  //   axios
+  //     .post('https://api.emailjs.com/api/v1.0/email/send', {
+  //       service_id: serviceId,
+  //       template_id: templateId,
+  //       user_id: publicKey,
+  //       template_params: {
+  //         teste: 'filipe',
+  //       },
+  //     })
+  //     .then((response: any) => {
+  //       console.log(response, 'entro?');
+  //     })
+  //     .catch((e) => {
+  //       console.log(e, 'error?');
+  //     });
+  // };
 
   return (
     <StyledContactUsSection id="contact">
@@ -194,6 +193,11 @@ const ContactUs = () => {
               info@electroflow.pt
             </StyledContactUsInformationValue>
           </StyledContactUsInformationContent>
+          <div
+            className="g-recaptcha"
+            data-sitekey="6LfVkV4qAAAAAKJbJGzGEV-CXryy5mZa7NJIbc0s"
+          ></div>
+          <br />
         </StyledContactUsInformationContainer>
       </StyledContactUsContent>
     </StyledContactUsSection>
