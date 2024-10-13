@@ -2,17 +2,17 @@ import react, { useCallback, useEffect, useState } from 'react';
 
 import { StyledGalleryGrid } from './styled';
 
-import Aquaparque from '../../assets/imgs/gallery/aquaparque.jpg';
-import Imprinews from '../../assets/imgs/gallery/imprinews.jpg';
-import Meo1 from '../../assets/imgs/gallery/meo-1.jpg';
-import Meo2 from '../../assets/imgs/gallery/meo-2.jpg';
+import Aquaparque from '../../assets/imgs/gallery/aquaparque.webp';
+import Imprinews from '../../assets/imgs/gallery/imprinews.webp';
+import Meo1 from '../../assets/imgs/gallery/meo-1.webp';
+import Meo2 from '../../assets/imgs/gallery/meo-2.webp';
 import Abb2 from '../../assets/imgs/gallery/abb2.jpg';
-import ThePlace from '../../assets/imgs/gallery/the-place.jpg';
-import UpacMoradia from '../../assets/imgs/gallery/upac-moradia.jpg';
-import Judiciaria from '../../assets/imgs/gallery/judiciaria.jpg';
-import Ferragens from '../../assets/imgs/gallery/ferragens.jpg';
-import Lourencinha from '../../assets/imgs/gallery/lourencinha.jpg';
-import AvacAltice from '../../assets/imgs/gallery/avac-altice.jpeg';
+import ThePlace from '../../assets/imgs/gallery/the-place.webp';
+import UpacMoradia from '../../assets/imgs/gallery/upac-moradia.webp';
+import Judiciaria from '../../assets/imgs/gallery/judiciaria.webp';
+import Ferragens from '../../assets/imgs/gallery/ferragens.webp';
+import Lourencinha from '../../assets/imgs/gallery/lourencinha.webp';
+import AvacAltice from '../../assets/imgs/gallery/avac-altice.webp';
 import MobileGallery from './MobileGallery';
 import { GalleryItem } from '../../interfaces';
 import GalleryItemWork from './GalleryItem';
