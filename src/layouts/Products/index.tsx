@@ -101,23 +101,8 @@ const Products = () => {
     },
     {
       id: 3,
-      title: 'Motores elétricos, motoredutores e variadores',
-      carousel: `Nesta gama de produtos somos distribuidores exclusivos da
-      SEW. O sistema modular de motorredutores SEW está orientado
-      para uma panóplia de áreas de aplicação. Seleccione o
-      accionamento ideal para si, entre os motorredutores
-      standard, de sistema de suporte suspenso elétrico,
-      servomotoredutores, motoredutores de ajuste, em aço
-      inoxidável ou à prova de explosão. A gama de funções
-      compacta, o manuseamento simples e uma integração rápida na
-      aplicação são características que distinguem os conversores
-      de frequência MOVITRAC® LTE-B. Estão disponíveis em 3
-      tamanhos na gama de potências de 0,37 kW até 7,5 kW para as
-      tensões de alimentação de 115 V, 230 V e 400 V. Concebido e
-      desenvolvido para o controlo da velocidade de motores
-      assíncronos sem encoder, o conversor realiza de forma fiável
-      as suas aplicações de transporte simples. Especialmente em
-      pequenos tranportadores modulares, em ventiladores e bombas.`,
+      title: t('translations.products.2.title'),
+      carousel: t('translations.products.2.description'),
       modal: [
         `Nesta gama de produtos somos distribuidores exclusivos da SEW.`,
         `O sistema modular de motorredutores SEW está orientado para uma panóplia de áreas de aplicação. Seleccione o accionamento ideal para si, entre os motorredutores standard, de sistema de suporte suspenso elétrico, servomotoredutores, motoredutores de ajuste, em aço inoxidável ou à prova de explosão.`,
@@ -127,15 +112,8 @@ const Products = () => {
     },
     {
       id: 4,
-      title: 'Bombas e sistemas hidropressores',
-      carousel: `Fornecemos todo o tipo de bombas para abastecimento
-      doméstico, industrial, piscina, rega ou qualquer outro tipo
-      de situação. A escolha do tipo de bomba de água ou de outro
-      fluído requer conhecer o caudal e a pressão pretendida no
-      ponto mais desfavorável, seja para abastecimento doméstico,
-      industrial, piscina, rega ou qualquer outro tipo de
-      situação. Como principais parceiros temos as Marcas CAPRARI
-      e a EBARA.`,
+      title: t('translations.products.3.title'),
+      carousel: t('translations.products.3.description'),
       modal: [
         `Fornecemos todo o tipo de bombas para abastecimento doméstico, industrial, piscina, rega ou qualquer outro tipo de situação. A escolha do tipo de bomba de água ou de outro fluído requer conhecer o caudal e a pressão pretendida no ponto mais desfavorável, seja para abastecimento doméstico, industrial, piscina, rega ou qualquer outro tipo de situação.  Como principais parceiros temos as Marcas CAPRARI e a EBARA.`,
         `Para obter uma cotação para o seu caso, contacte-nos com a seguinte informação:`,
@@ -144,18 +122,8 @@ const Products = () => {
     },
     {
       id: 5,
-      title: 'Equipamentos de AVAC',
-      carousel: `Nesta área de negócio somos distribuidores e de assistência
-      técnica aprovados das Marcas DAIKIN, SAMSUNG e TOYOTOMI.
-      O aquecimento, ventilação e ar condicionado (AVAC) refere-se
-      a uma gama de equipamentos que tem como finalidade
-      climatizar diversos ambientes para, assim, garantir o
-      conforto térmico desses espaços. Nesse sentido, além de
-      proporcionar uma temperatura agradável, o sistema AVAC é
-      responsável por filtrar o ar e eliminar bactérias, mofos e
-      fungos do ambiente em que está inserido. Os equipamentos de
-      AVAC também podem vir integrados com sistema de gestão e
-      poupança energética.`,
+      title: t('translations.products.4.title'),
+      carousel: t('translations.products.4.description'),
       modal: [
         `Nesta área de negócio somos distribuidores e de assistência técnica aprovados das Marcas DAIKIN, SAMSUNG e TOYOTOMI.`,
         `O aquecimento, ventilação e ar condicionado (AVAC) refere-se a uma gama de equipamentos que tem como finalidade climatizar diversos ambientes para, assim, garantir o conforto térmico desses espaços. Nesse sentido, além de proporcionar uma temperatura agradável, o sistema AVAC é responsável por filtrar o ar e eliminar bactérias, mofos e fungos do ambiente em que está inserido. Os equipamentos de AVAC também podem vir integrados com sistema de gestão e poupança energética.`,
@@ -164,19 +132,8 @@ const Products = () => {
     },
     {
       id: 6,
-      title: `Paíneis fotovoltaicos`,
-      carousel: `A energia solar fotovoltaica é a energia obtida através da
-      conversão direta da luz em eletricidade por meio do efeito
-      fotovoltaico. A célula fotovoltaica, um dispositivo
-      fabricado com material semicondutor, é a unidade fundamental
-      desse processo de conversão. Este tipo de energia usa-se
-      para alimentar uma grande variedade de aplicativos e
-      aparelhos autónomos, para abastecer refúgios ou moradias
-      isoladas da rede elétrica e para produzir eletricidade a
-      grande escala através de redes de distribuição. Devido à
-      crescente demanda de energias renováveis, a fabricação de
-      células solares e instalações fotovoltaicas tem avançado
-      consideravelmente nos últimos anos.`,
+      title: t('translations.products.5.title'),
+      carousel: t('translations.products.5.description'),
       modal: [
         `A energia solar fotovoltaica é a energia obtida através da conversão direta da luz em eletricidade por meio do efeito fotovoltaico. A célula fotovoltaica, um dispositivo fabricado com material semicondutor, é a unidade fundamental desse processo de conversão.`,
         `Este tipo de energia usa-se para alimentar uma grande variedade de aplicativos e aparelhos autónomos, para abastecer refúgios ou moradias isoladas da rede elétrica e para produzir eletricidade a grande escala através de redes de distribuição. Devido à crescente demanda de energias renováveis, a fabricação de células solares e instalações fotovoltaicas tem avançado consideravelmente nos últimos anos.`,
