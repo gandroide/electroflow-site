@@ -7,28 +7,6 @@ export const StyledGalleryGrid = styled.div`
     grid-template-rows: repeat(6, 150px);
     gap: 10px;
 
-    & > div {
-        border: 1px solid #cbcbcb;
-        position: relative;
-
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        & div {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px;
-            background: rgba(31, 53, 65, 0.9);
-            color: #fff;
-            text-align: center;
-        }
-    }
-
     & div:nth-child(1) {
         grid-column: 1 / span 3;
         grid-row: 1 / span 3;
@@ -82,5 +60,49 @@ export const StyledGalleryGrid = styled.div`
     & div:nth-child(11) {
         grid-column: 6 / span 1;
         grid-row: 6 / span 1;
+    }
+`;
+
+export const StyledGalleryItemContainer = styled.div`
+    border: 1px solid #cbcbcb;
+    position: relative;
+`;
+
+export const StyledGalleryItemImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`;
+
+export const StyledGalleryItemDescription = styled.p`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(31, 53, 65, 0.9);
+    color: #fff;
+    text-align: center;
+`;
+
+export const StyledMobileGallery = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & ${StyledGalleryItemContainer} {
+        margin-bottom: 20px;
+    }
+
+    & ${StyledGalleryItemImage} {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 500px) {
+        & ${StyledGalleryItemImage} {
+            height: 350px;
+        }
     }
 `;

@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactNode, Ref, RefObject } from 'react';
+import { ChangeEvent, ReactNode } from 'react';
 
 // Types
 export type SharedInputProperties = {
@@ -55,6 +55,11 @@ export type Language = {
   code: string;
   name: string;
 };
+
+export type GalleryItem = {
+  img: string;
+  description: string;
+}
 
 // Component Props
 export type InputProps = TextareaInput | BasicInput;
@@ -124,6 +129,12 @@ export type ServiceCardData = {
 };
 
 export type ServiceCardProps = Omit<ServiceCardData, 'id'>;
+
+export type MobileGalleryProps = {
+  items: GalleryItem[];
+}
+
+export type GalleryItemProps = GalleryItem;
 
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
