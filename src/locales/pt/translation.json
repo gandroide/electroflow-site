@@ -66,6 +66,16 @@
     },
     "footer": {
       "privacyPolicyTitle": "Política de privacidade"
+    },
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "morada": "Morada",
+      "zip-code": "Código Postal",
+      "localidade": "Localidade",
+      "install": "Localidade para instalação ou fornecimento",
+      "details": "Insira informações úteis a ter em conta na elaboração do seu orçamento",
+      "message": "Mensagem"
     }
   }
 }

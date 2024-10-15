@@ -66,6 +66,16 @@
     },
     "footer": {
       "privacyPolicyTitle": "Privacy Policy"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "morada": "Address",
+      "zip-code": "Zip code",
+      "localidade": "Location",
+      "install": "Installation or delivery location",
+      "details": "Enter useful information to consider in the preparation of your quote",
+      "message": "Message"
     }
   }
 }

@@ -24,7 +24,7 @@ import axios from 'axios';
 
 const formInputs: InputProps[] = [
   {
-    id: 'from_name',
+    id: 'name',
     label: 'Nome',
     value: '',
     hasError: false,
@@ -38,7 +38,7 @@ const formInputs: InputProps[] = [
     },
   },
   {
-    id: 'from_email',
+    id: 'email',
     label: 'Email',
     value: '',
     hasError: false,

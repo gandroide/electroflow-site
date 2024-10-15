@@ -1,24 +1,21 @@
 import react, { FC } from 'react';
 import useFormInputs, { ActionTypes } from '../../hooks/useFormInputs';
 import { TextInput, TextareaInput } from '../Inputs';
-import {
-  FormProps,
-  isTextInput,
-  isTextareaInput,
-  // isRadioInput,
-} from '../../interfaces';
+import { FormProps, isTextInput, isTextareaInput } from '../../interfaces';
 import { Grid, GridItem } from '../Grid';
-import RadioInput from '../Inputs/RadioInput';
 
 import {
   StyledForm,
   StyledFormButton,
   StyledFormButtosContainer,
 } from './styled';
+import { useTranslation } from 'react-i18next';
 
 const Form: FC<FormProps> = ({ inputs, submitCallback }) => {
+  const { t } = useTranslation();
   const { formInputs, formActions } = useFormInputs(inputs);
-  const formData = {};
+
+  t('translations.header.mission.title');
 
   const generatedInputs = () => {
     return formInputs.map((input, index) => {
@@ -29,7 +26,7 @@ const Form: FC<FormProps> = ({ inputs, submitCallback }) => {
           <GridItem columns={columns} key={id}>
             <TextInput
               id={id}
-              label={label}
+              label={t(`translations.form.${id}`)}
               type={input.type}
               value={input.value}
               hasError={hasError}
@@ -66,27 +63,6 @@ const Form: FC<FormProps> = ({ inputs, submitCallback }) => {
           </GridItem>
         );
       }
-
-      // if (isRadioInput(input)) {
-      //   return (
-      //     <GridItem columns={columns} key={id}>
-      //       <RadioInput
-      //         id={id}
-      //         label={label}
-      //         hasError={hasError}
-      //         errorMsg={errorMsg}
-      //         isRequired={isRequired}
-      //         changeHandler={(e) =>
-      //           formActions({
-      //             type: ActionTypes.CHANGE,
-      //             payload: { event: e, index },
-      //           })
-      //         }
-      //         options={input.options}
-      //       />
-      //     </GridItem>
-      //   );
-      // }
     });
   };
 
