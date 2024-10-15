@@ -23,48 +23,48 @@ import { TfiEmail, TfiLocationPin, TfiMobile } from 'react-icons/tfi';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 
-const formInputs: InputProps[] = [
-  {
-    id: 'name',
-    label: 'Nome',
-    value: '',
-    hasError: false,
-    errorMsg: '',
-    isRequired: true,
-    type: 'text',
-    columns: {
-      sm: 6,
-      md: 12,
-      lg: 6,
-    },
-  },
-  {
-    id: 'email',
-    label: 'Email',
-    value: '',
-    hasError: false,
-    errorMsg: '',
-    isRequired: true,
-    type: 'text',
-    columns: {
-      sm: 6,
-      md: 12,
-      lg: 6,
-    },
-  },
-  {
-    id: 'message',
-    label: 'Mensagem',
-    value: '',
-    hasError: false,
-    errorMsg: '',
-    isRequired: true,
-    type: 'textarea',
-  },
-];
-
 const ContactUs = () => {
   const { t } = useTranslation();
+
+  const formInputs: InputProps[] = [
+    {
+      id: 'name',
+      label: t('translations.header.contact.contactForm.name'),
+      value: '',
+      hasError: false,
+      errorMsg: '',
+      isRequired: true,
+      type: 'text',
+      columns: {
+        sm: 6,
+        md: 12,
+        lg: 6,
+      },
+    },
+    {
+      id: 'email',
+      label: 'Email',
+      value: '',
+      hasError: false,
+      errorMsg: '',
+      isRequired: true,
+      type: 'text',
+      columns: {
+        sm: 6,
+        md: 12,
+        lg: 6,
+      },
+    },
+    {
+      id: 'details',
+      label: t('translations.header.contact.contactForm.message'),
+      value: '',
+      hasError: false,
+      errorMsg: '',
+      isRequired: true,
+      type: 'textarea',
+    },
+  ];
   // const formRef = useRef();
   // const [name, setName] = useState<string>();
   // const [email, setEmail] = useState<string>();

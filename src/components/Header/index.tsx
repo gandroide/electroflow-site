@@ -179,7 +179,7 @@ const Header = () => {
               to="/#products"
               onClick={toggleOpenHandler}
             >
-              {t('translations.header.products.title')}
+              {t('translations.products.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>

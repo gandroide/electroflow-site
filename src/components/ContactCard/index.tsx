@@ -50,7 +50,7 @@ const ContactCard: FC<ContactCardProps> = ({
         <StyledContactCardInfoContainer>
           <StyledContactCardInfoContent>
             <StyledContactCardInfoLabel>
-              {t('translations.header.cards.phone')}
+              {t('translations.cards.phone')}
             </StyledContactCardInfoLabel>
             <StyledContactCardInfoValue>{phone}</StyledContactCardInfoValue>
           </StyledContactCardInfoContent>

@@ -66,7 +66,15 @@
         }
       },
       "budget": {
-        "title": "Ask for buget"
+        "title": "Ask for buget",
+        "form": {
+          "name": "Name",
+          "address": "Address",
+          "location": "Location",
+          "zipCode": "zip-code",
+          "LocationInstall": "Location for installation or supply",
+          "details": "Enter useful information to be taken into account when preparing your budget"
+        }
       }
     },
     "cards": {
@@ -120,6 +128,8 @@
       }
     },
     "footer": {
+      "copy": "All rights ",
+      "reserved": "reserved",
       "privacyPolicyTitle": "Privacy Policy"
     },
     "form": {
