@@ -127,7 +127,7 @@ export const StyledHeaderNavigationLink = styled(NavLink)`
     }
 `;
 
-export const StyledHeaderNavigationAnchor = styled.a`
+export const StyledHeaderNavigationAnchor = styled(NavLink)`
     text-align: center;
     width: 100%;
     display: block;

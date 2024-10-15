@@ -23,6 +23,7 @@ import {
 
 import { Language } from '../../interfaces';
 import Logo from '../../assets/imgs/logo.png';
+import { useLocation } from 'react-router-dom';
 
 const languages: Language[] = [
   {
@@ -116,10 +117,22 @@ const LanguageDropdown = () => {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
+  const location = useLocation();
 
   const toggleOpenHandler = () => {
     setIsOpen((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.substring(1);
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <StyledHeaderContainer>
@@ -129,7 +142,7 @@ const Header = () => {
       <StyledHeaderContent>
         <LanguageDropdown />
         <StyledHeaderNavigationButton
-          onClick={toggleOpenHandler}
+          onClick={() => toggleOpenHandler()}
           $isOpen={isOpen}
         >
           {!isOpen ? <TfiMenu fill="#fff" /> : <RiCloseFill fill="#1F3541" />}
@@ -139,7 +152,7 @@ const Header = () => {
         <StyledHeaderNavigationList>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationAnchor
-              href="#mission"
+              to="/#mission"
               onClick={toggleOpenHandler}
             >
               {t('translations.header.mission.title')}
@@ -147,7 +160,7 @@ const Header = () => {
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationAnchor
-              href="#services"
+              to="/#services"
               onClick={toggleOpenHandler}
             >
               {t('translations.header.services.title')}
@@ -155,7 +168,7 @@ const Header = () => {
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationAnchor
-              href="#gallery"
+              to="/#gallery"
               onClick={toggleOpenHandler}
             >
               {t('translations.header.portfolio.title')}
@@ -163,7 +176,7 @@ const Header = () => {
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationAnchor
-              href="#products"
+              to="/#products"
               onClick={toggleOpenHandler}
             >
               {t('translations.header.products.title')}
@@ -171,7 +184,7 @@ const Header = () => {
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationAnchor
-              href="#team"
+              to="/#team"
               onClick={toggleOpenHandler}
             >
               {t('translations.header.team.title')}
@@ -179,7 +192,7 @@ const Header = () => {
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
             <StyledHeaderNavigationAnchor
-              href="#contact"
+              to="/#contact"
               onClick={toggleOpenHandler}
             >
               {t('translations.header.contact.title')}
