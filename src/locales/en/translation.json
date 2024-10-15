@@ -41,9 +41,6 @@
       "portfolio": {
         "title": "Portfolio"
       },
-      "products": {
-        "title": "Products"
-      },
       "team": {
         "title": "Team",
         "position": {
@@ -78,25 +75,48 @@
     },
     "products": {
       "title": "Products",
+      "moreInfo": "See more",
       "1": {
         "title": "Electrical panels",
-        "description": "As HAGER-certified panelists, ELECTROFLOW designs, manufactures and assembles electrical panels, both power and control, in accordance with the specifications of the customer, and using components from the most prestigious manufacturers. An electrical, or distribution, panel is a electrical equipment intended to receive electrical energy from one or more power supplies and distributes them to one or more more circuits. Intended to house one or more devices protection and/or maneuvering and the connection of electrical conductors interconnected to them, in order to distribute electrical energy to the different circuits. In any electrical installation, we must know how to carry out the corresponding procedures the execution of a previously prepared project, in compliance with the specifications provided for in NBR 5410 (standard that regulates electrical installations at low voltage) and NR-10 (safety in installations and services in electricity)."
+        "description": "As HAGER-certified panelists, ELECTROFLOW designs, manufactures and assembles electrical panels, both power and control, in accordance with the specifications of the customer, and using components from the most prestigious manufacturers. An electrical, or distribution, panel is a electrical equipment intended to receive electrical energy from one or more power supplies and distributes them to one or more more circuits. Intended to house one or more devices protection and/or maneuvering and the connection of electrical conductors interconnected to them, in order to distribute electrical energy to the different circuits. In any electrical installation, we must know how to carry out the corresponding procedures the execution of a previously prepared project, in compliance with the specifications provided for in NBR 5410 (standard that regulates electrical installations at low voltage) and NR-10 (safety in installations and services in electricity).",
+        "modal": [
+          "As panelists certified by HAGER, ELECTROFLOW designs, manufactures and assembles electrical panels, both power and control, according to customer specifications, and using components from the most prestigious manufacturers.",
+          "An electrical, or distribution, panel is an electrical equipment designed to receive electrical energy from one or more power sources and distribute it to one or more circuits. Intended to house one or more protection and/or switching devices and the connection of electrical conductors interconnected to them, in order to distribute electrical energy to the various circuits.",
+          "In any electrical installation, we must know how to carry out the procedures corresponding to the execution of a previously prepared project, in accordance with the specifications set out in NBR 5410 (standard that regulates low voltage electrical installations) and NR-10 (safety in installations and services in electricity)."
+        ]
       },
       "2": {
         "title": "Electric motors, gearmotors and inverters",
-        "description": "We are exclusive SEW distributors for this range of products. The SEW modular gearmotor system is aimed at a range of application areas. Select the ideal drive for you from standard, electric suspended support system, servo gearmotors, adjustment gearmotors, stainless steel or explosion-proof gearmotors. The compact range of functions, simple handling and quick integration into the application are features that distinguish MOVITRAC® LTE-B frequency converters. They are available in 3 sizes in the power range from 0.37 kW to 7.5 kW for supply voltages of 115 V, 230 V and 400 V. Designed and developed for speed control of asynchronous motors without an encoder, the converter performs reliably your simple transport applications. Especially in small modular conveyors, fans and pumps."
+        "description": "We are exclusive SEW distributors for this range of products. The SEW modular gearmotor system is aimed at a range of application areas. Select the ideal drive for you from standard, electric suspended support system, servo gearmotors, adjustment gearmotors, stainless steel or explosion-proof gearmotors. The compact range of functions, simple handling and quick integration into the application are features that distinguish MOVITRAC® LTE-B frequency converters. They are available in 3 sizes in the power range from 0.37 kW to 7.5 kW for supply voltages of 115 V, 230 V and 400 V. Designed and developed for speed control of asynchronous motors without an encoder, the converter performs reliably your simple transport applications. Especially in small modular conveyors, fans and pumps.",
+        "modal": [
+          "We are exclusive SEW distributors for this range of products.",
+          "The SEW modular gearmotor system is aimed at a range of application areas. Select the ideal drive for you from standard, electric suspended support system, servo gearmotors, adjustment gearmotors, stainless steel or explosion-proof gearmotors.",
+          "The compact range of functions, simple handling and quick integration into the application are features that distinguish MOVITRAC® LTE-B frequency converters. They are available in 3 sizes in the power range from 0.37 kW to 7.5 kW for supply voltages of 115 V, 230 V and 400 V. Designed and developed for speed control of asynchronous motors without an encoder, the converter performs reliably your simple transport applications. Especially in small modular conveyors, fans and pumps."
+        ]
       },
       "3": {
         "title": "Pumps and pressure systems",
-        "description": "We supply all types of fuel pumps domestic, industrial, swimming pool, irrigation or any other type of situation. Choosing the type of water pump or other fluid requires knowing the flow rate and desired pressure in the most unfavorable point, whether for domestic supply, industrial, swimming pool, irrigation or any other type of situation. As main partners we have the CAPRARI Brands and EBARA."
+        "description": "We supply all types of fuel pumps domestic, industrial, swimming pool, irrigation or any other type of situation. Choosing the type of water pump or other fluid requires knowing the flow rate and desired pressure in the most unfavorable point, whether for domestic supply, industrial, swimming pool, irrigation or any other type of situation. As main partners we have the CAPRARI Brands and EBARA.",
+        "modal": [
+          "We supply all types of pumps for domestic, industrial, swimming pool, irrigation or any other type of situation. Choosing the type of water pump or other fluid requires knowing the flow rate and pressure desired at the most unfavorable point, whether for domestic, industrial supply, swimming pool, irrigation or any other type of situation.  As main partners we have the brands CAPRARI and EBARA.",
+          "To obtain a quote for your case, please contact us with the following information:"
+        ]
       },
       "4": {
         "title": "HVAC equipment",
-        "description": "In this business area we are distributors and assistance approved techniques of the DAIKIN, SAMSUNG and TOYOTOMI Brands. The heating, ventilation and air conditioning (HVAC) refers to to a range of equipment that aims to air conditioning different environments to ensure the thermal comfort of these spaces. In this sense, in addition to To provide a pleasant temperature, the HVAC system is responsible for filtering the air and eliminating bacteria, mold and fungi from the environment in which it is located. The equipment for HVAC can also be integrated with a management system and energy savings."
+        "description": "In this business area we are distributors and assistance approved techniques of the DAIKIN, SAMSUNG and TOYOTOMI Brands. The heating, ventilation and air conditioning (HVAC) refers to to a range of equipment that aims to air conditioning different environments to ensure the thermal comfort of these spaces. In this sense, in addition to To provide a pleasant temperature, the HVAC system is responsible for filtering the air and eliminating bacteria, mold and fungi from the environment in which it is located. The equipment for HVAC can also be integrated with a management system and energy savings.",
+        "modal": [
+          "In this business area we are approved distributors and technical assistance of the DAIKIN, SAMSUNG and TOYOTOMI Brands.",
+          "Heating, ventilation and air conditioning (HVAC) refers to a range of equipment that aims to air-condition different environments, thus guaranteeing the thermal comfort of these spaces. In this sense, in addition to providing a pleasant temperature, the HVAC system is responsible for filtering the air and eliminating bacteria, mold and fungi from the environment in which it is located. HVAC equipment can also be integrated with an energy management and saving system."
+        ]
       },
       "5": {
         "title": "Photovoltaic panels",
-        "description": "Photovoltaic solar energy is energy obtained through the direct conversion of light into electricity through the photovoltaic effect. The photovoltaic cell, a device made from semiconductor material, is the fundamental unit of this conversion process. This type of energy is used to power a wide variety of applications and autonomous devices, to supply refuges or homes isolated from the electrical grid and to produce electricity on a large scale through distribution networks. Due to the growing demand for renewable energy, the manufacturing of solar cells and photovoltaic installations has advanced considerably in recent years."
+        "description": "Photovoltaic solar energy is energy obtained through the direct conversion of light into electricity through the photovoltaic effect. The photovoltaic cell, a device made from semiconductor material, is the fundamental unit of this conversion process. This type of energy is used to power a wide variety of applications and autonomous devices, to supply refuges or homes isolated from the electrical grid and to produce electricity on a large scale through distribution networks. Due to the growing demand for renewable energy, the manufacturing of solar cells and photovoltaic installations has advanced considerably in recent years.",
+        "modal": [
+          "Photovoltaic solar energy is energy obtained through the direct conversion of light into electricity through the photovoltaic effect. The photovoltaic cell, a device made from semiconductor material, is the fundamental unit of this conversion process.",
+          "This type of energy is used to power a wide variety of applications and autonomous devices, to supply refuges or homes isolated from the electrical grid and to produce electricity on a large scale through distribution networks. Due to the growing demand for renewable energy, the manufacturing of solar cells and photovoltaic installations has advanced considerably in recent years."
+        ]
       }
     },
     "footer": {
