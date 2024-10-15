@@ -26,8 +26,8 @@ const Footer = () => {
     <StyledFooter>
       <StyledFooterContent>
         <StyledFooterRights>
-          Electroflow &#169; {new Date().getFullYear()} - Todos os direitos
-          reservados |{' '}
+          Electroflow &#169; {new Date().getFullYear()} -{' '}
+          {t('translations.footer.copy')} {t('translations.footer.reserved')} |{' '}
         </StyledFooterRights>
         <StyledLinkButton title="Privacy Policy" onClick={handleOpen}>
           {t('translations.footer.privacyPolicyTitle')}

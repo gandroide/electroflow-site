@@ -23,6 +23,7 @@ import {
 
 import { Language } from '../../interfaces';
 import Logo from '../../assets/imgs/logo.png';
+import { NavLink } from 'react-router-dom';
 
 const languages: Language[] = [
   {
@@ -166,7 +167,7 @@ const Header = () => {
               href="#products"
               onClick={toggleOpenHandler}
             >
-              {t('translations.header.products.title')}
+              {t('translations.products.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
           <StyledHeaderNavigationItem>
