@@ -28,7 +28,7 @@ const ContactUs = () => {
 
   const formInputs: InputProps[] = [
     {
-      id: 'from_name',
+      id: 'name',
       label: t('translations.header.contact.contactForm.name'),
       value: '',
       hasError: false,
@@ -42,7 +42,7 @@ const ContactUs = () => {
       },
     },
     {
-      id: 'from_email',
+      id: 'email',
       label: 'Email',
       value: '',
       hasError: false,
@@ -56,7 +56,7 @@ const ContactUs = () => {
       },
     },
     {
-      id: 'message',
+      id: 'details',
       label: t('translations.header.contact.contactForm.message'),
       value: '',
       hasError: false,
