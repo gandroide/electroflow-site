@@ -136,6 +136,10 @@ export type MobileGalleryProps = {
 
 export type GalleryItemProps = GalleryItem;
 
+export type SwiperComponentProps = {
+  onSliderChange: (index: number) => void;
+}
+
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
   return input.type === 'text';

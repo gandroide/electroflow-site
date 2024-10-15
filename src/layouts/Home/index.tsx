@@ -14,8 +14,7 @@ import { StyledPrimaryTitle } from '../../styles';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import { useTranslation } from 'react-i18next';
 
-const AnimatedText = () => {
-  const [visibleText, setVisibleText] = useState(0);
+const AnimatedText = ({ visibleTextIndex }: { visibleTextIndex: number }) => {
   const { t } = useTranslation();
 
   const animatedTextValues = [
@@ -25,17 +24,6 @@ const AnimatedText = () => {
     t('translations.main.animatedText.4'),
   ];
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      const newVisibleTextIndex =
-        visibleText === animatedTextValues.length - 1 ? 0 : visibleText + 1;
-
-      setVisibleText(newVisibleTextIndex);
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }, [visibleText]);
-
   return (
     <StyledAnimatedTextContainer>
       {animatedTextValues.map((text, index) => (
@@ -43,7 +31,7 @@ const AnimatedText = () => {
           key={text}
           timeout={500}
           classNames="teste"
-          in={visibleText === index}
+          in={visibleTextIndex === index}
           mountOnEnter
           unmountOnExit
         >
@@ -61,6 +49,8 @@ const Home = () => {
   const isHomeVisible = useIntersectionObserver({ ref: homeRef });
   const { t } = useTranslation();
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <StyledHomeSection>
       <CSSTransition
@@ -75,7 +65,7 @@ const Home = () => {
           </StyledHomeContentText>
           <StyledHomeContentText>
             {t('translations.main.secondParagraph')}
-            <AnimatedText />
+            <AnimatedText visibleTextIndex={currentIndex} />
           </StyledHomeContentText>
           <StyledHomeContentText>
             {t('translations.main.thirdParagraph')}
@@ -83,7 +73,7 @@ const Home = () => {
         </StyledHomeContent>
       </CSSTransition>
       <StyledHomeSlider>
-        <SwiperComponent />
+        <SwiperComponent onSliderChange={(index) => setCurrentIndex(index)} />
       </StyledHomeSlider>
     </StyledHomeSection>
   );
