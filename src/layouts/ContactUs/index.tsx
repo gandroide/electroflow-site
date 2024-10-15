@@ -21,6 +21,7 @@ import Form from '../../components/Form';
 import { FormProps, InputProps } from '../../interfaces';
 import { TfiEmail, TfiLocationPin, TfiMobile } from 'react-icons/tfi';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const formInputs: InputProps[] = [
   {
@@ -63,6 +64,7 @@ const formInputs: InputProps[] = [
 ];
 
 const ContactUs = () => {
+  const { t } = useTranslation();
   // const formRef = useRef();
   // const [name, setName] = useState<string>();
   // const [email, setEmail] = useState<string>();
@@ -154,21 +156,26 @@ const ContactUs = () => {
     <StyledContactUsSection id="contact">
       <StyledContactUsOverlay $background={Map} />
       <StyledContactUsContainer>
-        <StyledSecondaryTitle>Contacte-nos</StyledSecondaryTitle>
+        <StyledSecondaryTitle>
+          {t('translations.header.contact.contactForm.title')}
+        </StyledSecondaryTitle>
         <StyledTertiaryTitleContainer>
           <StyledTertiaryTtile>
-            Para mais informações sobre os nossos serviços, não hesite em
-            contactar-nos preenchendo o formulário abaixo
+            {t('translations.header.contact.contactForm.moreInfo')}
           </StyledTertiaryTtile>
         </StyledTertiaryTitleContainer>
       </StyledContactUsContainer>
       <StyledContactUsContent>
         <StyledFormContainer>
-          <StyledQuaternaryTitle>Envie-nos uma mensagem</StyledQuaternaryTitle>
+          <StyledQuaternaryTitle>
+            {t('translations.header.contact.contactForm.writeUs')}
+          </StyledQuaternaryTitle>
           <Form inputs={formInputs} submitCallback={onSubmitCallback} />
         </StyledFormContainer>
         <StyledContactUsInformationContainer>
-          <StyledQuaternaryTitle>Informação do contacto</StyledQuaternaryTitle>
+          <StyledQuaternaryTitle>
+            {t('translations.header.contact.contactForm.contactInfo')}
+          </StyledQuaternaryTitle>
           <StyledContactUsInformationContent>
             <StyledContactUsInformationIcon>
               <TfiLocationPin size={20} />

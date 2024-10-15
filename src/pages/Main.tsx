@@ -18,8 +18,10 @@ import ContactUs from '../layouts/ContactUs';
 import Products from '../layouts/Products';
 import Home from '../layouts/Home';
 import Services from '../layouts/Services';
+import { useTranslation } from 'react-i18next';
 
 const Main: FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Home />
@@ -34,7 +36,9 @@ const Main: FC = () => {
       <Products />
 
       <StyledSection id="team">
-        <StyledSecondaryTitle>Equipa</StyledSecondaryTitle>
+        <StyledSecondaryTitle>
+          {t('translations.header.team.title')}
+        </StyledSecondaryTitle>
         <Contacts />
       </StyledSection>
 

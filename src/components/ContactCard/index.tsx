@@ -21,6 +21,7 @@ import {
 } from './styled';
 
 import { ContactCardProps } from '../../interfaces';
+import { useTranslation } from 'react-i18next';
 
 const ContactCard: FC<ContactCardProps> = ({
   name,
@@ -29,6 +30,7 @@ const ContactCard: FC<ContactCardProps> = ({
   phone,
   photo,
 }) => {
+  const { t } = useTranslation();
   return (
     <StyledContactCardContainer>
       <StyledContactCardHeaderContainer>
@@ -47,7 +49,9 @@ const ContactCard: FC<ContactCardProps> = ({
       <StyledContactCardContent>
         <StyledContactCardInfoContainer>
           <StyledContactCardInfoContent>
-            <StyledContactCardInfoLabel>Telefone</StyledContactCardInfoLabel>
+            <StyledContactCardInfoLabel>
+              {t('translations.header.cards.phone')}
+            </StyledContactCardInfoLabel>
             <StyledContactCardInfoValue>{phone}</StyledContactCardInfoValue>
           </StyledContactCardInfoContent>
           <StyledContactCardInfoContent>
