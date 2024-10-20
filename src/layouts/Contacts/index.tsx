@@ -29,7 +29,7 @@ const Contacts = () => {
     },
     {
       id: 2,
-      name: 'Mariana Alves',
+      name: 'Marina Alves',
       position: t('translations.header.team.position.admin'),
       email: 'admistrativo@electroflow.pt',
       phone: '291143138',

@@ -46,6 +46,14 @@ const Services = () => {
           id: 2,
           text: t('translations.header.services.secondService.item2'),
         },
+        {
+          id: 3,
+          text: t('translations.header.services.secondService.item3'),
+        },
+        {
+          id: 4,
+          text: t('translations.header.services.secondService.item4'),
+        },
       ],
     },
     {

@@ -21,21 +21,23 @@
       "services": {
         "title": "Services",
         "firstService": {
-          "title": "Project Management",
-          "item1": "Preparation of Heating, Air Conditioning and Ventilation Studies and Projects",
+          "title": "Preparation of studies and projects for:",
+          "item1": "Climitization",
           "item2": "Electrical Installations and ITED",
           "item3": "Renewable Energy"
         },
         "secondService": {
-          "title": "Production management",
-          "item1": "Execution of works",
-          "item2": "Execution of renovations"
+          "title": "Planning and execution of works of:",
+          "item1": "Electrical installations and ITED",
+          "item2": "Air conditioning and ventilation",
+          "item3": "Assembly of hydropressor systems",
+          "item4": "Assembly of electro-mechanical equipment"
         },
         "thirdService": {
           "title": "Maintenance Management",
           "item1": "Preparation and Execution of Preventive and Predictive Maintenance Plans",
-          "item2": "Technical Assistance and Corrective Maintenance",
-          "item3": "Technical assistance"
+          "item2": "Carrying out corrective maintenance on electrical, mechanical and hydraulic systems",
+          "item3": "Technical assistance for all types of industrial equipment"
         }
       },
       "portfolio": {

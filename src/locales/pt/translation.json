@@ -21,21 +21,23 @@
       "services": {
         "title": "Serviços",
         "firstService": {
-          "title": "Gestão de Projetos",
-          "item1": "Elaboração de Estudo e Projetos de Aquecimento, Ar Condicionado e Ventilação",
+          "title": "Elaboração de estudo e projetos de :",
+          "item1": "Climitização",
           "item2": "Instalações Elétricas e ITED",
           "item3": "Energias renováveis"
         },
         "secondService": {
-          "title": "Gestão de Produção",
-          "item1": "Execução de obras",
-          "item2": "Execução de remodelações"
+          "title": "Planeamento e execução de obras de:",
+          "item1": "Instalações elétricas e ITED",
+          "item2": "Ar condicionado e ventilação",
+          "item3": "Montagem de sistemas hidropressores",
+          "item4": "Montagem de equipamentos eletro-mecânicos"
         },
         "thirdService": {
           "title": "Gestão de Manutenção",
           "item1": "Elaboração e Execução de Planos de Manutenção Preventiva e Preditiva",
-          "item2": "Assistência Técnica e Manutenção Correctiva",
-          "item3": "Assistência Técnica"
+          "item2": "Execução de manutenções corretivas em sistemas elétricos, mecânicos e hidraulicos",
+          "item3": "Assistência técnica em todo o tipo de equipamentos industriais"
         }
       },
       "portfolio": {
