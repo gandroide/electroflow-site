@@ -1,7 +1,7 @@
 {
   "translations": {
     "main": {
-      "firstParagraph": "Exerce a atividade desde 2014, e contamos com uma equipa jovem e dinâmica com amplos conhecimentos da indústria, em diversas áreas de engenharia, em sintonia com as necessidades dos nossos clientes na RAM.",
+      "firstParagraph": "Exerce a atividade desde 2014, e contamos com uma equipa experiente e dinâmica com amplos conhecimentos da indústria, em diversas áreas de engenharia, em sintonia com as necessidades dos nossos clientes na RAM.",
       "secondParagraph": "Intervimos ao nível do projeto, montagem/execução e assistência técnica nas seguintes áreas de negócio:",
       "thirdParagraph": "Nas áreas acima mencionadas comercializamos produtos de Marcas de referência, tanto para o setor industrial como comercial, com várias parcerias forjadas com grupos empresariais reconhecidos globalmente.",
       "animatedText": {
@@ -21,13 +21,13 @@
       "services": {
         "title": "Serviços",
         "firstService": {
-          "title": "Elaboração de estudo e projetos de :",
-          "item1": "Climitização",
+          "title": "Elaboração de estudo e projetos de",
+          "item1": "Climatizacao",
           "item2": "Instalações Elétricas e ITED",
           "item3": "Energias renováveis"
         },
         "secondService": {
-          "title": "Planeamento e execução de obras de:",
+          "title": "Planeamento e execução de obras de",
           "item1": "Instalações elétricas e ITED",
           "item2": "Ar condicionado e ventilação",
           "item3": "Montagem de sistemas hidropressores",
@@ -63,6 +63,7 @@
           "moreInfo": "Para mais informações sobre os nossos serviços, não hesite em contactar-nos preenchendo o formulário abaixo",
           "name": "Nome",
           "email": "Email",
+          "subject": "Assunto",
           "message": "Mensagem",
           "contactInfo": "Informação do contacto"
         }
@@ -139,6 +140,7 @@
       "name": "Nome",
       "email": "Email",
       "morada": "Morada",
+      "subject": "Assunto",
       "zip-code": "Código Postal",
       "localidade": "Localidade",
       "install": "Localidade para instalação ou fornecimento",

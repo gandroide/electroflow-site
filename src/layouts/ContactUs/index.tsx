@@ -56,6 +56,15 @@ const ContactUs = () => {
       },
     },
     {
+      id: 'subject',
+      type: 'text',
+      value: '',
+      hasError: false,
+      isRequired: true,
+      label: t('translations.header.contact.contactForm.subject'),
+      errorMsg: '',
+    },
+    {
       id: 'details',
       label: t('translations.header.contact.contactForm.message'),
       value: '',
@@ -181,7 +190,7 @@ const ContactUs = () => {
               <TfiLocationPin size={20} />
             </StyledContactUsInformationIcon>
             <StyledContactUsInformationValue>
-              Caminho do Pilar 19, 9000-653 Funchal
+              Caminho do Pilar 18 RC, 9000-136 Funchal
             </StyledContactUsInformationValue>
           </StyledContactUsInformationContent>
           <StyledContactUsInformationContent>
@@ -200,10 +209,10 @@ const ContactUs = () => {
               info@electroflow.pt
             </StyledContactUsInformationValue>
           </StyledContactUsInformationContent>
-          <div
+          {/* <div
             className="g-recaptcha"
             data-sitekey="6LfVkV4qAAAAAKJbJGzGEV-CXryy5mZa7NJIbc0s"
-          ></div>
+          ></div> */}
           <br />
         </StyledContactUsInformationContainer>
       </StyledContactUsContent>

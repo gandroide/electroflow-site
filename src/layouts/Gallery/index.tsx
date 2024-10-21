@@ -44,7 +44,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     img: UpacMoradia,
-    description: 'Upac moradia',
+    description: 'Moradia Calheta - UPAC',
   },
   {
     img: Judiciaria,
@@ -52,7 +52,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     img: Ferragens,
-    description: 'Ferragens Vieira - Pianeis Fotovoltaicos',
+    description: 'Ferragens Vieira - Painéis Fotovoltaicos ',
   },
   {
     img: Lourencinha,

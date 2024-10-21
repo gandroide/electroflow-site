@@ -198,11 +198,11 @@ const Header = () => {
               {t('translations.header.contact.title')}
             </StyledHeaderNavigationAnchor>
           </StyledHeaderNavigationItem>
-          <StyledHeaderNavigationItem>
+          {/* <StyledHeaderNavigationItem>
             <StyledHeaderNavigationLink to="/budget">
               {t('translations.header.budget.title')}
             </StyledHeaderNavigationLink>
-          </StyledHeaderNavigationItem>
+          </StyledHeaderNavigationItem> */}
         </StyledHeaderNavigationList>
       </StyledHeaderNavigation>
     </StyledHeaderContainer>

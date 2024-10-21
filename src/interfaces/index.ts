@@ -59,7 +59,7 @@ export type Language = {
 export type GalleryItem = {
   img: string;
   description: string;
-}
+};
 
 // Component Props
 export type InputProps = TextareaInput | BasicInput;
@@ -132,13 +132,13 @@ export type ServiceCardProps = Omit<ServiceCardData, 'id'>;
 
 export type MobileGalleryProps = {
   items: GalleryItem[];
-}
+};
 
 export type GalleryItemProps = GalleryItem;
 
 export type SwiperComponentProps = {
   onSliderChange: (index: number) => void;
-}
+};
 
 // Type Guards
 export const isTextInput = (input: InputProps): input is BasicInput => {
