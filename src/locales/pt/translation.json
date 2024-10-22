@@ -21,13 +21,13 @@
       "services": {
         "title": "Serviços",
         "firstService": {
-          "title": "Elaboração de estudo e projetos de",
+          "title": "Elaboração de estudo e projetos",
           "item1": "Climatizacao",
           "item2": "Instalações Elétricas e ITED",
           "item3": "Energias renováveis"
         },
         "secondService": {
-          "title": "Planeamento e execução de obras de",
+          "title": "Planeamento e execução de obras",
           "item1": "Instalações elétricas e ITED",
           "item2": "Ar condicionado e ventilação",
           "item3": "Montagem de sistemas hidropressores",
