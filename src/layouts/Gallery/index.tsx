@@ -16,53 +16,7 @@ import AvacAltice from '../../assets/imgs/gallery/avac-altice.webp';
 import MobileGallery from './MobileGallery';
 import { GalleryItem } from '../../interfaces';
 import GalleryItemWork from './GalleryItem';
-
-const galleryItems: GalleryItem[] = [
-  {
-    img: Aquaparque,
-    description: 'Aquaparque - Instalações hidráulicas',
-  },
-  {
-    img: Imprinews,
-    description: 'Imprinews - Automação',
-  },
-  {
-    img: Meo1,
-    description: 'Meo - AVAC',
-  },
-  {
-    img: Meo2,
-    description: 'Meo Call Center - Inst. Elétricas',
-  },
-  {
-    img: Abb2,
-    description: 'Subestação Amparo - Quadros Elétricos',
-  },
-  {
-    img: ThePlace,
-    description: 'The place - Inst. Elétricas',
-  },
-  {
-    img: UpacMoradia,
-    description: 'Moradia Calheta - UPAC',
-  },
-  {
-    img: Judiciaria,
-    description: 'Judiciária - Inst. Elétricas',
-  },
-  {
-    img: Ferragens,
-    description: 'Ferragens Vieira - Painéis Fotovoltaicos ',
-  },
-  {
-    img: Lourencinha,
-    description: 'Urb. Lourencinha',
-  },
-  {
-    img: AvacAltice,
-    description: 'Avac - Altice',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const GALLERY_MOBILE_WINDOW_WIDTH = 600;
 
@@ -70,6 +24,62 @@ const Gallery = () => {
   const [isMobile, setIsMobile] = useState(
     window.innerWidth < GALLERY_MOBILE_WINDOW_WIDTH,
   );
+  const { t } = useTranslation();
+
+  const galleryItems: GalleryItem[] = [
+    {
+      img: Aquaparque,
+      description:
+        'Aquaparque - ' + t('translations.header.portfolio.aquaparque'),
+    },
+    {
+      img: Imprinews,
+      description:
+        'Imprinews - ' + t('translations.header.portfolio.imprinews'),
+    },
+    {
+      img: Meo1,
+      description: 'Meo - ' + t('translations.header.portfolio.meo'),
+    },
+    {
+      img: Meo2,
+      description:
+        'Meo Call Center - ' + t('translations.header.portfolio.meoCallCenter'),
+    },
+    {
+      img: Abb2,
+      description:
+        'Subestação Amparo - ' + t('translations.header.portfolio.amparo'),
+    },
+    {
+      img: ThePlace,
+      description: 'The Place - ' + t('translations.header.portfolio.place'),
+    },
+    {
+      img: UpacMoradia,
+      description:
+        'Moradia Calheta - ' + t('translations.header.portfolio.moradia'),
+    },
+    {
+      img: Judiciaria,
+      description:
+        'Judiciária - ' + t('translations.header.portfolio.judicaria'),
+    },
+    {
+      img: Ferragens,
+      description:
+        'Ferragens Vieira - ' + t('translations.header.portfolio.vieira'),
+    },
+    {
+      img: Lourencinha,
+      description:
+        'Urb.Laurencinhas - ' + t('translations.header.portfolio.laurencinhas'),
+    },
+    {
+      img: AvacAltice,
+      description: 'Avac - Altice',
+    },
+  ];
 
   const changeViewportSize = useCallback(() => {
     if (window.innerWidth < GALLERY_MOBILE_WINDOW_WIDTH && !isMobile)

@@ -41,7 +41,18 @@
         }
       },
       "portfolio": {
-        "title": "Portfólio"
+        "title": "Portfólio",
+        "aquaparque": "Instalações hidráulicas",
+        "imprinews": "Automação",
+        "meo": "AVAC",
+        "meoCallCenter": "Inst. Elétricas",
+        "amparo": "Quadros Elétricos",
+        "place": "Inst. Elétricas",
+        "moradia": "UPAC",
+        "judicaria": "Inst. Elétricas",
+        "vieira": "Painéis Fotovoltaicos",
+        "laurencinhas": "Inst.Eletricas",
+        "avac": "Altice"
       },
       "team": {
         "title": "Equipa",

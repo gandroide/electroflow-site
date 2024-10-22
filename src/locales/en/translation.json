@@ -41,7 +41,18 @@
         }
       },
       "portfolio": {
-        "title": "Portfolio"
+        "title": "Portfolio",
+        "aquaparque": "Hydraulic Installations",
+        "imprinews": "Automation",
+        "meo": "HVAC",
+        "meoCallCenter": "Electrical Installations",
+        "amparo": "DB Boards",
+        "place": "Electrical Installations",
+        "moradia": "UPAC",
+        "judicaria": "Electrical Installations",
+        "vieira": "Photovoltaic systems",
+        "laurencinhas": "Inst.Eletricas",
+        "avac": "Altice"
       },
       "team": {
         "title": "Team",
@@ -52,7 +63,7 @@
           "auto": "Industrial Automation and Maintenance",
           "elect": "Electrical Installations and Renewable Energies",
           "clima": "HVAC",
-          "compras": "Purchasing and Logistics"
+          "compras": "Procurement & Logistics"
         }
       },
       "contact": {

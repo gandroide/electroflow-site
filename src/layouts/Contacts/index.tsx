@@ -31,7 +31,7 @@ const Contacts = () => {
       id: 2,
       name: 'Marina Alves',
       position: t('translations.header.team.position.admin'),
-      email: 'admistrativo@electroflow.pt',
+      email: 'administrativo@electroflow.pt',
       phone: '291143138',
       photo: MarianaPhoto,
     },
@@ -88,7 +88,7 @@ const Contacts = () => {
       name: 'Hugo Jardim',
       position: t('translations.header.team.position.compras'),
       email: 'producao@electroflow.pt',
-      phone: '967181479',
+      phone: '291143139',
       photo: HugoPhoto,
     },
     {
