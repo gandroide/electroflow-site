@@ -4,16 +4,16 @@ import { StyledContactsContainer } from './styled';
 import ContactCard from '../../components/ContactCard';
 import { ContactCardData } from '../../interfaces';
 
-import FlavioPhoto from '../../assets/imgs/contacts/flavio.jpg';
-import MarianaPhoto from '../../assets/imgs/contacts/mariana.jpg';
-import GervasioPhoto from '../../assets/imgs/contacts/gervasio.jpg';
-import RubenPhoto from '../../assets/imgs/contacts/ruben.jpg';
-import PedroPhoto from '../../assets/imgs/contacts/pedro.jpg';
-import HelderPhoto from '../../assets/imgs/contacts/helder.jpg';
-import EmanuelPhoto from '../../assets/imgs/contacts/emanuel.jpg';
-import PedroSilvaPhoto from '../../assets/imgs/contacts/pedro-silva.jpg';
-import HugoPhoto from '../../assets/imgs/contacts/hugo.jpg';
-import AndrePhoto from '../../assets/imgs/contacts/andre.jpeg';
+import FlavioPhoto from '../../assets/imgs/contacts/flavio.png';
+import MarianaPhoto from '../../assets/imgs/contacts/mariana.png';
+import GervasioPhoto from '../../assets/imgs/contacts/gervasio.png';
+import RubenPhoto from '../../assets/imgs/contacts/ruben.png';
+import PedroPhoto from '../../assets/imgs/contacts/pedro.png';
+import HelderPhoto from '../../assets/imgs/contacts/helder.png';
+import EmanuelPhoto from '../../assets/imgs/contacts/emanuel.png';
+import PedroSilvaPhoto from '../../assets/imgs/contacts/pedro-silva.png';
+import HugoPhoto from '../../assets/imgs/contacts/hugo.png';
+import AndrePhoto from '../../assets/imgs/contacts/andre.png';
 import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
