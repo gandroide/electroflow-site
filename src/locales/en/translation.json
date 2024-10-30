@@ -76,7 +76,8 @@
           "email": "Email",
           "subject": "Subject",
           "message": "Message",
-          "contactInfo": "Contact info"
+          "contactInfo": "Contact info",
+          "confirmationModal": "Contact request sent successfully"
         }
       },
       "budget": {

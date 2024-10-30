@@ -1,4 +1,4 @@
-import react from 'react';
+import react, { useState } from 'react';
 import {
   StyledQuaternaryTitle,
   StyledSecondaryTitle,
@@ -22,9 +22,17 @@ import { FormProps, InputProps } from '../../interfaces';
 import { TfiEmail, TfiLocationPin, TfiMobile } from 'react-icons/tfi';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { ConfirmationModal } from '../../components/confirmationModal/ConfirmationModal';
 
 const ContactUs = () => {
   const { t } = useTranslation();
+
+  const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
+
+  const handleShowConfirmation = () => {
+    setIsConfirmationVisible(true);
+    setTimeout(() => setIsConfirmationVisible(false), 2000); // Ocultar después de 2 segundos
+  };
 
   const formInputs: InputProps[] = [
     {
@@ -85,8 +93,7 @@ const ContactUs = () => {
   const publicKey = 'MwjIzGM8lMjpEKNPb';
 
   const onSubmitCallback: FormProps['submitCallback'] = (inputs) => {
-    console.log(inputs);
-
+    handleShowConfirmation();
     const emailObj: {
       [key: string]: string;
     } = {};
@@ -160,7 +167,6 @@ const ContactUs = () => {
   //       console.log(e, 'error?');
   //     });
   // };
-
   return (
     <StyledContactUsSection id="contact">
       <StyledContactUsOverlay $background={Map} />
@@ -214,6 +220,7 @@ const ContactUs = () => {
             data-sitekey="6LfVkV4qAAAAAKJbJGzGEV-CXryy5mZa7NJIbc0s"
           ></div> */}
           <br />
+          <ConfirmationModal isConfirmationVisible={isConfirmationVisible} />
         </StyledContactUsInformationContainer>
       </StyledContactUsContent>
     </StyledContactUsSection>

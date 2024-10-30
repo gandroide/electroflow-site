@@ -1,4 +1,4 @@
-import react from 'react';
+import react, { useState } from 'react';
 import { GridItem, Grid } from '../../components/Grid';
 import { StyledContactsContainer } from './styled';
 import ContactCard from '../../components/ContactCard';
