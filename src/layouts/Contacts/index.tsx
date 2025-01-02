@@ -75,14 +75,14 @@ const Contacts = () => {
       phone: '966300725',
       photo: EmanuelPhoto,
     },
-    {
-      id: 8,
-      name: 'Pedro Silva',
-      position: t('translations.header.team.position.clima'),
-      email: 'pedro.silva@electroflow.pt',
-      phone: '966332403',
-      photo: PedroSilvaPhoto,
-    },
+    // {
+    //   id: 8,
+    //   name: 'Pedro Silva',
+    //   position: t('translations.header.team.position.clima'),
+    //   email: 'pedro.silva@electroflow.pt',
+    //   phone: '966332403',
+    //   photo: PedroSilvaPhoto,
+    // },
     {
       id: 9,
       name: 'Hugo Jardim',
