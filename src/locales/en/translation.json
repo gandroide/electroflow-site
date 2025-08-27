@@ -63,7 +63,8 @@
           "auto": "Industrial Automation and Maintenance",
           "elect": "Electrical Installations and Renewable Energies",
           "clima": "HVAC",
-          "compras": "Procurement & Logistics"
+          "compras": "Procurement & Logistics",
+          "clima2": "HAVAC and Industrial Maintenance"
         }
       },
       "contact": {

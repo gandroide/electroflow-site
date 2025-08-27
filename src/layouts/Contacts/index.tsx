@@ -46,7 +46,7 @@ const Contacts = () => {
     {
       id: 4,
       name: 'Ruben Ramos',
-      position: t('translations.header.team.position.auto'),
+      position: t('translations.header.team.position.clima2'),
       email: 'ruben.ramos@electroflow.pt',
       phone: '962387450',
       photo: RubenPhoto,
@@ -67,14 +67,14 @@ const Contacts = () => {
       phone: '968848836',
       photo: HelderPhoto,
     },
-    {
-      id: 7,
-      name: 'Emanuel Freitas',
-      position: t('translations.header.team.position.clima'),
-      email: 'avac@electroflow.pt',
-      phone: '966300725',
-      photo: EmanuelPhoto,
-    },
+    // {
+    //   id: 7,
+    //   name: 'Emanuel Freitas',
+    //   position: t('translations.header.team.position.clima'),
+    //   email: 'avac@electroflow.pt',
+    //   phone: '966300725',
+    //   photo: EmanuelPhoto,
+    // },
     // {
     //   id: 8,
     //   name: 'Pedro Silva',
