@@ -34,7 +34,7 @@ const languages: Language[] = [
   {
     id: 2,
     code: 'en',
-    name: 'Inglês',
+    name: 'English',
   },
 ];
 
